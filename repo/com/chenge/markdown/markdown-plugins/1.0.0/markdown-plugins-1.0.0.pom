@@ -13,6 +13,66 @@
   <packaging>aar</packaging>
   <dependencies>
     <dependency>
+      <groupId>io.noties.markwon</groupId>
+      <artifactId>core</artifactId>
+      <version>4.6.2</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.noties.markwon</groupId>
+      <artifactId>ext-tables</artifactId>
+      <version>4.6.2</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.noties.markwon</groupId>
+      <artifactId>ext-tasklist</artifactId>
+      <version>4.6.2</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.noties.markwon</groupId>
+      <artifactId>ext-latex</artifactId>
+      <version>4.6.2</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.noties.markwon</groupId>
+      <artifactId>inline-parser</artifactId>
+      <version>4.6.2</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.noties.markwon</groupId>
+      <artifactId>ext-strikethrough</artifactId>
+      <version>4.6.2</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.noties.markwon</groupId>
+      <artifactId>image</artifactId>
+      <version>4.6.2</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.bumptech.glide</groupId>
+      <artifactId>glide</artifactId>
+      <version>4.15.1</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.noties.markwon</groupId>
+      <artifactId>image-glide</artifactId>
+      <version>4.6.2</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.noties.markwon</groupId>
+      <artifactId>html</artifactId>
+      <version>4.6.2</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
       <groupId>org.jetbrains.kotlin</groupId>
       <artifactId>kotlin-stdlib</artifactId>
       <version>1.9.22</version>
@@ -22,24 +82,6 @@
       <groupId>com.chenge.markdown</groupId>
       <artifactId>markdown-common</artifactId>
       <version>1.0.0</version>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>io.noties.markwon</groupId>
-      <artifactId>core</artifactId>
-      <version>4.6.2</version>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>io.noties.markwon</groupId>
-      <artifactId>ext-tables</artifactId>
-      <version>4.6.2</version>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>io.noties.markwon</groupId>
-      <artifactId>ext-tasklist</artifactId>
-      <version>4.6.2</version>
       <scope>runtime</scope>
     </dependency>
   </dependencies>

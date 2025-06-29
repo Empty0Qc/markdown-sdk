@@ -23,27 +23,6 @@
       },
       "dependencies": [
         {
-          "group": "io.noties.markwon",
-          "module": "core",
-          "version": {
-            "requires": "4.6.2"
-          }
-        },
-        {
-          "group": "io.noties.markwon",
-          "module": "ext-tables",
-          "version": {
-            "requires": "4.6.2"
-          }
-        },
-        {
-          "group": "io.noties.markwon",
-          "module": "ext-tasklist",
-          "version": {
-            "requires": "4.6.2"
-          }
-        },
-        {
           "group": "org.jetbrains.kotlin",
           "module": "kotlin-stdlib",
           "version": {
@@ -55,11 +34,11 @@
         {
           "name": "markdown-core-1.0.0.aar",
           "url": "markdown-core-1.0.0.aar",
-          "size": 5250,
-          "sha512": "951579e22f3a6449a68121645b5eb4d7b4efda1eab21668a25b64b457fe891618b3d74e11b27f505ed50194c6181068240e6f01379701907d431ba6b30db58a8",
-          "sha256": "c82569791d265c256405e5252b7ace5d2f386dc8c459e395eea5f60b1c1a8b12",
-          "sha1": "abce6542fd77c7b287a719782080a27951af2a85",
-          "md5": "3b36d50fc09ec451d6a9482bc3d3a12c"
+          "size": 10354,
+          "sha512": "a0a0bfd3648c87ab197492312f8ec57808b9f7b2191e4a3a92585eea75114737d4764bd345118f1bbf24d42112cad0c6d625225d278daa4646442ab82332776b",
+          "sha256": "9193a92cb825b5ec27b65c8928362fa3cecc9a9f0a428deb23d2960f5cf26db2",
+          "sha1": "1bd78ed9ccebb7f5f4301701891d686e798d63c9",
+          "md5": "3e17c98b9c5620db751d669ca723a279"
         }
       ]
     },
@@ -93,27 +72,6 @@
           }
         },
         {
-          "group": "io.noties.markwon",
-          "module": "core",
-          "version": {
-            "requires": "4.6.2"
-          }
-        },
-        {
-          "group": "io.noties.markwon",
-          "module": "ext-tables",
-          "version": {
-            "requires": "4.6.2"
-          }
-        },
-        {
-          "group": "io.noties.markwon",
-          "module": "ext-tasklist",
-          "version": {
-            "requires": "4.6.2"
-          }
-        },
-        {
           "group": "org.jetbrains.kotlin",
           "module": "kotlin-stdlib",
           "version": {
@@ -125,11 +83,11 @@
         {
           "name": "markdown-core-1.0.0.aar",
           "url": "markdown-core-1.0.0.aar",
-          "size": 5250,
-          "sha512": "951579e22f3a6449a68121645b5eb4d7b4efda1eab21668a25b64b457fe891618b3d74e11b27f505ed50194c6181068240e6f01379701907d431ba6b30db58a8",
-          "sha256": "c82569791d265c256405e5252b7ace5d2f386dc8c459e395eea5f60b1c1a8b12",
-          "sha1": "abce6542fd77c7b287a719782080a27951af2a85",
-          "md5": "3b36d50fc09ec451d6a9482bc3d3a12c"
+          "size": 10354,
+          "sha512": "a0a0bfd3648c87ab197492312f8ec57808b9f7b2191e4a3a92585eea75114737d4764bd345118f1bbf24d42112cad0c6d625225d278daa4646442ab82332776b",
+          "sha256": "9193a92cb825b5ec27b65c8928362fa3cecc9a9f0a428deb23d2960f5cf26db2",
+          "sha1": "1bd78ed9ccebb7f5f4301701891d686e798d63c9",
+          "md5": "3e17c98b9c5620db751d669ca723a279"
         }
       ]
     },
@@ -147,11 +105,11 @@
         {
           "name": "markdown-core-1.0.0-sources.jar",
           "url": "markdown-core-1.0.0-sources.jar",
-          "size": 3079,
-          "sha512": "c637fc7f5e38da3dab5ac9c46616f42f157289fb010b48f4164c803e31dae27034e2efdcd433d86d7328f2d763d257c90c006f0d33dc3867f8e699a28a35980a",
-          "sha256": "6ae884600d5003711700adedcbb799c0a7a35656dc11a8df5cb955820280c3c3",
-          "sha1": "5555bcb81e6fd71f44a4fac87578c7a91b80583b",
-          "md5": "f6ddb088fcfc095a844537df9376f7c3"
+          "size": 7439,
+          "sha512": "b3cc03d34b067599172018b6c7b993941f066b4042d0150d0c70753b1c7ae1b79d5308708ebf752559f0df44b3c2cfe3d5660505d5f33cf9555bcf67b054984c",
+          "sha256": "48a7279c320622742d9a77dbaa26614c7a71ef087491808011dd85645c64b6a7",
+          "sha1": "fa23fc6b9d9f67e46ca19f70bae110cece649193",
+          "md5": "a0809c536b0ede3aad08ef39b492e076"
         }
       ]
     }
