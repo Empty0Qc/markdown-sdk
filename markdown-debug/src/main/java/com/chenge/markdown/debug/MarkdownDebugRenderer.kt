@@ -43,4 +43,21 @@ object MarkdownDebugRenderer {
       }
     }.start()
   }
+
+  /**
+   * Render markdown synchronously or asynchronously with timing.
+   */
+  fun renderWithTiming(
+    markwon: Markwon,
+    textView: TextView,
+    markdown: String,
+    async: Boolean,
+    onDurationMeasured: (Long) -> Unit
+  ) {
+    if (async) {
+      setMarkdownAsyncWithTiming(markwon, textView, markdown, onDurationMeasured)
+    } else {
+      setMarkdownSyncWithTiming(markwon, textView, markdown, onDurationMeasured)
+    }
+  }
 }

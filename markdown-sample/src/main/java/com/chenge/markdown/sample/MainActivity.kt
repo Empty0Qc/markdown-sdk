@@ -8,14 +8,13 @@ import androidx.appcompat.app.AppCompatActivity
 import com.chenge.markdown.common.MarkdownConfig
 import com.chenge.markdown.common.MarkdownSanitizer
 import com.chenge.markdown.core.EmojiReplacer
+import com.chenge.markdown.core.MarkdownLoader
 import com.chenge.markdown.debug.MarkdownDebugRenderer
 import com.chenge.markdown.plugins.ClickablePlugin
 import com.chenge.markdown.plugins.ImageSizePlugin
 import com.chenge.markdown.plugins.MarkdownPlugins
 import com.chenge.markdown.render.MarkdownView
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-import java.io.BufferedReader
-import java.io.InputStreamReader
 
 class MainActivity : AppCompatActivity() {
 
@@ -30,7 +29,7 @@ class MainActivity : AppCompatActivity() {
     val fabDebug = findViewById<ExtendedFloatingActionButton>(R.id.fabDebug)
 
     // 加载 assets 文件里的全格式 Markdown 内容
-    val rawMarkdown = loadMarkdownFromAssets("full_format_test.md")
+    val rawMarkdown = MarkdownLoader.loadFromAssets(this, "full_format_test.md")
     // Emoji 替换
     val markdownWithEmoji = EmojiReplacer.replaceShortcodes(rawMarkdown)
 
@@ -66,38 +65,15 @@ class MainActivity : AppCompatActivity() {
 
     // 点击调试按钮
     fabDebug.setOnClickListener {
-      if (isSyncMode) {
-        // 同步渲染
-        MarkdownDebugRenderer.setMarkdownSyncWithTiming(
-          markwon, markdownView, safeMarkdown
-        ) { duration ->
-          fabTiming.text = "同步耗时 ${duration}ms"
-          fabTiming.extend()
-          Log.d("MarkdownDebug", "同步渲染完成，耗时: ${duration}ms")
-        }
-      } else {
-        // 异步渲染
-        MarkdownDebugRenderer.setMarkdownAsyncWithTiming(
-          markwon, markdownView, safeMarkdown
-        ) { duration ->
-          fabTiming.text = "异步耗时 ${duration}ms"
-          fabTiming.extend()
-          Log.d("MarkdownDebug", "异步渲染完成，耗时: ${duration}ms")
-        }
+      MarkdownDebugRenderer.renderWithTiming(
+        markwon, markdownView, safeMarkdown, async = !isSyncMode
+      ) { duration ->
+        fabTiming.text = if (isSyncMode) "同步耗时 ${duration}ms" else "异步耗时 ${duration}ms"
+        fabTiming.extend()
+        Log.d("MarkdownDebug", "渲染完成，耗时: ${duration}ms")
       }
       // 切换模式
       isSyncMode = !isSyncMode
-    }
-  }
-
-  private fun loadMarkdownFromAssets(fileName: String): String {
-    return try {
-      assets.open(fileName).use { inputStream ->
-        BufferedReader(InputStreamReader(inputStream)).readText()
-      }
-    } catch (e: Exception) {
-      Log.e("MarkdownLoad", "加载 Markdown 文件失败: ${e.message}")
-      "# 加载失败\n无法读取文件内容。"
     }
   }
 }
