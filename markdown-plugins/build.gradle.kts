@@ -24,9 +24,16 @@ android {
 
 dependencies {
   implementation(project(":markdown-common"))
-  implementation("io.noties.markwon:core:4.6.2")
-  implementation("io.noties.markwon:ext-tables:4.6.2")
-  implementation("io.noties.markwon:ext-tasklist:4.6.2")
+  api("io.noties.markwon:core:4.6.2")
+  api("io.noties.markwon:ext-tables:4.6.2")
+  api("io.noties.markwon:ext-tasklist:4.6.2")
+  api("io.noties.markwon:ext-latex:4.6.2")
+  api("io.noties.markwon:inline-parser:4.6.2")
+  api("io.noties.markwon:ext-strikethrough:4.6.2")
+  api("io.noties.markwon:image:4.6.2")
+  api("com.github.bumptech.glide:glide:4.15.1")
+  api("io.noties.markwon:image-glide:4.6.2")
+  api("io.noties.markwon:html:4.6.2")
 }
 
 afterEvaluate {

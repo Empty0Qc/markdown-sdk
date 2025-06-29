@@ -1,29 +1,44 @@
 plugins {
-  kotlin("jvm")
+  id("com.android.library")
+  id("org.jetbrains.kotlin.android")
   id("maven-publish")
 }
 
-kotlin {
-  jvmToolchain(17)
-}
 
-dependencies {
-  implementation(kotlin("stdlib"))
-}
+android {
+  namespace = "com.chenge.markdown.common"
+  compileSdk = 35
 
-publishing {
-  publications {
-    create<MavenPublication>("mavenJava") {
-      from(components["java"])
-      groupId = property("SDK_GROUP") as String
-      artifactId = project.name
-      version = property("SDK_VERSION") as String
-    }
+  defaultConfig {
+    minSdk = 21
   }
-  repositories {
-    maven {
-      name = "localRepo"
-      url = uri("$rootDir/repo")
+
+  compileOptions {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+  }
+
+  kotlinOptions {
+    jvmTarget = "17"
+  }
+}
+
+
+afterEvaluate {
+  publishing {
+    publications {
+      create<MavenPublication>("release") {
+        from(components["release"])
+        groupId = property("SDK_GROUP") as String
+        artifactId = project.name
+        version = property("SDK_VERSION") as String
+      }
+    }
+    repositories {
+      maven {
+        name = "localRepo"
+        url = uri("$rootDir/repo")
+      }
     }
   }
 }

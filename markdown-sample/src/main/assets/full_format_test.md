@@ -20,13 +20,9 @@
 
 *斜体文本*
 
-_斜体文本_
-
-**粗体文本**
-
 __粗体文本__
 
-***粗体斜体文本***
+_**粗体斜体文本**_
 
 ~~删除线文本~~
 
@@ -100,19 +96,20 @@ fun main() {
 
 ## 链接
 
-[普通链接](https://www.example.com)
+### 文本链接
 
-<https://www.example.com>
+[这是百度](https://www.baidu.com/)
 
-[带标题链接](https://www.example.com "这是一个标题")
+### 这是链接识别
+<https://www.bilibili.com/>
+
+
 
 ---
 
 ## 图片
 
-![普通图片](https://via.placeholder.com/150)
-
-<img src="https://via.placeholder.com/100" width="100" height="50" alt="HTML 图片">
+![普通图片](https://img.picui.cn/free/2025/06/29/6861326bbc8e9.jpg)
 
 ---
 
@@ -135,15 +132,9 @@ fun main() {
 
 ---
 
-***
-
-___
-
----
-
 ## 数学公式 (LaTeX)
 
-行内公式：$E=mc^2$
+行内公式：$$E=mc^2$$
 
 块级公式：
 $$
@@ -154,9 +145,10 @@ $$
 
 ## HTML 混排
 
-<div style="color: red;">这是红色文字</div>
 
-<span style="font-weight: bold;">粗体 span</span>
+<b>粗体文本</b>
+
+<font color="red">红色文字</font>
 
 ---
 

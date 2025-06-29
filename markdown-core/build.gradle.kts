@@ -25,9 +25,6 @@ dependencies {
   implementation(project(":markdown-plugins"))
   implementation(project(":markdown-render"))
   implementation(project(":markdown-common"))
-  api("io.noties.markwon:core:4.6.2")
-  api("io.noties.markwon:ext-tables:4.6.2")
-  api("io.noties.markwon:ext-tasklist:4.6.2")
 }
 
 afterEvaluate {
