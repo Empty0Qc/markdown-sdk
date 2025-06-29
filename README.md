@@ -13,6 +13,9 @@
 ✅ 多模块分层架构
 ✅ 一键发布脚本
 ✅ 高度可定制配置
+✅ Emoji 短代码替换与内容净化
+✅ 支持流式增量渲染
+✅ 提供 MarkdownView 控件及 Assets 加载
 
 ---
 
@@ -33,11 +36,11 @@ markdown-sdk/
 
 | 模块               | 功能说明                                    |
 | ---------------- | --------------------------------------- |
-| markdown-core    | 核心入口：`MarkdownEngine`，提供配置、自定义、同步异步渲染接口 |
-| markdown-render  | 对 Markwon 渲染 API 进行封装，支持同步和异步渲染         |
-| markdown-plugins | 集成 `TablePlugin`, `TaskListPlugin` 等扩展  |
-| markdown-debug   | 提供调试渲染（含耗时打印），支持多种调试模式                  |
-| markdown-sample  | 示例项目，包含渲染演示、性能测试、悬浮按钮操作                 |
+| markdown-core    | 核心入口 `MarkdownEngine`，包含 Emoji 解析、内容净化与配置管理 |
+| markdown-render  | 封装 Markwon，提供同步/异步及流式渲染，并包含 `MarkdownView` |
+| markdown-plugins | 提供 `TablePlugin`、`TaskListPlugin` 等扩展，并支持自定义插件 |
+| markdown-debug   | 调试渲染（含耗时打印），支持多种调试模式 |
+| markdown-sample  | 示例项目，包含渲染演示与性能测试 |
 
 ---
 
@@ -161,6 +164,16 @@ MarkdownRenderer.setMarkdownAsync(markwon, textView, markdown) {
 | MarkdownPlugins       | Markwon 插件创建器   |
 | MarkdownConfig        | 渲染配置参数类         |
 | MarkdownSanitizer     | Markdown 内容安全过滤 |
+| MarkdownLoader        | 从 assets 加载 Markdown 文件 |
+| MarkdownParser        | 解析并净化 Markdown 内容 |
+| EmojiReplacer         | Emoji 短代码替换 |
+| MarkdownView          | 自定义 TextView 渲染控件 |
+| StreamingRenderer     | 流式增量渲染实现 |
+| MarkdownPlugin        | 插件统一接口 |
+| ClickablePlugin       | 链接/代码点击回调 |
+| ImageSizePlugin       | 按 URL 参数解析图片尺寸 |
+| StylePlugin           | 样式插件，依赖 MarkdownStyleConfig |
+| MarkdownStyleConfig   | 样式配置参数 |
 
 ---
 
