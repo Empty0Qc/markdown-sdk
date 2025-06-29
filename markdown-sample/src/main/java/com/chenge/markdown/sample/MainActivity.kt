@@ -1,13 +1,16 @@
 package com.chenge.markdown.sample
 
 import android.os.Bundle
-import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.chenge.markdown.common.MarkdownConfig
 import com.chenge.markdown.common.MarkdownSanitizer
+import com.chenge.markdown.debug.MarkdownDebugRenderer
 import com.chenge.markdown.plugins.MarkdownPlugins
 import com.chenge.markdown.render.MarkdownView
-import com.chenge.markdown.debug.MarkdownDebugRenderer
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+import java.io.BufferedReader
+import java.io.InputStreamReader
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,12 +24,8 @@ class MainActivity : AppCompatActivity() {
     val fabTiming = findViewById<ExtendedFloatingActionButton>(R.id.fabTiming)
     val fabDebug = findViewById<ExtendedFloatingActionButton>(R.id.fabDebug)
 
-    val rawMarkdown = """
-            # 性能测试
-
-            ${"- 列表\n".repeat(500)}
-        """.trimIndent()
-
+    // 加载 assets 文件里的全格式 Markdown 内容
+    val rawMarkdown = loadMarkdownFromAssets("full_format_test.md")
     val safeMarkdown = MarkdownSanitizer.sanitize(rawMarkdown)
 
     val config = MarkdownConfig(
@@ -54,6 +53,7 @@ class MainActivity : AppCompatActivity() {
         ) { duration ->
           fabTiming.text = "同步耗时 ${duration}ms"
           fabTiming.extend()
+          Log.d("MarkdownDebug", "同步渲染完成，耗时: ${duration}ms")
         }
       } else {
         // 异步渲染
@@ -64,10 +64,22 @@ class MainActivity : AppCompatActivity() {
         ) { duration ->
           fabTiming.text = "异步耗时 ${duration}ms"
           fabTiming.extend()
+          Log.d("MarkdownDebug", "异步渲染完成，耗时: ${duration}ms")
         }
       }
       // 切换模式
       isSyncMode = !isSyncMode
+    }
+  }
+
+  private fun loadMarkdownFromAssets(fileName: String): String {
+    return try {
+      assets.open(fileName).use { inputStream ->
+        BufferedReader(InputStreamReader(inputStream)).readText()
+      }
+    } catch (e: Exception) {
+      Log.e("MarkdownLoad", "加载 Markdown 文件失败: ${e.message}")
+      "# 加载失败\n无法读取文件内容。"
     }
   }
 }
