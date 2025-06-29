@@ -9,6 +9,8 @@ import com.chenge.markdown.common.MarkdownConfig
 import com.chenge.markdown.common.MarkdownSanitizer
 import com.chenge.markdown.core.EmojiReplacer
 import com.chenge.markdown.core.MarkdownLoader
+import com.chenge.markdown.core.MarkdownEngine
+import com.chenge.markdown.core.MarkdownParser
 import com.chenge.markdown.debug.MarkdownDebugRenderer
 import com.chenge.markdown.plugins.ClickablePlugin
 import com.chenge.markdown.plugins.ImageSizePlugin
@@ -30,10 +32,10 @@ class MainActivity : AppCompatActivity() {
 
     // 加载 assets 文件里的全格式 Markdown 内容
     val rawMarkdown = MarkdownLoader.loadFromAssets(this, "full_format_test.md")
-    // Emoji 替换
-    val markdownWithEmoji = EmojiReplacer.replaceShortcodes(rawMarkdown)
 
-    val safeMarkdown = MarkdownSanitizer.sanitize(markdownWithEmoji)
+    // 使用 MarkdownParser 进一步处理文本
+    val parsedMarkdown = MarkdownParser.parse(rawMarkdown)
+
     val config = MarkdownConfig(
       enableHtml = true, enableTables = true, enableTaskList = true
     )
@@ -54,7 +56,12 @@ class MainActivity : AppCompatActivity() {
 //      StylePlugin(MarkdownStyleConfig(headingColor = Color.RED))
 //    )
 
-    val markwon = MarkdownPlugins.create(this, config)
+    // 初始化 MarkdownEngine
+    val engine = MarkdownEngine.with(this).config(config)
+
+    // 先使用 MarkdownEngine 渲染一次内容
+//    engine.render(markdownView, parsedMarkdown)
+
     markdownView.movementMethod = android.text.method.LinkMovementMethod.getInstance()
 
     // 耗时按钮默认收起
@@ -66,7 +73,7 @@ class MainActivity : AppCompatActivity() {
     // 点击调试按钮
     fabDebug.setOnClickListener {
       MarkdownDebugRenderer.renderWithTiming(
-        markwon, markdownView, safeMarkdown, async = !isSyncMode
+        engine.getMarkwon(), markdownView, parsedMarkdown, async = !isSyncMode
       ) { duration ->
         fabTiming.text = if (isSyncMode) "同步耗时 ${duration}ms" else "异步耗时 ${duration}ms"
         fabTiming.extend()
