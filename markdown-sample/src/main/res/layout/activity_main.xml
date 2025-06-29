@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <!-- MarkdownView -->
+  <com.chenge.markdown.render.MarkdownView
+    android:id="@+id/markdownView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp" />
+
+  <!-- 耗时按钮 -->
+  <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+    android:id="@+id/fabTiming"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|end"
+    android:layout_margin="16dp"
+    android:text="耗时"
+    android:contentDescription="耗时"
+    app:icon="@android:drawable/ic_dialog_info" />
+
+  <!-- 调试渲染按钮 -->
+  <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+    android:id="@+id/fabDebug"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|start"
+    android:layout_margin="16dp"
+    android:text="调试渲染"
+    android:contentDescription="调试渲染"
+    app:icon="@android:drawable/ic_menu_info_details" />
+</FrameLayout>

@@ -1,0 +1,159 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.chenge.markdown",
+    "module": "markdown-core",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.6"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "io.noties.markwon",
+          "module": "core",
+          "version": {
+            "requires": "4.6.2"
+          }
+        },
+        {
+          "group": "io.noties.markwon",
+          "module": "ext-tables",
+          "version": {
+            "requires": "4.6.2"
+          }
+        },
+        {
+          "group": "io.noties.markwon",
+          "module": "ext-tasklist",
+          "version": {
+            "requires": "4.6.2"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.22"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "markdown-core-1.0.0.aar",
+          "url": "markdown-core-1.0.0.aar",
+          "size": 5250,
+          "sha512": "951579e22f3a6449a68121645b5eb4d7b4efda1eab21668a25b64b457fe891618b3d74e11b27f505ed50194c6181068240e6f01379701907d431ba6b30db58a8",
+          "sha256": "c82569791d265c256405e5252b7ace5d2f386dc8c459e395eea5f60b1c1a8b12",
+          "sha1": "abce6542fd77c7b287a719782080a27951af2a85",
+          "md5": "3b36d50fc09ec451d6a9482bc3d3a12c"
+        }
+      ]
+    },
+    {
+      "name": "releaseRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.chenge.markdown",
+          "module": "markdown-plugins",
+          "version": {
+            "requires": "1.0.0"
+          }
+        },
+        {
+          "group": "com.chenge.markdown",
+          "module": "markdown-render",
+          "version": {
+            "requires": "1.0.0"
+          }
+        },
+        {
+          "group": "com.chenge.markdown",
+          "module": "markdown-common",
+          "version": {
+            "requires": "1.0.0"
+          }
+        },
+        {
+          "group": "io.noties.markwon",
+          "module": "core",
+          "version": {
+            "requires": "4.6.2"
+          }
+        },
+        {
+          "group": "io.noties.markwon",
+          "module": "ext-tables",
+          "version": {
+            "requires": "4.6.2"
+          }
+        },
+        {
+          "group": "io.noties.markwon",
+          "module": "ext-tasklist",
+          "version": {
+            "requires": "4.6.2"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.22"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "markdown-core-1.0.0.aar",
+          "url": "markdown-core-1.0.0.aar",
+          "size": 5250,
+          "sha512": "951579e22f3a6449a68121645b5eb4d7b4efda1eab21668a25b64b457fe891618b3d74e11b27f505ed50194c6181068240e6f01379701907d431ba6b30db58a8",
+          "sha256": "c82569791d265c256405e5252b7ace5d2f386dc8c459e395eea5f60b1c1a8b12",
+          "sha1": "abce6542fd77c7b287a719782080a27951af2a85",
+          "md5": "3b36d50fc09ec451d6a9482bc3d3a12c"
+        }
+      ]
+    },
+    {
+      "name": "releaseSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "files": [
+        {
+          "name": "markdown-core-1.0.0-sources.jar",
+          "url": "markdown-core-1.0.0-sources.jar",
+          "size": 3079,
+          "sha512": "c637fc7f5e38da3dab5ac9c46616f42f157289fb010b48f4164c803e31dae27034e2efdcd433d86d7328f2d763d257c90c006f0d33dc3867f8e699a28a35980a",
+          "sha256": "6ae884600d5003711700adedcbb799c0a7a35656dc11a8df5cb955820280c3c3",
+          "sha1": "5555bcb81e6fd71f44a4fac87578c7a91b80583b",
+          "md5": "f6ddb088fcfc095a844537df9376f7c3"
+        }
+      ]
+    }
+  ]
+}
