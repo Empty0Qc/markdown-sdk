@@ -1,0 +1,102 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  release:
+    name: Build and Release
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        
+    - name: Setup Gradle
+      uses: gradle/gradle-build-action@v2
+      
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+      
+    - name: Extract version from tag
+      id: get_version
+      run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+      
+    - name: Build all modules
+      run: ./gradlew assembleRelease
+      
+    - name: Run tests
+      run: ./gradlew testReleaseUnitTest
+      
+    - name: Run lint
+      run: ./gradlew lintRelease
+      
+    - name: Generate documentation
+      run: ./gradlew dokkaHtml
+      
+    - name: Publish to Maven Central (if configured)
+      env:
+        OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+        OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
+        SIGNING_KEY_ID: ${{ secrets.SIGNING_KEY_ID }}
+        SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
+        SIGNING_SECRET_KEY_RING_FILE: ${{ secrets.SIGNING_SECRET_KEY_RING_FILE }}
+      run: |
+        if [ -n "$OSSRH_USERNAME" ]; then
+          echo "Publishing to Maven Central..."
+          ./gradlew publishReleasePublicationToSonatypeRepository
+        else
+          echo "Maven Central credentials not configured, skipping publish"
+        fi
+      
+    - name: Create GitHub Release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ steps.get_version.outputs.VERSION }}
+        body: |
+          ## 🚀 Release ${{ steps.get_version.outputs.VERSION }}
+          
+          ### 📦 Artifacts
+          - All modules have been built and tested
+          - Documentation generated with Dokka
+          
+          ### 📋 Changes
+          See [CHANGELOG.md](CHANGELOG.md) for detailed changes.
+          
+          ### 📚 Documentation
+          - [API Documentation](https://your-docs-url.com)
+          - [Usage Guide](README.md)
+          
+          ### 🔧 Installation
+          ```gradle
+          implementation 'com.chenge.markdown:markdown-engine:${{ steps.get_version.outputs.VERSION }}'
+          ```
+        draft: false
+        prerelease: false
+        
+    - name: Upload Release Assets
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./build/distributions/
+        asset_name: markdown-sdk-${{ steps.get_version.outputs.VERSION }}.zip
+        asset_content_type: application/zip
+        
+    - name: Upload Documentation
+      uses: actions/upload-artifact@v4
+      with:
+        name: documentation-${{ steps.get_version.outputs.VERSION }}
+        path: '**/build/dokka/html/'
