@@ -185,6 +185,38 @@ MarkdownRenderer.setMarkdownAsync(markwon, textView, markdown) {
 
 ---
 
+## 📋 更新日志
+
+### v1.0.1 (最新)
+
+#### 🐛 问题修复
+
+✅ **修复主页面底部按钮显示问题**
+- 解决了底部按钮只有按下才能看到部分内容的显示问题
+- 优化了按钮布局和可见性
+
+✅ **优化 Markdown 内容触摸反馈**
+- 为 Markdown 内容区域添加了 Material Design 风格的水波按压效果
+- 在 `ComposeActivity.kt` 和 `activity_main.xml` 中启用了 `selectableItemBackground`
+- 提升了用户交互体验，保持滚动功能正常
+
+✅ **修复 Compose 页面滚动问题**
+- 解决了 Compose 页面渲染结果无法滚动查看下面内容的问题
+- 移除了 `MarkdownView` 的 `heightIn` 最大高度限制（`max = 600.dp`）
+- 确保 Markdown 内容可以完整显示和正常滚动
+
+✅ **修复 ScrollBarDrawable 空指针崩溃**
+- 解决了 Compose 页面中 ScrollBarDrawable 相关的空指针异常
+- 提升了应用稳定性
+
+#### 🔧 技术改进
+
+- 优化了 `AndroidView` 组件的配置
+- 改进了触摸事件处理机制
+- 增强了 Compose 与传统 View 的兼容性
+
+---
+
 ## 🙏 致谢
 
 基于 [Markwon](https://github.com/noties/Markwon) 构建。

@@ -1,48 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  android:layout_marginTop="30dp">
+  android:fitsSystemWindows="true">
 
-  <!-- MarkdownView -->
-  <com.chenge.markdown.render.MarkdownView
-    android:id="@+id/markdownView"
+  <!-- MarkdownView with enhanced scrolling -->
+  <androidx.core.widget.NestedScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="30dp"
+    android:layout_marginBottom="120dp"
+    android:fillViewport="true"
+    android:overScrollMode="ifContentScrolls"
+    android:scrollbars="vertical">
+
+    <com.chenge.markdown.render.MarkdownView
+      android:id="@+id/markdownView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="16dp"
+      android:clickable="true"
+      android:focusable="true"
+      android:background="?android:attr/selectableItemBackground" />
+
+  </androidx.core.widget.NestedScrollView>
+
+  <!-- 底部按钮容器 -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
     android:padding="16dp"
-    android:layout_marginBottom="50dp"/>
+    android:paddingBottom="24dp"
+    android:background="@android:color/white"
+    android:elevation="8dp">
 
-  <!-- 耗时按钮 -->
-  <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-    android:id="@+id/fabTiming"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="bottom|end"
-    android:layout_margin="10dp"
-    android:text="耗时"
-    android:contentDescription="耗时"
-    app:icon="@android:drawable/ic_dialog_info" />
+    <!-- 第一行按钮 -->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:gravity="center"
+      android:layout_marginBottom="8dp">
 
-  <!-- 调试渲染按钮 -->
-  <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-    android:id="@+id/fabDebug"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="bottom|start"
-    android:layout_margin="10dp"
-    android:text="调试渲染"
-    android:contentDescription="调试渲染"
-    app:icon="@android:drawable/ic_menu_info_details" />
+      <!-- 调试渲染按钮 -->
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDebug"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_weight="1"
+        android:layout_marginEnd="8dp"
+        android:text="调试渲染"
+        android:textSize="14sp"
+        android:stateListAnimator="@null"
+        android:clickable="true"
+        android:focusable="true"
+        app:rippleColor="@android:color/transparent"
+        app:backgroundTint="@null"
+        app:icon="@android:drawable/ic_menu_info_details"
+        app:iconGravity="textStart"
+        app:iconSize="20dp"
+        style="@style/Widget.Material3.Button.Icon" />
 
-  <!-- Compose 演示按钮 -->
-  <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-    android:id="@+id/fab_compose"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="bottom|center"
-    android:layout_margin="10dp"
-    android:text="Compose 演示"
-    android:contentDescription="Compose 演示"
-    app:icon="@android:drawable/ic_menu_view" />
-</FrameLayout>
+      <!-- 耗时显示按钮 -->
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnTiming"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_weight="1"
+        android:layout_marginStart="8dp"
+        android:text="耗时"
+        android:textSize="14sp"
+        android:stateListAnimator="@null"
+        android:clickable="true"
+        android:focusable="true"
+        app:rippleColor="@android:color/transparent"
+        app:backgroundTint="@null"
+        app:icon="@android:drawable/ic_dialog_info"
+        app:iconGravity="textStart"
+        app:iconSize="20dp" />
+
+    </LinearLayout>
+
+    <!-- Compose 演示按钮 -->
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/btnCompose"
+      android:layout_width="match_parent"
+      android:layout_height="56dp"
+      android:text="Compose 演示"
+      android:textSize="16sp"
+      android:stateListAnimator="@null"
+      android:clickable="true"
+      android:focusable="true"
+      app:rippleColor="@android:color/transparent"
+      app:backgroundTint="@null"
+      app:icon="@android:drawable/ic_menu_view"
+      app:iconGravity="textStart"
+      app:iconSize="24dp"
+      style="@style/Widget.Material3.Button.UnelevatedButton" />
+
+  </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
