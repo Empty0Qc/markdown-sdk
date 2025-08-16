@@ -26,6 +26,9 @@
 
 ## 📁 模块结构
 
+<details>
+<summary>展开查看模块结构</summary>
+
 ```
 markdown-sdk/
 ├── markdown-core        // 核心引擎（MarkdownEngine）
@@ -35,12 +38,14 @@ markdown-sdk/
 ├── markdown-sample      // 示例 App
 ```
 
+</details>
+
 ---
 
 ## ✨ 功能能力
 
 <details>
-<summary>展开查看功能能力表格</summary>
+<summary>展开查看功能能力</summary>
 
 | 模块               | 功能说明                                    |
 | ---------------- | --------------------------------------- |
@@ -56,10 +61,10 @@ markdown-sdk/
 
 ## 🛠️ 安装使用
 
-### 1⃣ 添加依赖
-
 <details>
-<summary>展开查看依赖配置</summary>
+<summary>展开查看安装使用</summary>
+
+### 1⃣ 添加依赖
 
 > 如果你要在其他项目中使用，需先通过 `./publish.sh` 发布到本地 maven 仓库。
 
@@ -76,8 +81,6 @@ dependencies {
     implementation(project(":markdown-core"))
 }
 ```
-
-</details>
 
 ### 2⃣ 初始化 MarkdownEngine
 
@@ -105,12 +108,14 @@ val engine = MarkdownEngine.with(context).config(
 engine.render(textView, markdownString)
 ```
 
+</details>
+
 ---
 
 ## 🧬 调试与性能测试
 
 <details>
-<summary>展开查看调试功能</summary>
+<summary>展开查看调试与性能测试</summary>
 
 **MarkdownDebugRenderer** 提供耗时分析和多模式渲染：
 
@@ -131,7 +136,7 @@ debugRenderer.render(textView, markdown, async = true)
 ## ⚙️ 一键发布脚本
 
 <details>
-<summary>展开查看发布脚本说明</summary>
+<summary>展开查看一键发布脚本</summary>
 
 在根目录执行：
 
@@ -155,7 +160,7 @@ debugRenderer.render(textView, markdown, async = true)
 ## 🚀 性能对比示例
 
 <details>
-<summary>展开查看性能测试代码</summary>
+<summary>展开查看性能对比示例</summary>
 
 在 `MainActivity` 中，通过如下方式对比同步和异步性能：
 
@@ -183,7 +188,7 @@ MarkdownRenderer.setMarkdownAsync(markwon, textView, markdown) {
 ## 🎯 核心类
 
 <details>
-<summary>展开查看核心类列表</summary>
+<summary>展开查看核心类</summary>
 
 | 类名                    | 功能              |
 | --------------------- | --------------- |
@@ -210,9 +215,14 @@ MarkdownRenderer.setMarkdownAsync(markwon, textView, markdown) {
 
 ## 🍿 发布版本规范
 
+<details>
+<summary>展开查看发布版本规范</summary>
+
 版本号格式：`major.minor.patch`
 
 示例：`1.0.0`
+
+</details>
 
 ---
 

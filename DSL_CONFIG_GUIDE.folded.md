@@ -17,6 +17,9 @@ MarkdownSDK 现在提供了三种配置方式：
 
 ## 1. 传统配置方式
 
+<details>
+<summary>展开查看传统配置方式</summary>
+
 ```kotlin
 val config = MarkdownConfig(
     enableHtml = true,
@@ -31,12 +34,14 @@ val config = MarkdownConfig(
 val engine = MarkdownEngine.with(context).config(config)
 ```
 
+</details>
+
 ## 2. 预设配置
 
-### 可用预设
-
 <details>
-<summary>展开查看可用预设列表</summary>
+<summary>展开查看预设配置</summary>
+
+### 可用预设
 
 - `MarkdownConfig.default()` - 默认配置
 - `MarkdownConfig.blog()` - 博客/文档配置（支持表格、任务列表、LaTeX）
@@ -45,8 +50,6 @@ val engine = MarkdownEngine.with(context).config(config)
 - `MarkdownConfig.safe()` - 安全模式配置（禁用 HTML）
 - `MarkdownConfig.performance()` - 性能优化配置
 - `MarkdownConfig.full()` - 完整功能配置
-
-</details>
 
 ### 使用示例
 
@@ -61,7 +64,12 @@ val chatEngine = MarkdownEngine.withPreset(context, MarkdownConfig.chat())
 val editorEngine = MarkdownEngine.withPreset(context, MarkdownConfig.editor())
 ```
 
+</details>
+
 ## 3. DSL 配置（推荐）
+
+<details>
+<summary>展开查看 DSL 配置</summary>
 
 ### 基本用法
 
@@ -77,9 +85,6 @@ val engine = MarkdownEngine.with(context) {
 ```
 
 ### 可用的 DSL 方法
-
-<details>
-<summary>展开查看 DSL 方法详情</summary>
 
 #### 功能开关
 - `tables()` - 启用表格支持
@@ -107,12 +112,9 @@ val engine = MarkdownEngine.with(context) {
 }
 ```
 
-</details>
-
 ### 高级用法
 
 #### 条件配置
-
 ```kotlin
 val engine = MarkdownEngine.with(context) {
     tables()
@@ -135,7 +137,6 @@ val engine = MarkdownEngine.with(context) {
 ```
 
 #### 自定义插件配置
-
 ```kotlin
 val engine = MarkdownEngine.with(context) {
     enableAll()
@@ -146,7 +147,6 @@ val engine = MarkdownEngine.with(context) {
 ```
 
 #### 性能优化配置
-
 ```kotlin
 val performanceEngine = MarkdownEngine.with(context) {
     disableAll()
@@ -157,9 +157,6 @@ val performanceEngine = MarkdownEngine.with(context) {
 ```
 
 ### 独立 DSL 配置
-
-<details>
-<summary>展开查看独立配置示例</summary>
 
 你也可以创建独立的配置对象：
 
@@ -180,7 +177,7 @@ val engine = MarkdownEngine.withPreset(context, config)
 ## 配置对比
 
 <details>
-<summary>展开查看配置对比表格</summary>
+<summary>展开查看配置对比表</summary>
 
 | 功能 | 默认 | 博客 | 聊天 | 编辑器 | 安全 | 性能 |
 |------|------|------|------|--------|------|------|
@@ -198,7 +195,7 @@ val engine = MarkdownEngine.withPreset(context, config)
 ## 最佳实践
 
 <details>
-<summary>展开查看最佳实践建议</summary>
+<summary>展开查看最佳实践</summary>
 
 1. **使用 DSL 配置** - 更简洁、更易读
 2. **选择合适的预设** - 根据使用场景选择预设配置
