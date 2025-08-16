@@ -27,6 +27,11 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+    <activity
+      android:exported="false"
+      android:label="Compose 演示"
+      android:name=".ComposeActivity"
+      android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
   </application>
 
 </manifest>

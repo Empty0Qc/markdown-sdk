@@ -34,4 +34,15 @@
     android:text="调试渲染"
     android:contentDescription="调试渲染"
     app:icon="@android:drawable/ic_menu_info_details" />
+
+  <!-- Compose 演示按钮 -->
+  <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+    android:id="@+id/fab_compose"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|center"
+    android:layout_margin="10dp"
+    android:text="Compose 演示"
+    android:contentDescription="Compose 演示"
+    app:icon="@android:drawable/ic_menu_view" />
 </FrameLayout>
