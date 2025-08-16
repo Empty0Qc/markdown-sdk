@@ -1,0 +1,170 @@
+[versions]
+# Android
+android-gradle-plugin = "8.2.2"
+android-compile-sdk = "34"
+android-min-sdk = "21"
+android-target-sdk = "34"
+
+# Kotlin
+kotlin = "1.9.22"
+kotlin-coroutines = "1.7.3"
+
+# AndroidX
+androidx-core = "1.12.0"
+androidx-lifecycle = "2.7.0"
+androidx-activity = "1.8.2"
+androidx-compose-bom = "2024.02.00"
+androidx-compose-compiler = "1.5.8"
+
+# UI
+material = "1.11.0"
+
+# Markdown
+markwon = "4.6.2"
+
+# Image Loading
+glide = "4.16.0"
+
+# Testing
+junit = "4.13.2"
+androidx-test-ext-junit = "1.1.5"
+androidx-test-espresso = "3.5.1"
+
+# Build Tools
+dokka = "1.9.10"
+detekt = "1.23.4"
+ktlint = "11.6.1"
+
+[libraries]
+# Android Gradle Plugin
+android-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "android-gradle-plugin" }
+kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+detekt-gradle-plugin = { group = "io.gitlab.arturbosch.detekt", name = "detekt-gradle-plugin", version.ref = "detekt" }
+
+# Kotlin
+kotlin-stdlib = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib", version.ref = "kotlin" }
+kotlin-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlin-coroutines" }
+kotlin-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlin-coroutines" }
+
+# AndroidX Core
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidx-core" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version = "1.7.0" }
+
+# AndroidX Lifecycle
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "androidx-lifecycle" }
+
+# AndroidX Activity
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "androidx-activity" }
+
+# AndroidX Compose BOM
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidx-compose-bom" }
+androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+
+# Material Design
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+# Markwon
+markwon-core = { group = "io.noties.markwon", name = "core", version.ref = "markwon" }
+markwon-editor = { group = "io.noties.markwon", name = "editor", version.ref = "markwon" }
+markwon-html = { group = "io.noties.markwon", name = "html", version.ref = "markwon" }
+markwon-image = { group = "io.noties.markwon", name = "image", version.ref = "markwon" }
+markwon-image-glide = { group = "io.noties.markwon", name = "image-glide", version.ref = "markwon" }
+markwon-ext-latex = { group = "io.noties.markwon", name = "ext-latex", version.ref = "markwon" }
+markwon-linkify = { group = "io.noties.markwon", name = "linkify", version.ref = "markwon" }
+markwon-ext-strikethrough = { group = "io.noties.markwon", name = "ext-strikethrough", version.ref = "markwon" }
+markwon-inline-parser = { group = "io.noties.markwon", name = "inline-parser", version.ref = "markwon" }
+markwon-syntax-highlight = { group = "io.noties.markwon", name = "syntax-highlight", version.ref = "markwon" }
+markwon-ext-tables = { group = "io.noties.markwon", name = "ext-tables", version.ref = "markwon" }
+markwon-ext-tasklist = { group = "io.noties.markwon", name = "ext-tasklist", version.ref = "markwon" }
+
+# Glide
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+glide-compiler = { group = "com.github.bumptech.glide", name = "compiler", version.ref = "glide" }
+
+# Testing
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
+androidx-test-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "androidx-test-espresso" }
+
+[plugins]
+# Android
+android-application = { id = "com.android.application", version.ref = "android-gradle-plugin" }
+android-library = { id = "com.android.library", version.ref = "android-gradle-plugin" }
+
+# Kotlin
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+
+# Documentation
+dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
+
+# Code Quality
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
+
+# Convention Plugins
+markdownsdk-android-library = { id = "markdownsdk.android.library", version = "unspecified" }
+markdownsdk-android-application = { id = "markdownsdk.android.application", version = "unspecified" }
+markdownsdk-kotlin-library = { id = "markdownsdk.kotlin.library", version = "unspecified" }
+markdownsdk-publishing = { id = "markdownsdk.publishing", version = "unspecified" }
+
+[bundles]
+# AndroidX Lifecycle
+androidx-lifecycle = [
+    "androidx-lifecycle-runtime-ktx",
+    "androidx-lifecycle-viewmodel-ktx",
+    "androidx-lifecycle-livedata-ktx"
+]
+
+# AndroidX Compose
+androidx-compose = [
+    "androidx-compose-ui",
+    "androidx-compose-ui-graphics",
+    "androidx-compose-ui-tooling-preview",
+    "androidx-compose-material3"
+]
+
+# AndroidX Compose Debug
+androidx-compose-debug = [
+    "androidx-compose-ui-tooling",
+    "androidx-compose-ui-test-manifest"
+]
+
+# Markwon Core
+markwon-core-bundle = [
+    "markwon-core",
+    "markwon-html",
+    "markwon-linkify",
+    "markwon-ext-strikethrough",
+    "markwon-inline-parser"
+]
+
+# Markwon Extensions
+markwon-extensions = [
+    "markwon-ext-tables",
+    "markwon-ext-tasklist",
+    "markwon-ext-latex",
+    "markwon-syntax-highlight"
+]
+
+# Markwon Image
+markwon-image-bundle = [
+    "markwon-image",
+    "markwon-image-glide",
+    "glide"
+]
+
+# Testing
+testing = [
+    "junit",
+    "androidx-test-ext-junit",
+    "androidx-test-espresso-core"
+]
