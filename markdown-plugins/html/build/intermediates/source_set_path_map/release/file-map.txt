@@ -1,0 +1,7 @@
+com.markdownsdk.plugins.html-pngs-0 /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/html/build/generated/res/pngs/release
+com.markdownsdk.plugins.html-resValues-1 /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/html/build/generated/res/resValues/release
+com.markdownsdk.plugins.html-mergeReleaseResources-2 /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/html/build/intermediates/incremental/release/mergeReleaseResources/merged.dir
+com.markdownsdk.plugins.html-mergeReleaseResources-3 /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/html/build/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+com.markdownsdk.plugins.html-merged_res-4 /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/html/build/intermediates/merged_res/release
+com.markdownsdk.plugins.html-main-5 /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/html/src/main/res
+com.markdownsdk.plugins.html-release-6 /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/html/src/release/res

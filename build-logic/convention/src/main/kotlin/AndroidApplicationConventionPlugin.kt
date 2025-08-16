@@ -72,6 +72,14 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
             }
 
             dependencies {
+                // Kotlin standard library
+                add("implementation", "org.jetbrains.kotlin:kotlin-stdlib:1.9.22")
+                
+                // Android core dependencies
+                add("implementation", "androidx.core:core-ktx:1.12.0")
+                add("implementation", "androidx.appcompat:appcompat:1.7.0")
+                
+                // Testing dependencies
                 add("testImplementation", "junit:junit:4.13.2")
                 add("androidTestImplementation", "androidx.test.ext:junit:1.1.5")
                 add("androidTestImplementation", "androidx.test.espresso:espresso-core:3.5.1")

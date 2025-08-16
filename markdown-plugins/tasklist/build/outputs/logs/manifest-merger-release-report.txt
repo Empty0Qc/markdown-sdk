@@ -1,0 +1,16 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/tasklist/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest14860295176132869142.xml:2:13-83
+INJECTED from /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/tasklist/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest14860295176132869142.xml:2:13-83
+	package
+		INJECTED from /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/tasklist/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest14860295176132869142.xml
+	xmlns:android
+		ADDED from /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/tasklist/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest14860295176132869142.xml:2:23-81
+uses-sdk
+INJECTED from /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/tasklist/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest14860295176132869142.xml reason: use-sdk injection requested
+INJECTED from /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/tasklist/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest14860295176132869142.xml
+INJECTED from /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/tasklist/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest14860295176132869142.xml
+	android:targetSdkVersion
+		INJECTED from /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/tasklist/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest14860295176132869142.xml
+	android:minSdkVersion
+		INJECTED from /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/tasklist/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest14860295176132869142.xml

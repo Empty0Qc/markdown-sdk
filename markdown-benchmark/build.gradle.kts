@@ -1,9 +1,10 @@
 plugins {
-    id("android-library-conventions")
-    id("androidx.benchmark")
+    alias(libs.plugins.markdownsdk.android.library)
+    alias(libs.plugins.androidx.benchmark)
 }
 
 android {
+    namespace = "com.markdownsdk.benchmark"
     testBuildType = "release"
     defaultConfig {
         testInstrumentationRunner = "androidx.benchmark.junit4.AndroidBenchmarkRunner"

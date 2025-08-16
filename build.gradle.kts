@@ -6,10 +6,10 @@ plugins {
 
   // Kotlin Android Plugin
   alias(libs.plugins.kotlin.android) apply false
-  
+
   // Documentation
   alias(libs.plugins.dokka) apply false
-  
+
   // Code Quality
   alias(libs.plugins.detekt) apply false
   alias(libs.plugins.ktlint) apply false

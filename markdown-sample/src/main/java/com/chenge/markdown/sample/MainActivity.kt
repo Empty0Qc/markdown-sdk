@@ -15,7 +15,7 @@ import com.chenge.markdown.engine.ImageSizePlugin
 import com.chenge.markdown.engine.MarkdownPlugins
 import com.chenge.markdown.engine.MarkdownView
 import com.chenge.markdown.debug.MarkdownDebugRenderer
-import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+import com.google.android.material.button.MaterialButton
 import android.text.method.LinkMovementMethod
 
 class MainActivity : AppCompatActivity() {
@@ -27,8 +27,9 @@ class MainActivity : AppCompatActivity() {
     setContentView(R.layout.activity_main)
 
     val markdownView = findViewById<MarkdownView>(R.id.markdownView)
-    val fabTiming = findViewById<ExtendedFloatingActionButton>(R.id.fabTiming)
-    val fabDebug = findViewById<ExtendedFloatingActionButton>(R.id.fabDebug)
+    val btnTiming = findViewById<MaterialButton>(R.id.btnTiming)
+    val btnDebug = findViewById<MaterialButton>(R.id.btnDebug)
+    val btnCompose = findViewById<MaterialButton>(R.id.btnCompose)
 
     // 加载 assets 文件里的全格式 Markdown 内容
     val rawMarkdown = MarkdownLoader.loadFromAssets(this, "full_format_test.md")
@@ -83,33 +84,45 @@ class MainActivity : AppCompatActivity() {
       debug()
     }
 
-    // 先使用 MarkdownEngine 渲染一次内容（第一步目标：暂不渲染，使用调试按钮触发）
-//    engine.render(markdownView, parsedMarkdown)
+    // 先使用 MarkdownEngine 渲染一次内容
+    engine.render(markdownView, parsedMarkdown)
 
     markdownView.movementMethod = LinkMovementMethod.getInstance()
 
-    // 耗时按钮默认收起
-    fabTiming.shrink()
-    fabTiming.setOnClickListener {
-      if (fabTiming.isExtended) fabTiming.shrink() else fabTiming.extend()
+    // 耗时按钮点击切换显示/隐藏
+    var isTimingVisible = false
+    btnTiming.setOnClickListener {
+      isTimingVisible = !isTimingVisible
+      if (!isTimingVisible) {
+        btnTiming.text = "耗时"
+      }
     }
 
     // 点击调试按钮
-    fabDebug.setOnClickListener {
+    btnDebug.setOnClickListener {
+      // 禁用按钮防止重复点击
+      btnDebug.isEnabled = false
+      btnDebug.text = "渲染中..."
+      
       MarkdownDebugRenderer.renderWithTiming(
         engine.getMarkwon(), markdownView, parsedMarkdown, async = !isSyncMode
       ) { duration ->
-        fabTiming.text = if (isSyncMode) "同步耗时 ${duration}ms" else "异步耗时 ${duration}ms"
-        fabTiming.extend()
+        val modeText = if (isSyncMode) "同步" else "异步"
+        btnTiming.text = "${modeText}耗时: ${duration}ms"
+        isTimingVisible = true
+        
+        // 恢复按钮状态
+        btnDebug.isEnabled = true
+        btnDebug.text = "调试渲染 (${if (isSyncMode) "切换到异步" else "切换到同步"})"
+        
         Log.d("MarkdownDebug", "渲染完成，耗时: ${duration}ms")
       }
       // 切换模式
       isSyncMode = !isSyncMode
     }
 
-    // 添加跳转到 Compose 演示的按钮
-    val fabCompose = findViewById<ExtendedFloatingActionButton>(R.id.fab_compose)
-    fabCompose.setOnClickListener {
+    // Compose 演示按钮
+    btnCompose.setOnClickListener {
       startActivity(Intent(this, ComposeActivity::class.java))
     }
   }

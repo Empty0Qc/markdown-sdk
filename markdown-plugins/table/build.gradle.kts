@@ -1,3 +1,7 @@
 plugins {
-    id("android-library-conventions")
+    alias(libs.plugins.markdownsdk.android.library)
+}
+
+android {
+    namespace = "com.markdownsdk.plugins.table"
 }
