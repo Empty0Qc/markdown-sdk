@@ -1,7 +1,0 @@
-com.markdownsdk.plugins.imageglide.image-glide-pngs-0 /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/image-glide/build/generated/res/pngs/release
-com.markdownsdk.plugins.imageglide.image-glide-resValues-1 /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/image-glide/build/generated/res/resValues/release
-com.markdownsdk.plugins.imageglide.image-glide-mergeReleaseResources-2 /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/image-glide/build/intermediates/incremental/release/mergeReleaseResources/merged.dir
-com.markdownsdk.plugins.imageglide.image-glide-mergeReleaseResources-3 /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/image-glide/build/intermediates/incremental/release/mergeReleaseResources/stripped.dir
-com.markdownsdk.plugins.imageglide.image-glide-merged_res-4 /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/image-glide/build/intermediates/merged_res/release
-com.markdownsdk.plugins.imageglide.image-glide-main-5 /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/image-glide/src/main/res
-com.markdownsdk.plugins.imageglide.image-glide-release-6 /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/image-glide/src/release/res

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:fitsSystemWindows="false"
+  tools:context=".MainActivity">
+
+  <!-- App Bar Layout -->
+  <com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="false">
+
+    <com.google.android.material.appbar.MaterialToolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="48dp"
+      android:minHeight="48dp"
+      android:background="?attr/colorPrimary"
+      android:theme="@style/ThemeOverlay.Material3.Dark.ActionBar"
+      app:popupTheme="@style/ThemeOverlay.Material3.Light" />
+
+  </com.google.android.material.appbar.AppBarLayout>
+
+  <!-- Main Content -->
+  <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+        android:paddingBottom="80dp"
+        android:clipToPadding="false">
+
+      <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Content MarkdownView -->
+        <com.chenge.markdown.render.MarkdownView
+          android:id="@+id/contentTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="16dp"
+          android:layout_marginBottom="80dp"
+          android:lineSpacingExtra="4dp"
+          android:textIsSelectable="true"
+          android:textSize="16sp"
+          android:visibility="gone"
+          android:clickable="false"
+          android:focusable="false"
+          tools:text="Sample markdown content"
+          tools:visibility="visible" />
+
+        <!-- Loading Progress Bar -->
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+          android:id="@+id/progressBar"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:indeterminate="true"
+          app:indicatorColor="?attr/colorPrimary"
+          app:trackColor="?attr/colorSurfaceVariant" />
+
+      </FrameLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+  </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+  <!-- Bottom Button Layout -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="?attr/colorSurface"
+    android:elevation="8dp">
+
+    <!-- First Row: Debug and Compose buttons -->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:layout_marginBottom="4dp">
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/debugRenderButton"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="1dp"
+        android:text="@string/debug_render"
+        android:textSize="9sp"
+        android:minHeight="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        style="@style/Widget.Material3.Button.OutlinedButton" />
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/streamingModeButton"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="1dp"
+        android:text="渲染模式"
+        android:textSize="9sp"
+        android:minHeight="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        style="@style/Widget.Material3.Button.OutlinedButton" />
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/typewriterButton"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="1dp"
+        android:text="渲染速度"
+        android:textSize="9sp"
+        android:minHeight="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        style="@style/Widget.Material3.Button.OutlinedButton" />
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/composeButton"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="1dp"
+        android:text="@string/compose_demo"
+        android:textSize="9sp"
+        android:minHeight="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        style="@style/Widget.Material3.Button.OutlinedButton" />
+
+    </LinearLayout>
+
+    <!-- Second Row: Time display -->
+    <TextView
+      android:id="@+id/timeTextView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:text="@string/render_time"
+      android:textSize="10sp"
+      android:textColor="?attr/colorOnSurface"
+      android:padding="4dp" />
+
+  </LinearLayout>
+
+  <!-- Floating Action Button -->
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/fab"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|end"
+    android:layout_margin="16dp"
+    android:layout_marginBottom="80dp"
+    android:contentDescription="@string/toggle_theme"
+    app:srcCompat="@drawable/ic_theme_toggle"
+    app:tint="?attr/colorOnPrimary" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

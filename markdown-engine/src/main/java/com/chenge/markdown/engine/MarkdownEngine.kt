@@ -92,14 +92,17 @@ class MarkdownEngine private constructor(
   
   /**
    * 流式渲染Markdown（逐步显示内容）
+   * @deprecated 请使用ProgressiveRenderer替代此方法
    */
+  @Deprecated("Use ProgressiveRenderer instead", ReplaceWith("ProgressiveRenderer"))
   fun renderStreaming(target: TextView, markdown: String) {
     val startTime = if (config.debugMode) System.currentTimeMillis() else 0
     
     val parsed = MarkdownParser.parse(markdown)
     val safeMarkdown = MarkdownSanitizer.sanitize(parsed)
     
-    MarkdownRenderer.setMarkdownStreaming(engineMarkwon, target, safeMarkdown)
+    // 降级到异步渲染，建议使用ProgressiveRenderer
+    MarkdownRenderer.setMarkdownAsync(engineMarkwon, target, safeMarkdown)
     
     if (config.debugMode) {
        val duration = System.currentTimeMillis() - startTime

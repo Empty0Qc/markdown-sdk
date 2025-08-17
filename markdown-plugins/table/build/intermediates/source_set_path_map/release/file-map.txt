@@ -1,7 +1,0 @@
-com.markdownsdk.plugins.table-pngs-0 /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/table/build/generated/res/pngs/release
-com.markdownsdk.plugins.table-resValues-1 /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/table/build/generated/res/resValues/release
-com.markdownsdk.plugins.table-mergeReleaseResources-2 /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/table/build/intermediates/incremental/release/mergeReleaseResources/merged.dir
-com.markdownsdk.plugins.table-mergeReleaseResources-3 /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/table/build/intermediates/incremental/release/mergeReleaseResources/stripped.dir
-com.markdownsdk.plugins.table-merged_res-4 /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/table/build/intermediates/merged_res/release
-com.markdownsdk.plugins.table-main-5 /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/table/src/main/res
-com.markdownsdk.plugins.table-release-6 /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/table/src/release/res

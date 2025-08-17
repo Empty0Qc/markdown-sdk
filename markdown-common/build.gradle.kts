@@ -8,6 +8,9 @@ android {
 }
 
 dependencies {
+  // Android annotations
+  implementation("androidx.annotation:annotation:1.7.1")
+  
   // Test dependencies
   testImplementation(libs.junit)
 }

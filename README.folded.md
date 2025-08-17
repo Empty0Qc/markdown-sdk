@@ -202,7 +202,7 @@ MarkdownRenderer.setMarkdownAsync(markwon, textView, markdown) {
 | MarkdownParser        | 解析并净化 Markdown 内容 |
 | EmojiReplacer         | Emoji 短代码替换 |
 | MarkdownView          | 自定义 TextView 渲染控件 |
-| StreamingRenderer     | 流式增量渲染实现 |
+
 | MarkdownPlugin        | 插件统一接口 |
 | ClickablePlugin       | 链接/代码点击回调 |
 | ImageSizePlugin       | 按 URL 参数解析图片尺寸 |

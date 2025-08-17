@@ -1,7 +1,0 @@
-com.markdownsdk.plugins.latex-pngs-0 /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/latex/build/generated/res/pngs/release
-com.markdownsdk.plugins.latex-resValues-1 /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/latex/build/generated/res/resValues/release
-com.markdownsdk.plugins.latex-mergeReleaseResources-2 /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/latex/build/intermediates/incremental/release/mergeReleaseResources/merged.dir
-com.markdownsdk.plugins.latex-mergeReleaseResources-3 /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/latex/build/intermediates/incremental/release/mergeReleaseResources/stripped.dir
-com.markdownsdk.plugins.latex-merged_res-4 /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/latex/build/intermediates/merged_res/release
-com.markdownsdk.plugins.latex-main-5 /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/latex/src/main/res
-com.markdownsdk.plugins.latex-release-6 /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-plugins/latex/src/release/res

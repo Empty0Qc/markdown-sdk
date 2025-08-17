@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.chenge.markdown.engine.markdown-engine-mergeReleaseResources-26:/values-da/values-da.xml",
+            "outputFile": "com.chenge.markdown.engine.markdown-engine-mergeReleaseResources-30:/values-da/values-da.xml",
             "map": [
                 {
                     "source": "/Users/quchen/.gradle/caches/transforms-4/88c8cdb71ef66f174158d2e25bdbc67d/transformed/core-1.13.0/res/values-da/values-da.xml",
@@ -40,7 +40,7 @@
             ]
         },
         {
-            "outputFile": "com.chenge.markdown.engine.markdown-engine-merged_res-28:/values-da/values-da.xml",
+            "outputFile": "com.chenge.markdown.engine.markdown-engine-merged_res-32:/values-da/values-da.xml",
             "map": [
                 {
                     "source": "/Users/quchen/.gradle/caches/transforms-4/88c8cdb71ef66f174158d2e25bdbc67d/transformed/core-1.13.0/res/values-da/values-da.xml",

@@ -22,21 +22,14 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/build-logic" />
             <option value="$PROJECT_DIR$/build-logic/convention" />
-            <option value="$PROJECT_DIR$/markdown-benchmark" />
             <option value="$PROJECT_DIR$/markdown-common" />
             <option value="$PROJECT_DIR$/markdown-core" />
-            <option value="$PROJECT_DIR$/markdown-debug" />
             <option value="$PROJECT_DIR$/markdown-engine" />
             <option value="$PROJECT_DIR$/markdown-plugins" />
-            <option value="$PROJECT_DIR$/markdown-plugins/html" />
-            <option value="$PROJECT_DIR$/markdown-plugins/image-glide" />
-            <option value="$PROJECT_DIR$/markdown-plugins/latex" />
-            <option value="$PROJECT_DIR$/markdown-plugins/table" />
-            <option value="$PROJECT_DIR$/markdown-plugins/tasklist" />
             <option value="$PROJECT_DIR$/markdown-render" />
-            <option value="$PROJECT_DIR$/markdown-sample" />
           </set>
         </option>
       </GradleProjectSettings>

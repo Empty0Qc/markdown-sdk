@@ -179,7 +179,7 @@ document.getElementById(id).style.display = 'none';
     <div class="mdl-layout__header-row">
       <span class="mdl-layout-title">Lint Report: 1 warning</span>
       <div class="mdl-layout-spacer"></div>
-      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Sun Aug 17 01:15:18 CST 2025 by AGP (8.2.2)</nav>
+      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Sun Aug 17 15:27:26 CST 2025 by AGP (8.2.2)</nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -204,7 +204,7 @@ document.getElementById(id).style.display = 'none';
 <tr>
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#StaticFieldLeak">StaticFieldLeak</a>: Static Field Leaks</td></tr>
-<tr><td></td><td class="categoryColumn"><a href="#ExtraIssues">Included Additional Checks (26)</a>
+<tr><td></td><td class="categoryColumn"><a href="#ExtraIssues">Included Additional Checks (29)</a>
 </td></tr>
 <tr><td></td><td class="categoryColumn"><a href="#MissingIssues">Disabled Checks (39)</a>
 </td></tr>
@@ -407,6 +407,47 @@ In order to use the ActivityResult APIs you must upgrade your                 Fr
 Vendor: Android Open Source Project<br/>
 Identifier: androidx.activity<br/>
 Feedback: <a href="https://issuetracker.google.com/issues/new?component=527362">https://issuetracker.google.com/issues/new?component=527362</a><br/>
+</div>
+<br/>
+<br/></div>
+</div>
+</div>
+<div class="issue">
+<div class="id">NullSafeMutableLiveData<div class="issueSeparator"></div>
+</div>
+<div class="metadata"><div class="explanation">
+This check ensures that LiveData values are not null when explicitly                 declared as non-nullable.<br/>
+<br/>
+                Kotlin interoperability does not support enforcing explicit null-safety when using                 generic Java type parameters. Since LiveData is a Java class its value can always                 be null even when its type is explicitly declared as non-nullable. This can lead                 to runtime exceptions from reading a null LiveData value that is assumed to be                 non-nullable.<br/><div class="vendor">
+Vendor: Android Open Source Project<br/>
+Identifier: androidx.lifecycle<br/>
+Feedback: <a href="https://issuetracker.google.com/issues/new?component=413132">https://issuetracker.google.com/issues/new?component=413132</a><br/>
+</div>
+<br/>
+<br/></div>
+</div>
+</div>
+<div class="issue">
+<div class="id">RepeatOnLifecycleWrongUsage<div class="issueSeparator"></div>
+</div>
+<div class="metadata"><div class="explanation">
+The repeatOnLifecycle APIs should be used when the View is created,                 that is in the <code>onCreate</code> lifecycle method for Activities, or <code>onViewCreated</code> in                 case you're using Fragments.<br/><div class="vendor">
+Vendor: Android Open Source Project<br/>
+Identifier: androidx.lifecycle<br/>
+Feedback: <a href="https://issuetracker.google.com/issues/new?component=413132">https://issuetracker.google.com/issues/new?component=413132</a><br/>
+</div>
+<br/>
+<br/></div>
+</div>
+</div>
+<div class="issue">
+<div class="id">UnsafeLifecycleWhenUsage<div class="issueSeparator"></div>
+</div>
+<div class="metadata"><div class="explanation">
+If the <code>Lifecycle</code> is destroyed within the block of                     <code>Lifecycle.whenStarted</code> or any similar <code>Lifecycle.when</code> method is suspended,                     the block will be cancelled, which will also cancel any child coroutine                     launched inside the block. As as a result, If you have a try finally block                     in your code, the finally might run after the Lifecycle moves outside                     the desired state. It is recommended to check the <code>Lifecycle.isAtLeast</code>                     before accessing UI in finally block. Similarly,                     if you have a catch statement that might catch <code>CancellationException</code>,                     you should check the <code>Lifecycle.isAtLeast</code> before accessing the UI. See                     documentation of <code>Lifecycle.whenStateAtLeast</code> for more details<br/><div class="vendor">
+Vendor: Android Open Source Project<br/>
+Identifier: androidx.lifecycle<br/>
+Feedback: <a href="https://issuetracker.google.com/issues/new?component=413132">https://issuetracker.google.com/issues/new?component=413132</a><br/>
 </div>
 <br/>
 <br/></div>

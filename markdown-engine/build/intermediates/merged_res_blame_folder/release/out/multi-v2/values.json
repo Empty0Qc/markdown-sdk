@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.chenge.markdown.engine.markdown-engine-mergeReleaseResources-26:/values/values.xml",
+            "outputFile": "com.chenge.markdown.engine.markdown-engine-mergeReleaseResources-30:/values/values.xml",
             "map": [
                 {
                     "source": "/Users/quchen/.gradle/caches/transforms-4/9d2eb1dac1813af2a270bfec3dca72ce/transformed/activity-1.7.0/res/values/values.xml",
@@ -52,6 +52,23 @@
                         "startOffsets": "15652",
                         "endColumns": "57",
                         "endOffsets": "15705"
+                    }
+                },
+                {
+                    "source": "/Users/quchen/.gradle/caches/transforms-4/64e9ce4afc88221aab004c0a28c15407/transformed/lifecycle-runtime-2.7.0/res/values/values.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "42",
+                        "endOffsets": "93"
+                    },
+                    "to": {
+                        "startLines": "265",
+                        "startColumns": "4",
+                        "startOffsets": "17141",
+                        "endColumns": "42",
+                        "endOffsets": "17179"
                     }
                 },
                 {
@@ -127,7 +144,7 @@
                     }
                 },
                 {
-                    "source": "/Users/quchen/.gradle/caches/transforms-4/e1bea39c81c2979e9f2771a5199c292d/transformed/lifecycle-viewmodel-2.6.2/res/values/values.xml",
+                    "source": "/Users/quchen/.gradle/caches/transforms-4/3a3899e07ea06f372539b989fefc7eb3/transformed/lifecycle-viewmodel-2.7.0/res/values/values.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -177,23 +194,6 @@
                         "startOffsets": "15814,15871",
                         "endColumns": "56,75",
                         "endOffsets": "15866,15942"
-                    }
-                },
-                {
-                    "source": "/Users/quchen/.gradle/caches/transforms-4/58b68ec32d6250fd4c49702b41b000f7/transformed/lifecycle-runtime-2.6.2/res/values/values.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "42",
-                        "endOffsets": "93"
-                    },
-                    "to": {
-                        "startLines": "265",
-                        "startColumns": "4",
-                        "startOffsets": "17141",
-                        "endColumns": "42",
-                        "endOffsets": "17179"
                     }
                 },
                 {
@@ -237,7 +237,7 @@
             ]
         },
         {
-            "outputFile": "com.chenge.markdown.engine.markdown-engine-merged_res-28:/values/values.xml",
+            "outputFile": "com.chenge.markdown.engine.markdown-engine-merged_res-32:/values/values.xml",
             "map": [
                 {
                     "source": "/Users/quchen/.gradle/caches/transforms-4/9d2eb1dac1813af2a270bfec3dca72ce/transformed/activity-1.7.0/res/values/values.xml",
@@ -288,6 +288,23 @@
                         "startOffsets": "15652",
                         "endColumns": "57",
                         "endOffsets": "15705"
+                    }
+                },
+                {
+                    "source": "/Users/quchen/.gradle/caches/transforms-4/64e9ce4afc88221aab004c0a28c15407/transformed/lifecycle-runtime-2.7.0/res/values/values.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "42",
+                        "endOffsets": "93"
+                    },
+                    "to": {
+                        "startLines": "265",
+                        "startColumns": "4",
+                        "startOffsets": "17141",
+                        "endColumns": "42",
+                        "endOffsets": "17179"
                     }
                 },
                 {
@@ -363,7 +380,7 @@
                     }
                 },
                 {
-                    "source": "/Users/quchen/.gradle/caches/transforms-4/e1bea39c81c2979e9f2771a5199c292d/transformed/lifecycle-viewmodel-2.6.2/res/values/values.xml",
+                    "source": "/Users/quchen/.gradle/caches/transforms-4/3a3899e07ea06f372539b989fefc7eb3/transformed/lifecycle-viewmodel-2.7.0/res/values/values.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -413,23 +430,6 @@
                         "startOffsets": "15814,15871",
                         "endColumns": "56,75",
                         "endOffsets": "15866,15942"
-                    }
-                },
-                {
-                    "source": "/Users/quchen/.gradle/caches/transforms-4/58b68ec32d6250fd4c49702b41b000f7/transformed/lifecycle-runtime-2.6.2/res/values/values.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "42",
-                        "endOffsets": "93"
-                    },
-                    "to": {
-                        "startLines": "265",
-                        "startColumns": "4",
-                        "startOffsets": "17141",
-                        "endColumns": "42",
-                        "endOffsets": "17179"
                     }
                 },
                 {

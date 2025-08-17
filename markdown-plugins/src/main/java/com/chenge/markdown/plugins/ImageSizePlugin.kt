@@ -12,7 +12,10 @@ import io.noties.markwon.image.glide.GlideImagesPlugin
 /**
  * 图片尺寸解析插件，url 支持参数 w=100&h=200
  */
-class ImageSizePlugin(private val context: Context) : MarkdownPlugin {
+class ImageSizePlugin(context: Context) : MarkdownPlugin {
+    
+    // 使用 ApplicationContext 避免 Activity 销毁后的生命周期问题
+    private val appContext = context.applicationContext
 
     override fun apply(builder: io.noties.markwon.Markwon.Builder) {
         builder.usePlugin(
@@ -21,12 +24,12 @@ class ImageSizePlugin(private val context: Context) : MarkdownPlugin {
                     override fun load(drawable: AsyncDrawable): RequestBuilder<Drawable> {
                         val destination = drawable.destination
                         val (src, w, h) = parseImageUrl(destination)
-                        val req = Glide.with(context).asDrawable().load(src)
+                        val req = Glide.with(appContext).asDrawable().load(src)
                         return if (w != null && h != null && w > 0 && h > 0) req.override(w, h) else req
                     }
 
                     override fun cancel(target: Target<*>) {
-                        Glide.with(context).clear(target)
+                        Glide.with(appContext).clear(target)
                     }
                 }
             )
