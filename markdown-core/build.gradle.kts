@@ -1,15 +1,17 @@
 plugins {
-  alias(libs.plugins.markdownsdk.android.library)
-  alias(libs.plugins.markdownsdk.publishing)
+    alias(libs.plugins.markdownsdk.android.library)
+    alias(libs.plugins.markdownsdk.publishing)
+    alias(libs.plugins.ktlint)
+    alias(libs.plugins.detekt)
 }
 
 android {
-  namespace = "com.chenge.markdown.core"
+    namespace = "com.chenge.markdown.core"
 }
 
 dependencies {
-  implementation(project(":markdown-common"))
-  
-  // Test dependencies
-  testImplementation(libs.junit)
+    implementation(project(":markdown-common"))
+
+    // Test dependencies
+    testImplementation(libs.junit)
 }

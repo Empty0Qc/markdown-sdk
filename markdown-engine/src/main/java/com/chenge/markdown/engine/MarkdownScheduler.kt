@@ -13,10 +13,10 @@ import java.util.concurrent.atomic.AtomicInteger
  * 提供独立的线程池用于 Markdown 解析和渲染，避免阻塞主线程
  */
 object MarkdownScheduler {
-    
+
     private const val CORE_POOL_SIZE = 2
     private const val MAX_POOL_SIZE = 4
-    
+
     /**
      * 专用于 Markdown 渲染的线程池
      */
@@ -26,7 +26,7 @@ object MarkdownScheduler {
             MarkdownThreadFactory("MarkdownRender")
         )
     }
-    
+
     /**
      * 专用于图片加载的线程池
      */
@@ -36,26 +36,26 @@ object MarkdownScheduler {
             MarkdownThreadFactory("MarkdownImage")
         )
     }
-    
+
     /**
      * 主线程 Handler
      */
     private val mainHandler = Handler(Looper.getMainLooper())
-    
+
     /**
      * 在渲染线程池中执行任务
      */
     fun executeRender(task: Runnable): Future<*> {
         return renderExecutor.submit(task)
     }
-    
+
     /**
      * 在图片加载线程池中执行任务
      */
     fun executeImage(task: Runnable): Future<*> {
         return imageExecutor.submit(task)
     }
-    
+
     /**
      * 在主线程中执行任务
      */
@@ -66,14 +66,14 @@ object MarkdownScheduler {
             mainHandler.post(task)
         }
     }
-    
+
     /**
      * 延迟在主线程中执行任务
      */
     fun executeOnMainDelayed(task: Runnable, delayMillis: Long) {
         mainHandler.postDelayed(task, delayMillis)
     }
-    
+
     /**
      * 异步执行渲染任务并在主线程回调结果
      */
@@ -95,14 +95,14 @@ object MarkdownScheduler {
             }
         }
     }
-    
+
     /**
      * 检查当前是否在主线程
      */
     fun isMainThread(): Boolean {
         return Looper.myLooper() == Looper.getMainLooper()
     }
-    
+
     /**
      * 获取调度器状态
      */
@@ -113,7 +113,7 @@ object MarkdownScheduler {
             isMainThread = isMainThread()
         )
     }
-    
+
     /**
      * 关闭调度器（通常在应用退出时调用）
      */
@@ -121,7 +121,7 @@ object MarkdownScheduler {
         renderExecutor.shutdown()
         imageExecutor.shutdown()
     }
-    
+
     /**
      * 立即关闭调度器
      */
@@ -129,13 +129,13 @@ object MarkdownScheduler {
         renderExecutor.shutdownNow()
         imageExecutor.shutdownNow()
     }
-    
+
     /**
      * 自定义线程工厂
      */
     private class MarkdownThreadFactory(private val namePrefix: String) : ThreadFactory {
         private val threadNumber = AtomicInteger(1)
-        
+
         override fun newThread(r: Runnable): Thread {
             val thread = Thread(r, "$namePrefix-${threadNumber.getAndIncrement()}")
             thread.isDaemon = false
@@ -143,7 +143,7 @@ object MarkdownScheduler {
             return thread
         }
     }
-    
+
     data class SchedulerStats(
         val renderPoolActive: Boolean,
         val imagePoolActive: Boolean,

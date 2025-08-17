@@ -2,24 +2,44 @@ package com.chenge.markdown.compose.ui.screen
 
 import android.content.Context
 import android.view.ViewGroup
-import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.*
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.material.icons.filled.Palette
+import androidx.compose.material.icons.filled.PlayArrow
+import androidx.compose.material.icons.filled.Sync
+import androidx.compose.material3.Button
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FilterChip
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Slider
+import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
-// import androidx.lifecycle.compose.LocalLifecycleOwner
-import com.chenge.markdown.compose.R
 import com.chenge.markdown.compose.ProgressiveRenderer
 import com.chenge.markdown.engine.MarkdownEngine
 import com.chenge.markdown.render.MarkdownView
@@ -42,19 +62,19 @@ fun MarkdownDemoScreen(
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
     // val lifecycleOwner = LocalLifecycleOwner.current
-    
+
     var markdownText by remember { mutableStateOf("") }
     var isLoading by remember { mutableStateOf(false) }
     var errorMessage by remember { mutableStateOf<String?>(null) }
-    
+
     val progressiveRenderer = remember { ProgressiveRenderer() }
-    
+
     LaunchedEffect(Unit) {
         loadMarkdownContent(context) { content ->
             markdownText = content
         }
     }
-    
+
     Column(modifier = modifier.fillMaxSize()) {
         // 顶部工具栏
         TopAppBar(
@@ -65,7 +85,7 @@ fun MarkdownDemoScreen(
                 }
             }
         )
-        
+
         // 控制面板
         Card(
             modifier = Modifier
@@ -80,9 +100,9 @@ fun MarkdownDemoScreen(
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold
                 )
-                
+
                 Spacer(modifier = Modifier.height(8.dp))
-                
+
                 // 字体大小控制
                 Row(
                     modifier = Modifier.fillMaxWidth(),
@@ -97,9 +117,9 @@ fun MarkdownDemoScreen(
                         modifier = Modifier.weight(1f)
                     )
                 }
-                
+
                 Spacer(modifier = Modifier.height(8.dp))
-                
+
                 // 渲染速度控制
                 Row(
                     modifier = Modifier.fillMaxWidth(),
@@ -107,8 +127,8 @@ fun MarkdownDemoScreen(
                 ) {
                     Text("渲染速度: ")
                     Spacer(modifier = Modifier.width(8.dp))
-                    
-                    ProgressiveRenderer.RenderSpeed.values().forEach { speed ->
+
+                    for (speed in ProgressiveRenderer.RenderSpeed.values()) {
                         FilterChip(
                             onClick = { onRenderSpeedChange(speed) },
                             label = { Text(speed.name) },
@@ -117,9 +137,9 @@ fun MarkdownDemoScreen(
                         )
                     }
                 }
-                
+
                 Spacer(modifier = Modifier.height(8.dp))
-                
+
                 // 操作按钮
                 Row {
                     Button(
@@ -134,7 +154,7 @@ fun MarkdownDemoScreen(
                                         isAsync = true,
                                         onStart = { isLoading = true },
                                         onComplete = { isLoading = false },
-                                        onError = { error -> 
+                                        onError = { error ->
                                             errorMessage = error
                                             isLoading = false
                                         }
@@ -158,9 +178,9 @@ fun MarkdownDemoScreen(
                         Spacer(modifier = Modifier.width(4.dp))
                         Text("异步渲染")
                     }
-                    
+
                     Spacer(modifier = Modifier.width(8.dp))
-                    
+
                     Button(
                         onClick = {
                             scope.launch {
@@ -173,7 +193,7 @@ fun MarkdownDemoScreen(
                                         isAsync = false,
                                         onStart = { isLoading = true },
                                         onComplete = { isLoading = false },
-                                        onError = { error -> 
+                                        onError = { error ->
                                             errorMessage = error
                                             isLoading = false
                                         }
@@ -191,7 +211,7 @@ fun MarkdownDemoScreen(
                         Text("同步渲染")
                     }
                 }
-                
+
                 // 错误信息显示
                 errorMessage?.let { error ->
                     Spacer(modifier = Modifier.height(8.dp))
@@ -209,7 +229,7 @@ fun MarkdownDemoScreen(
                 }
             }
         }
-        
+
         // Markdown 渲染区域
         Card(
             modifier = Modifier
@@ -252,17 +272,17 @@ private suspend fun renderMarkdown(
 ) {
     try {
         onStart()
-        
+
         if (markdownEngine == null) {
             onError("MarkdownEngine 未初始化")
             return
         }
-        
+
         // 简化渲染逻辑，直接使用 MarkdownView
         withContext(Dispatchers.Main) {
             // 渲染逻辑已在 AndroidView 的 update 中处理
         }
-        
+
         onComplete()
     } catch (e: Exception) {
         onError(e.message ?: "未知错误")

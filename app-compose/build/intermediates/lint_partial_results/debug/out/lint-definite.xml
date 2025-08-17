@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.2.2" type="incidents">
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;切换主题&quot;, should use `@string` resource">
+        <location
+            file="${:app-compose*debug*MAIN*sourceProvider*0*resDir*0}/menu/main_menu.xml"
+            line="8"
+            column="9"
+            startOffset="252"
+            endLine="8"
+            endColumn="29"
+            endOffset="272"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;增大字体&quot;, should use `@string` resource">
+        <location
+            file="${:app-compose*debug*MAIN*sourceProvider*0*resDir*0}/menu/main_menu.xml"
+            line="15"
+            column="13"
+            startOffset="471"
+            endLine="15"
+            endColumn="33"
+            endOffset="491"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;减小字体&quot;, should use `@string` resource">
+        <location
+            file="${:app-compose*debug*MAIN*sourceProvider*0*resDir*0}/menu/main_menu.xml"
+            line="20"
+            column="13"
+            startOffset="615"
+            endLine="20"
+            endColumn="33"
+            endOffset="635"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;重置字体&quot;, should use `@string` resource">
+        <location
+            file="${:app-compose*debug*MAIN*sourceProvider*0*resDir*0}/menu/main_menu.xml"
+            line="25"
+            column="13"
+            startOffset="756"
+            endLine="25"
+            endColumn="33"
+            endOffset="776"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;渲染慢速&quot;, should use `@string` resource">
+        <location
+            file="${:app-compose*debug*MAIN*sourceProvider*0*resDir*0}/menu/main_menu.xml"
+            line="33"
+            column="13"
+            startOffset="989"
+            endLine="33"
+            endColumn="33"
+            endOffset="1009"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;渲染正常&quot;, should use `@string` resource">
+        <location
+            file="${:app-compose*debug*MAIN*sourceProvider*0*resDir*0}/menu/main_menu.xml"
+            line="38"
+            column="13"
+            startOffset="1127"
+            endLine="38"
+            endColumn="33"
+            endOffset="1147"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;渲染快速&quot;, should use `@string` resource">
+        <location
+            file="${:app-compose*debug*MAIN*sourceProvider*0*resDir*0}/menu/main_menu.xml"
+            line="43"
+            column="13"
+            startOffset="1263"
+            endLine="43"
+            endColumn="33"
+            endOffset="1283"/>
+    </incident>
+
+    <incident
+        id="TypographyEllipsis"
+        severity="warning"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?">
+        <fix-replace
+            description="Replace with …"
+            oldString="..."
+            replacement="…"/>
+        <location
+            file="${:app-compose*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="11"
+            column="33"
+            startOffset="545"
+            endLine="11"
+            endColumn="40"
+            endOffset="552"/>
+    </incident>
+
+    <incident
+        id="OldTargetApi"
+        severity="warning"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details.">
+        <fix-replace
+            description="Update targetSdkVersion to 36"
+            oldString="35"
+            replacement="36"/>
+        <location
+            file="${:app-compose*projectDir}/build.gradle.kts"
+            line="15"
+            column="9"
+            startOffset="337"
+            endLine="15"
+            endColumn="23"
+            endOffset="351"/>
+    </incident>
+
+    <incident
+        id="UseTomlInstead"
+        severity="warning"
+        message="Use version catalog instead">
+        <location
+            file="${:app-compose*projectDir}/build.gradle.kts"
+            line="82"
+            column="21"
+            startOffset="2029"
+            endLine="82"
+            endColumn="70"
+            endOffset="2078"/>
+    </incident>
+
+    <incident
+        id="UseTomlInstead"
+        severity="warning"
+        message="Use version catalog instead">
+        <fix-alternatives>
+            <fix-composite
+                description="Replace with new library catalog declaration, reusing version variable androidx-lifecycle"
+                robot="true"
+                independent="true">
+                <fix-replace
+                    description="Replace with androidx-lifecycle-lifecycle-viewmodel-compose11 = { module = &quot;androidx.lifecycle:lifecycle-viewmodel-compose&quot;, version.ref = &quot;androidx-lifecycle&quot; }..."
+                    robot="true"
+                    independent="true"
+                    oldString="_lint_insert_begin_"
+                    replacement="androidx-lifecycle-lifecycle-viewmodel-compose11 = { module = &quot;androidx.lifecycle:lifecycle-viewmodel-compose&quot;, version.ref = &quot;androidx-lifecycle&quot; }&#xA;">
+                    <range
+                        file="$HOME/AndroidStudioProjects/markdownsdk/gradle/libs.versions.toml"
+                        startOffset="849"
+                        endOffset="849"/>
+                </fix-replace>
+                <fix-replace
+                    description="Replace with libs.androidx.lifecycle.lifecycle.viewmodel.compose11"
+                    robot="true"
+                    independent="true"
+                    replacement="libs.androidx.lifecycle.lifecycle.viewmodel.compose11">
+                    <range
+                        file="${:app-compose*projectDir}/build.gradle.kts"
+                        startOffset="2100"
+                        endOffset="2154"/>
+                </fix-replace>
+            </fix-composite>
+            <fix-composite
+                description="Replace with new library catalog declaration for androidx-lifecycle-lifecycle-viewmodel-compose12"
+                robot="true">
+                <fix-replace
+                    description="Replace with androidx-lifecycle-lifecycle-viewmodel-compose5 = &quot;2.7.0&quot;..."
+                    robot="true"
+                    oldString="_lint_insert_begin_"
+                    replacement="androidx-lifecycle-lifecycle-viewmodel-compose5 = &quot;2.7.0&quot;&#xA;">
+                    <range
+                        file="$HOME/AndroidStudioProjects/markdownsdk/gradle/libs.versions.toml"
+                        startOffset="139"
+                        endOffset="139"/>
+                </fix-replace>
+                <fix-replace
+                    description="Replace with androidx-lifecycle-lifecycle-viewmodel-compose12 = { module = &quot;androidx.lifecycle:lifecycle-viewmodel-compose&quot;, version.ref = &quot;androidx-lifecycle-lifecycle-viewmodel-compose5&quot; }..."
+                    robot="true"
+                    oldString="_lint_insert_begin_"
+                    replacement="androidx-lifecycle-lifecycle-viewmodel-compose12 = { module = &quot;androidx.lifecycle:lifecycle-viewmodel-compose&quot;, version.ref = &quot;androidx-lifecycle-lifecycle-viewmodel-compose5&quot; }&#xA;">
+                    <range
+                        file="$HOME/AndroidStudioProjects/markdownsdk/gradle/libs.versions.toml"
+                        startOffset="849"
+                        endOffset="849"/>
+                </fix-replace>
+                <fix-replace
+                    description="Replace with libs.androidx.lifecycle.lifecycle.viewmodel.compose12"
+                    robot="true"
+                    replacement="libs.androidx.lifecycle.lifecycle.viewmodel.compose12">
+                    <range
+                        file="${:app-compose*projectDir}/build.gradle.kts"
+                        startOffset="2100"
+                        endOffset="2154"/>
+                </fix-replace>
+            </fix-composite>
+        </fix-alternatives>
+        <location
+            file="${:app-compose*projectDir}/build.gradle.kts"
+            line="83"
+            column="21"
+            startOffset="2101"
+            endLine="83"
+            endColumn="73"
+            endOffset="2153"/>
+    </incident>
+
+    <incident
+        id="UseTomlInstead"
+        severity="warning"
+        message="Use version catalog instead">
+        <fix-composite
+            description="Replace with new library catalog declaration for androidx-navigation-navigation-compose5"
+            robot="true">
+            <fix-replace
+                description="Replace with androidx-navigation-navigation-compose5 = &quot;2.7.6&quot;..."
+                robot="true"
+                oldString="_lint_insert_begin_"
+                replacement="androidx-navigation-navigation-compose5 = &quot;2.7.6&quot;&#xA;">
+                <range
+                    file="$HOME/AndroidStudioProjects/markdownsdk/gradle/libs.versions.toml"
+                    startOffset="139"
+                    endOffset="139"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with androidx-navigation-navigation-compose5 = { module = &quot;androidx.navigation:navigation-compose&quot;, version.ref = &quot;androidx-navigation-navigation-compose5&quot; }..."
+                robot="true"
+                oldString="_lint_insert_begin_"
+                replacement="androidx-navigation-navigation-compose5 = { module = &quot;androidx.navigation:navigation-compose&quot;, version.ref = &quot;androidx-navigation-navigation-compose5&quot; }&#xA;">
+                <range
+                    file="$HOME/AndroidStudioProjects/markdownsdk/gradle/libs.versions.toml"
+                    startOffset="849"
+                    endOffset="849"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with libs.androidx.navigation.navigation.compose5"
+                robot="true"
+                replacement="libs.androidx.navigation.navigation.compose5">
+                <range
+                    file="${:app-compose*projectDir}/build.gradle.kts"
+                    startOffset="2175"
+                    endOffset="2221"/>
+            </fix-replace>
+        </fix-composite>
+        <location
+            file="${:app-compose*projectDir}/build.gradle.kts"
+            line="84"
+            column="21"
+            startOffset="2176"
+            endLine="84"
+            endColumn="65"
+            endOffset="2220"/>
+    </incident>
+
+    <incident
+        id="UseTomlInstead"
+        severity="warning"
+        message="Use version catalog instead">
+        <location
+            file="${:app-compose*projectDir}/build.gradle.kts"
+            line="87"
+            column="21"
+            startOffset="2289"
+            endLine="87"
+            endColumn="55"
+            endOffset="2323"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-viewmodel-compose than 2.7.0 is available: 2.9.2">
+        <fix-replace
+            description="Change to 2.9.2"
+            family="Update versions"
+            oldString="2.7.0"
+            replacement="2.9.2"/>
+        <location
+            file="${:app-compose*projectDir}/build.gradle.kts"
+            line="83"
+            column="21"
+            startOffset="2101"
+            endLine="83"
+            endColumn="73"
+            endOffset="2153"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.navigation:navigation-compose than 2.7.6 is available: 2.9.3">
+        <fix-replace
+            description="Change to 2.9.3"
+            family="Update versions"
+            oldString="2.7.6"
+            replacement="2.9.3"/>
+        <location
+            file="${:app-compose*projectDir}/build.gradle.kts"
+            line="84"
+            column="21"
+            startOffset="2176"
+            endLine="84"
+            endColumn="65"
+            endOffset="2220"/>
+    </incident>
+
+</incidents>

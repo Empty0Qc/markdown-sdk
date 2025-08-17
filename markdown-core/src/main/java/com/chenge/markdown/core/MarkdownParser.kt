@@ -7,15 +7,15 @@ import com.chenge.markdown.common.MarkdownSanitizer
  */
 object MarkdownParser {
 
-  /**
-   * 解析Markdown文本
-   * @param input 原始Markdown字符串
-   * @return 暂时直接返回原始字符串
-   */
-  fun parse(input: String): String {
-    // Emoji 替换
-    val markdownWithEmoji = EmojiReplacer.replaceShortcodes(input)
-    val safeMarkdown = MarkdownSanitizer.sanitize(markdownWithEmoji)
-    return safeMarkdown
-  }
+    /**
+     * 解析Markdown文本
+     * @param input 原始Markdown字符串
+     * @return 暂时直接返回原始字符串
+     */
+    fun parse(input: String): String {
+        // Emoji 替换
+        val markdownWithEmoji = EmojiReplacer.replaceShortcodes(input)
+        val safeMarkdown = MarkdownSanitizer.sanitize(markdownWithEmoji)
+        return safeMarkdown
+    }
 }

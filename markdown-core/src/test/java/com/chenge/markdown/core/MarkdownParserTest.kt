@@ -1,7 +1,7 @@
 package com.chenge.markdown.core
 
+import org.junit.Assert.assertEquals
 import org.junit.Test
-import org.junit.Assert.*
 
 /**
  * MarkdownParser 单元测试
@@ -67,21 +67,21 @@ class MarkdownParserTest {
             |
             |<script>alert('xss')</script>
         """.trimMargin()
-        
+
         val result = MarkdownParser.parse(input)
-        
+
         // Check emoji replacement
         assertTrue("Should contain smile emoji", result.contains("😄"))
         assertTrue("Should contain heart emoji", result.contains("❤️"))
         assertTrue("Should contain thumbsup emoji", result.contains("👍"))
         assertTrue("Should contain wink emoji", result.contains("😉"))
-        
+
         // Check HTML sanitization
         assertFalse("Should not contain script tag", result.contains("<script>"))
         assertFalse("Should not contain iframe tag", result.contains("<iframe"))
         assertTrue("Should contain escaped script", result.contains("&lt;script"))
         assertTrue("Should contain escaped iframe", result.contains("&lt;iframe"))
-        
+
         // Check that code blocks are preserved (but emojis in code are still replaced since we do emoji replacement first)
         assertTrue("Should preserve code block content", result.contains("println(\"😂\")"))
     }

@@ -10,48 +10,48 @@ import java.util.concurrent.atomic.AtomicInteger
  * 在列表场景中复用 TextView，避免频繁创建和销毁
  */
 class TextViewPool private constructor() {
-    
+
     companion object {
         private const val MAX_POOL_SIZE = 20
         private const val INITIAL_POOL_SIZE = 5
-        
+
         @Volatile
         private var INSTANCE: TextViewPool? = null
-        
+
         fun getInstance(): TextViewPool {
             return INSTANCE ?: synchronized(this) {
                 INSTANCE ?: TextViewPool().also { INSTANCE = it }
             }
         }
     }
-    
+
     /**
      * TextView 池
      */
     private val textViewPool = ConcurrentLinkedQueue<TextView>()
-    
+
     /**
      * 当前池大小
      */
     private val poolSize = AtomicInteger(0)
-    
+
     /**
      * 统计信息
      */
     private val hitCount = AtomicInteger(0)
     private val missCount = AtomicInteger(0)
     private val recycleCount = AtomicInteger(0)
-    
+
     /**
      * 从池中获取 TextView
      */
     fun acquire(context: Context): TextView {
         val textView = textViewPool.poll()
-        
+
         return if (textView != null) {
             poolSize.decrementAndGet()
             hitCount.incrementAndGet()
-            
+
             // 重置 TextView 状态
             resetTextView(textView)
             textView
@@ -60,7 +60,7 @@ class TextViewPool private constructor() {
             createNewTextView(context)
         }
     }
-    
+
     /**
      * 回收 TextView 到池中
      */
@@ -68,13 +68,13 @@ class TextViewPool private constructor() {
         if (poolSize.get() < MAX_POOL_SIZE) {
             // 清理 TextView 状态
             cleanupTextView(textView)
-            
+
             textViewPool.offer(textView)
             poolSize.incrementAndGet()
             recycleCount.incrementAndGet()
         }
     }
-    
+
     /**
      * 预热池（创建初始 TextView）
      */
@@ -88,7 +88,7 @@ class TextViewPool private constructor() {
             }
         }
     }
-    
+
     /**
      * 创建新的 TextView
      */
@@ -97,15 +97,15 @@ class TextViewPool private constructor() {
             // 设置默认属性
             textSize = 14f
             setPadding(16, 8, 16, 8)
-            
+
             // 启用文本选择
             setTextIsSelectable(true)
-            
+
             // 设置行间距
             setLineSpacing(4f, 1.2f)
         }
     }
-    
+
     /**
      * 重置 TextView 状态
      */
@@ -113,22 +113,22 @@ class TextViewPool private constructor() {
         textView.apply {
             // 清空文本
             text = ""
-            
+
             // 重置可见性
             visibility = TextView.VISIBLE
-            
+
             // 重置点击监听器
             setOnClickListener(null)
             setOnLongClickListener(null)
-            
+
             // 重置移动方法
             movementMethod = null
-            
+
             // 重置标签
             tag = null
         }
     }
-    
+
     /**
      * 清理 TextView 状态
      */
@@ -136,15 +136,15 @@ class TextViewPool private constructor() {
         textView.apply {
             // 清空文本和样式
             text = ""
-            
+
             // 移除回调
             setOnClickListener(null)
             setOnLongClickListener(null)
             movementMethod = null
-            
+
             // 清理标签
             tag = null
-            
+
             // 重置变换
             scaleX = 1f
             scaleY = 1f
@@ -154,7 +154,7 @@ class TextViewPool private constructor() {
             translationY = 0f
         }
     }
-    
+
     /**
      * 清空池
      */
@@ -162,14 +162,14 @@ class TextViewPool private constructor() {
         textViewPool.clear()
         poolSize.set(0)
     }
-    
+
     /**
      * 获取池统计信息
      */
     fun getStats(): PoolStats {
         val total = hitCount.get() + missCount.get()
         val hitRate = if (total > 0) hitCount.get().toFloat() / total else 0f
-        
+
         return PoolStats(
             currentSize = poolSize.get(),
             maxSize = MAX_POOL_SIZE,
@@ -179,7 +179,7 @@ class TextViewPool private constructor() {
             hitRate = hitRate
         )
     }
-    
+
     /**
      * 重置统计信息
      */
@@ -188,7 +188,7 @@ class TextViewPool private constructor() {
         missCount.set(0)
         recycleCount.set(0)
     }
-    
+
     data class PoolStats(
         val currentSize: Int,
         val maxSize: Int,

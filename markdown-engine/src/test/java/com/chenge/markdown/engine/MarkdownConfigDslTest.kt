@@ -2,8 +2,10 @@ package com.chenge.markdown.engine
 
 import com.chenge.markdown.common.MarkdownConfig
 import com.chenge.markdown.common.markdownConfig
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
+import org.junit.Assert.assertTrue
 import org.junit.Test
-import org.junit.Assert.*
 
 /**
  * MarkdownConfig DSL 功能测试

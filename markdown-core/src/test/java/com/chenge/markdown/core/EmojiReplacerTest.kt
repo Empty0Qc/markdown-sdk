@@ -1,7 +1,7 @@
 package com.chenge.markdown.core
 
+import org.junit.Assert.assertEquals
 import org.junit.Test
-import org.junit.Assert.*
 
 /**
  * EmojiReplacer 单元测试
