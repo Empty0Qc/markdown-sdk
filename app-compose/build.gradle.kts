@@ -57,11 +57,14 @@ android {
 dependencies {
     // 项目模块依赖 - 仅依赖核心 Markdown 功能
     implementation(project(":markdown-engine"))
+    implementation(project(":markdown-render"))
     implementation(project(":markdown-common"))
     
     // Android 核心库
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
     
     // Compose BOM - 统一管理 Compose 版本
     implementation(platform(libs.androidx.compose.bom))

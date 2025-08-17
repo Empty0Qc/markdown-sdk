@@ -6,7 +6,7 @@
   <string name="main_activity_title">Markdown渲染器演示</string>
   <string name="debug_render">调试渲染</string>
   <string name="render_time_simple">耗时: 0ms</string>
-  <string name="compose_demo">Compose</string>
+
 
   <!-- Menu Items -->
   <string name="toggle_theme">切换主题</string>

@@ -2,18 +2,6 @@
 <issues format="6" by="lint 8.2.2">
 
     <issue
-        id="ObsoleteLintCustomCheck"
-        severity="Warning"
-        message="Library lint checks reference invalid APIs; these checks **will be skipped**!&#xA;&#xA;Lint found an issue registry (`androidx.compose.runtime.lint.RuntimeIssueRegistry`)&#xA;which contains some references to invalid API:&#xA;org.jetbrains.kotlin.analysis.api.session.KtAnalysisSessionProvider: org.jetbrains.kotlin.analysis.api.lifetime.KtLifetimeTokenFactory getTokenFactory()&#xA;(Referenced from androidx/compose/runtime/lint/AutoboxingStateCreationDetector.class)&#xA;&#xA;Therefore, this lint check library is **not** included&#xA;in analysis. This affects the following lint checks:&#xA;`AutoboxingStateValueProperty`&#xA;`AutoboxingStateCreation`&#xA;`CoroutineCreationDuringComposition`&#xA;`FlowOperatorInvokedInComposition`&#xA;`ComposableLambdaParameterNaming`&#xA;`ComposableLambdaParameterPosition`&#xA;`ComposableNaming`&#xA;`StateFlowValueCalledInComposition`&#xA;`CompositionLocalNaming`&#xA;`MutableCollectionMutableState`&#xA;`ProduceStateDoesNotAssignValue`&#xA;`RememberReturnType`&#xA;`OpaqueUnitKey`&#xA;`UnrememberedMutableState`&#xA;&#xA;To use this lint check, upgrade to a more recent version&#xA;of the library."
-        category="Lint"
-        priority="10"
-        summary="Obsolete custom lint check"
-        explanation="Lint can be extended with &quot;custom checks&quot;: additional checks implemented by developers and libraries to for example enforce specific API usages required by a library or a company coding style guideline.&#xA;&#xA;The Lint APIs are not yet stable, so these checks may either cause a performance degradation, or stop working, or provide wrong results.&#xA;&#xA;This warning flags custom lint checks that are found to be using obsolete APIs and will need to be updated to run in the current lint environment.&#xA;&#xA;It may also flag issues found to be using a **newer** version of the API, meaning that you need to use a newer version of lint (or Android Studio or Gradle plugin etc) to work with these checks.">
-        <location
-            file="/Users/quchen/.gradle/caches/transforms-4/0a571d907bfdcc7cb9af3de8f5a79b81/transformed/runtime-release/jars/lint.jar"/>
-    </issue>
-
-    <issue
         id="OldTargetApi"
         severity="Warning"
         message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details."
@@ -75,7 +63,7 @@
         errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/Users/quchen/AndroidStudioProjects/markdownsdk/app/build.gradle.kts"
-            line="65"
+            line="60"
             column="21"/>
     </issue>
 
@@ -2214,22 +2202,6 @@
     <issue
         id="SmallSp"
         severity="Warning"
-        message="Avoid using sizes smaller than `11sp`: `9sp`"
-        category="Usability"
-        priority="4"
-        summary="Text size is too small"
-        explanation="Avoid using sizes smaller than 11sp."
-        errorLine1="        android:textSize=&quot;9sp&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/Users/quchen/AndroidStudioProjects/markdownsdk/app/src/main/res/layout/activity_main.xml"
-            line="141"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="SmallSp"
-        severity="Warning"
         message="Avoid using sizes smaller than `11sp`: `10sp`"
         category="Usability"
         priority="4"
@@ -2239,7 +2211,7 @@
         errorLine2="      ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/Users/quchen/AndroidStudioProjects/markdownsdk/app/src/main/res/layout/activity_main.xml"
-            line="156"
+            line="145"
             column="7"/>
     </issue>
 
@@ -2255,7 +2227,7 @@
         errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/Users/quchen/AndroidStudioProjects/markdownsdk/app/build.gradle.kts"
-            line="65"
+            line="60"
             column="21"/>
     </issue>
 
@@ -2271,7 +2243,7 @@
         errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/Users/quchen/AndroidStudioProjects/markdownsdk/app/build.gradle.kts"
-            line="66"
+            line="61"
             column="21"/>
     </issue>
 
@@ -2289,7 +2261,7 @@
         errorLine2="                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/Users/quchen/AndroidStudioProjects/markdownsdk/app/src/main/java/com/chenge/markdownsdk/MainActivity.kt"
-            line="190"
+            line="188"
             column="40"/>
     </issue>
 
@@ -2307,7 +2279,7 @@
         errorLine2="                                                                                   ~~~~~~~~~~~~~~~~">
         <location
             file="/Users/quchen/AndroidStudioProjects/markdownsdk/app/src/main/java/com/chenge/markdownsdk/MainActivity.kt"
-            line="190"
+            line="188"
             column="84"/>
     </issue>
 

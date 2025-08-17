@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.chenge.markdownsdk.app-mergeDebugResources-62:/values-xlarge-v4/values-xlarge-v4.xml",
+            "outputFile": "com.chenge.markdownsdk.app-mergeDebugResources-38:/values-xlarge-v4/values-xlarge-v4.xml",
             "map": [
                 {
                     "source": "/Users/quchen/.gradle/caches/transforms-4/b4d2ac2e0d042b6e2aa3a03e2828bd46/transformed/appcompat-1.7.0/res/values-xlarge-v4/values-xlarge-v4.xml",

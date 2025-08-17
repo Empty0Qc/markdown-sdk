@@ -26,11 +26,7 @@
             </intent-filter>
         </activity>
         
-        <activity
-            android:name=".ComposeActivity"
-            android:exported="false"
-            android:label="Compose演示"
-            android:theme="@style/Theme.MarkdownSDK" />
+
         
     </application>
 

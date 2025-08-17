@@ -1,82 +1,82 @@
 [
     {
-        "merged": "com.chenge.markdownsdk.app-merged_res-64:/drawable_ic_text_decrease.xml.flat",
-        "source": "com.chenge.markdownsdk.app-main-66:/drawable/ic_text_decrease.xml"
+        "merged": "com.chenge.markdownsdk.app-merged_res-40:/drawable_ic_text_increase.xml.flat",
+        "source": "com.chenge.markdownsdk.app-main-42:/drawable/ic_text_increase.xml"
     },
     {
-        "merged": "com.chenge.markdownsdk.app-merged_res-64:/mipmap-hdpi_ic_launcher_round.xml.flat",
-        "source": "com.chenge.markdownsdk.app-main-66:/mipmap-hdpi/ic_launcher_round.xml"
+        "merged": "com.chenge.markdownsdk.app-merged_res-40:/drawable_ic_info.xml.flat",
+        "source": "com.chenge.markdownsdk.app-main-42:/drawable/ic_info.xml"
     },
     {
-        "merged": "com.chenge.markdownsdk.app-merged_res-64:/mipmap-hdpi_ic_launcher.xml.flat",
-        "source": "com.chenge.markdownsdk.app-main-66:/mipmap-hdpi/ic_launcher.xml"
+        "merged": "com.chenge.markdownsdk.app-merged_res-40:/mipmap-xxxhdpi_ic_launcher.xml.flat",
+        "source": "com.chenge.markdownsdk.app-main-42:/mipmap-xxxhdpi/ic_launcher.xml"
     },
     {
-        "merged": "com.chenge.markdownsdk.app-merged_res-64:/mipmap-xhdpi_ic_launcher_round.xml.flat",
-        "source": "com.chenge.markdownsdk.app-main-66:/mipmap-xhdpi/ic_launcher_round.xml"
+        "merged": "com.chenge.markdownsdk.app-merged_res-40:/mipmap-xhdpi_ic_launcher_round.xml.flat",
+        "source": "com.chenge.markdownsdk.app-main-42:/mipmap-xhdpi/ic_launcher_round.xml"
     },
     {
-        "merged": "com.chenge.markdownsdk.app-merged_res-64:/mipmap-xxxhdpi_ic_launcher_round.xml.flat",
-        "source": "com.chenge.markdownsdk.app-main-66:/mipmap-xxxhdpi/ic_launcher_round.xml"
+        "merged": "com.chenge.markdownsdk.app-merged_res-40:/drawable_ic_text_reset.xml.flat",
+        "source": "com.chenge.markdownsdk.app-main-42:/drawable/ic_text_reset.xml"
     },
     {
-        "merged": "com.chenge.markdownsdk.app-merged_res-64:/xml_data_extraction_rules.xml.flat",
-        "source": "com.chenge.markdownsdk.app-main-66:/xml/data_extraction_rules.xml"
+        "merged": "com.chenge.markdownsdk.app-merged_res-40:/mipmap-xhdpi_ic_launcher.xml.flat",
+        "source": "com.chenge.markdownsdk.app-main-42:/mipmap-xhdpi/ic_launcher.xml"
     },
     {
-        "merged": "com.chenge.markdownsdk.app-merged_res-64:/drawable_ic_text_reset.xml.flat",
-        "source": "com.chenge.markdownsdk.app-main-66:/drawable/ic_text_reset.xml"
+        "merged": "com.chenge.markdownsdk.app-merged_res-40:/mipmap-hdpi_ic_launcher_round.xml.flat",
+        "source": "com.chenge.markdownsdk.app-main-42:/mipmap-hdpi/ic_launcher_round.xml"
     },
     {
-        "merged": "com.chenge.markdownsdk.app-merged_res-64:/xml_backup_rules.xml.flat",
-        "source": "com.chenge.markdownsdk.app-main-66:/xml/backup_rules.xml"
+        "merged": "com.chenge.markdownsdk.app-merged_res-40:/xml_backup_rules.xml.flat",
+        "source": "com.chenge.markdownsdk.app-main-42:/xml/backup_rules.xml"
     },
     {
-        "merged": "com.chenge.markdownsdk.app-merged_res-64:/drawable_ic_theme_toggle.xml.flat",
-        "source": "com.chenge.markdownsdk.app-main-66:/drawable/ic_theme_toggle.xml"
+        "merged": "com.chenge.markdownsdk.app-merged_res-40:/menu_main_menu.xml.flat",
+        "source": "com.chenge.markdownsdk.app-main-42:/menu/main_menu.xml"
     },
     {
-        "merged": "com.chenge.markdownsdk.app-merged_res-64:/mipmap-mdpi_ic_launcher_round.xml.flat",
-        "source": "com.chenge.markdownsdk.app-main-66:/mipmap-mdpi/ic_launcher_round.xml"
+        "merged": "com.chenge.markdownsdk.app-merged_res-40:/layout_activity_main.xml.flat",
+        "source": "com.chenge.markdownsdk.app-main-42:/layout/activity_main.xml"
     },
     {
-        "merged": "com.chenge.markdownsdk.app-merged_res-64:/layout_activity_main.xml.flat",
-        "source": "com.chenge.markdownsdk.app-main-66:/layout/activity_main.xml"
+        "merged": "com.chenge.markdownsdk.app-merged_res-40:/drawable_ic_theme_toggle.xml.flat",
+        "source": "com.chenge.markdownsdk.app-main-42:/drawable/ic_theme_toggle.xml"
     },
     {
-        "merged": "com.chenge.markdownsdk.app-merged_res-64:/mipmap-xxhdpi_ic_launcher_round.xml.flat",
-        "source": "com.chenge.markdownsdk.app-main-66:/mipmap-xxhdpi/ic_launcher_round.xml"
+        "merged": "com.chenge.markdownsdk.app-merged_res-40:/mipmap-xxhdpi_ic_launcher.xml.flat",
+        "source": "com.chenge.markdownsdk.app-main-42:/mipmap-xxhdpi/ic_launcher.xml"
     },
     {
-        "merged": "com.chenge.markdownsdk.app-merged_res-64:/menu_main_menu.xml.flat",
-        "source": "com.chenge.markdownsdk.app-main-66:/menu/main_menu.xml"
+        "merged": "com.chenge.markdownsdk.app-merged_res-40:/drawable_ic_text_decrease.xml.flat",
+        "source": "com.chenge.markdownsdk.app-main-42:/drawable/ic_text_decrease.xml"
     },
     {
-        "merged": "com.chenge.markdownsdk.app-merged_res-64:/drawable_ic_text_increase.xml.flat",
-        "source": "com.chenge.markdownsdk.app-main-66:/drawable/ic_text_increase.xml"
+        "merged": "com.chenge.markdownsdk.app-merged_res-40:/mipmap-mdpi_ic_launcher.xml.flat",
+        "source": "com.chenge.markdownsdk.app-main-42:/mipmap-mdpi/ic_launcher.xml"
     },
     {
-        "merged": "com.chenge.markdownsdk.app-merged_res-64:/mipmap-mdpi_ic_launcher.xml.flat",
-        "source": "com.chenge.markdownsdk.app-main-66:/mipmap-mdpi/ic_launcher.xml"
+        "merged": "com.chenge.markdownsdk.app-merged_res-40:/mipmap-xxhdpi_ic_launcher_round.xml.flat",
+        "source": "com.chenge.markdownsdk.app-main-42:/mipmap-xxhdpi/ic_launcher_round.xml"
     },
     {
-        "merged": "com.chenge.markdownsdk.app-merged_res-64:/mipmap-xxhdpi_ic_launcher.xml.flat",
-        "source": "com.chenge.markdownsdk.app-main-66:/mipmap-xxhdpi/ic_launcher.xml"
+        "merged": "com.chenge.markdownsdk.app-merged_res-40:/mipmap-xxxhdpi_ic_launcher_round.xml.flat",
+        "source": "com.chenge.markdownsdk.app-main-42:/mipmap-xxxhdpi/ic_launcher_round.xml"
     },
     {
-        "merged": "com.chenge.markdownsdk.app-merged_res-64:/mipmap-xxxhdpi_ic_launcher.xml.flat",
-        "source": "com.chenge.markdownsdk.app-main-66:/mipmap-xxxhdpi/ic_launcher.xml"
+        "merged": "com.chenge.markdownsdk.app-merged_res-40:/mipmap-mdpi_ic_launcher_round.xml.flat",
+        "source": "com.chenge.markdownsdk.app-main-42:/mipmap-mdpi/ic_launcher_round.xml"
     },
     {
-        "merged": "com.chenge.markdownsdk.app-merged_res-64:/mipmap-xhdpi_ic_launcher.xml.flat",
-        "source": "com.chenge.markdownsdk.app-main-66:/mipmap-xhdpi/ic_launcher.xml"
+        "merged": "com.chenge.markdownsdk.app-merged_res-40:/xml_data_extraction_rules.xml.flat",
+        "source": "com.chenge.markdownsdk.app-main-42:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "com.chenge.markdownsdk.app-merged_res-64:/drawable_ic_info.xml.flat",
-        "source": "com.chenge.markdownsdk.app-main-66:/drawable/ic_info.xml"
+        "merged": "com.chenge.markdownsdk.app-merged_res-40:/mipmap-hdpi_ic_launcher.xml.flat",
+        "source": "com.chenge.markdownsdk.app-main-42:/mipmap-hdpi/ic_launcher.xml"
     },
     {
-        "merged": "com.chenge.markdownsdk.app-merged_res-64:/drawable_ic_contrast.xml.flat",
-        "source": "com.chenge.markdownsdk.app-main-66:/drawable/ic_contrast.xml"
+        "merged": "com.chenge.markdownsdk.app-merged_res-40:/drawable_ic_contrast.xml.flat",
+        "source": "com.chenge.markdownsdk.app-main-42:/drawable/ic_contrast.xml"
     }
 ]

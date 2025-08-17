@@ -46,7 +46,7 @@ import kotlinx.coroutines.launch
  * - 完整的Markdown语法支持
  * - 性能测试和调试功能
  * - 多种渲染模式（同步/异步）
- * - Compose集成演示
+
  */
 class MainActivity : AppCompatActivity() {
 
@@ -133,7 +133,7 @@ class MainActivity : AppCompatActivity() {
 
     // 设置浮动操作按钮
     binding.fab.setOnClickListener {
-      startActivity(Intent(this, ComposeActivity::class.java))
+      toggleTheme()
     }
 
     // 移除LinkMovementMethod以消除链接点击的交互式覆盖层
@@ -154,9 +154,7 @@ class MainActivity : AppCompatActivity() {
       cycleRenderSpeed()
     }
 
-    binding.composeButton.setOnClickListener {
-      startActivity(Intent(this, ComposeActivity::class.java))
-    }
+
   }
 
   private fun loadAndRenderContent() {

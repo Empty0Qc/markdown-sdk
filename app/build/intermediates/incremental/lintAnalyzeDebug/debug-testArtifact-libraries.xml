@@ -143,10 +143,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="androidx.compose.material3:material3-android:1.2.0@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/e7fa87f09716560faa19bb593ad3f8d4/transformed/material3-release/jars/classes.jar"
-      resolved="androidx.compose.material3:material3-android:1.2.0"
-      folder="/Users/quchen/.gradle/caches/transforms-4/e7fa87f09716560faa19bb593ad3f8d4/transformed/material3-release"
+      name="androidx.activity:activity:1.8.0@aar"
+      jars="/Users/quchen/.gradle/caches/transforms-4/bda9c6d4f24294afb3340eebfa9de04e/transformed/activity-1.8.0/jars/classes.jar"
+      resolved="androidx.activity:activity:1.8.0"
+      folder="/Users/quchen/.gradle/caches/transforms-4/bda9c6d4f24294afb3340eebfa9de04e/transformed/activity-1.8.0"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -156,10 +156,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="androidx.compose.ui:ui-util-android:1.6.1@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/9c27d57e59bba26c534282388b1c56c7/transformed/ui-util-release/jars/classes.jar"
-      resolved="androidx.compose.ui:ui-util-android:1.6.1"
-      folder="/Users/quchen/.gradle/caches/transforms-4/9c27d57e59bba26c534282388b1c56c7/transformed/ui-util-release"
+      name="androidx.dynamicanimation:dynamicanimation:1.0.0@aar"
+      jars="/Users/quchen/.gradle/caches/transforms-4/5e7beb3f40f58a075a3a4ee5fbb733d7/transformed/dynamicanimation-1.0.0/jars/classes.jar"
+      resolved="androidx.dynamicanimation:dynamicanimation:1.0.0"
+      folder="/Users/quchen/.gradle/caches/transforms-4/5e7beb3f40f58a075a3a4ee5fbb733d7/transformed/dynamicanimation-1.0.0"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -169,10 +169,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="androidx.compose.ui:ui-unit-android:1.6.1@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/e30d0d1bffff9820b9ac42e53ac5373c/transformed/ui-unit-release/jars/classes.jar"
-      resolved="androidx.compose.ui:ui-unit-android:1.6.1"
-      folder="/Users/quchen/.gradle/caches/transforms-4/e30d0d1bffff9820b9ac42e53ac5373c/transformed/ui-unit-release"
+      name="androidx.legacy:legacy-support-core-utils:1.0.0@aar"
+      jars="/Users/quchen/.gradle/caches/transforms-4/c3827b777e746024115f6e7af93db6be/transformed/legacy-support-core-utils-1.0.0/jars/classes.jar"
+      resolved="androidx.legacy:legacy-support-core-utils:1.0.0"
+      folder="/Users/quchen/.gradle/caches/transforms-4/c3827b777e746024115f6e7af93db6be/transformed/legacy-support-core-utils-1.0.0"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -182,10 +182,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="androidx.compose.ui:ui-text-android:1.6.1@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/23f670b3f076535954837311e772d1ff/transformed/ui-text-release/jars/classes.jar"
-      resolved="androidx.compose.ui:ui-text-android:1.6.1"
-      folder="/Users/quchen/.gradle/caches/transforms-4/23f670b3f076535954837311e772d1ff/transformed/ui-text-release"
+      name="androidx.loader:loader:1.0.0@aar"
+      jars="/Users/quchen/.gradle/caches/transforms-4/c8d47a48bef7f4b673b90991b6dfe726/transformed/loader-1.0.0/jars/classes.jar"
+      resolved="androidx.loader:loader:1.0.0"
+      folder="/Users/quchen/.gradle/caches/transforms-4/c8d47a48bef7f4b673b90991b6dfe726/transformed/loader-1.0.0"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -195,10 +195,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="androidx.compose.foundation:foundation-layout-android:1.6.1@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/4bdd42c8649e7cf4b397e6743d25f74e/transformed/foundation-layout-release/jars/classes.jar"
-      resolved="androidx.compose.foundation:foundation-layout-android:1.6.1"
-      folder="/Users/quchen/.gradle/caches/transforms-4/4bdd42c8649e7cf4b397e6743d25f74e/transformed/foundation-layout-release"
+      name="androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0@aar"
+      jars="/Users/quchen/.gradle/caches/transforms-4/a9500b51636fcaf043fd4214096fd645/transformed/lifecycle-livedata-core-ktx-2.7.0/jars/classes.jar"
+      resolved="androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0"
+      folder="/Users/quchen/.gradle/caches/transforms-4/a9500b51636fcaf043fd4214096fd645/transformed/lifecycle-livedata-core-ktx-2.7.0"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -208,10 +208,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="androidx.compose.material:material-icons-core-android:1.6.1@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/ff1209c65c40dea4fe1d9572cb3fb1f4/transformed/material-icons-core-release/jars/classes.jar"
-      resolved="androidx.compose.material:material-icons-core-android:1.6.1"
-      folder="/Users/quchen/.gradle/caches/transforms-4/ff1209c65c40dea4fe1d9572cb3fb1f4/transformed/material-icons-core-release"
+      name="androidx.lifecycle:lifecycle-livedata:2.7.0@aar"
+      jars="/Users/quchen/.gradle/caches/transforms-4/93260d9f3f3893f9a8f6f9ab9c48590e/transformed/lifecycle-livedata-2.7.0/jars/classes.jar"
+      resolved="androidx.lifecycle:lifecycle-livedata:2.7.0"
+      folder="/Users/quchen/.gradle/caches/transforms-4/93260d9f3f3893f9a8f6f9ab9c48590e/transformed/lifecycle-livedata-2.7.0"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -221,10 +221,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="androidx.compose.material:material-ripple-android:1.6.1@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/17b20960f7a97fe0d02851171f4b2f96/transformed/material-ripple-release/jars/classes.jar"
-      resolved="androidx.compose.material:material-ripple-android:1.6.1"
-      folder="/Users/quchen/.gradle/caches/transforms-4/17b20960f7a97fe0d02851171f4b2f96/transformed/material-ripple-release"
+      name="androidx.lifecycle:lifecycle-livedata-core:2.7.0@aar"
+      jars="/Users/quchen/.gradle/caches/transforms-4/dffc516060b5c34f8d5ba9c7fbfa500a/transformed/lifecycle-livedata-core-2.7.0/jars/classes.jar"
+      resolved="androidx.lifecycle:lifecycle-livedata-core:2.7.0"
+      folder="/Users/quchen/.gradle/caches/transforms-4/dffc516060b5c34f8d5ba9c7fbfa500a/transformed/lifecycle-livedata-core-2.7.0"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -234,10 +234,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="androidx.compose.foundation:foundation-android:1.6.1@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/164231cbd21fd0a0355c7b323ef50086/transformed/foundation-release/jars/classes.jar"
-      resolved="androidx.compose.foundation:foundation-android:1.6.1"
-      folder="/Users/quchen/.gradle/caches/transforms-4/164231cbd21fd0a0355c7b323ef50086/transformed/foundation-release"
+      name="androidx.lifecycle:lifecycle-viewmodel:2.7.0@aar"
+      jars="/Users/quchen/.gradle/caches/transforms-4/3a3899e07ea06f372539b989fefc7eb3/transformed/lifecycle-viewmodel-2.7.0/jars/classes.jar"
+      resolved="androidx.lifecycle:lifecycle-viewmodel:2.7.0"
+      folder="/Users/quchen/.gradle/caches/transforms-4/3a3899e07ea06f372539b989fefc7eb3/transformed/lifecycle-viewmodel-2.7.0"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -247,153 +247,14 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="androidx.compose.animation:animation-core-android:1.6.1@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/ccec3316d3c706dffe22c0451ca4d39a/transformed/animation-core-release/jars/classes.jar"
-      resolved="androidx.compose.animation:animation-core-android:1.6.1"
-      folder="/Users/quchen/.gradle/caches/transforms-4/ccec3316d3c706dffe22c0451ca4d39a/transformed/animation-core-release"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
+      name="androidx.lifecycle:lifecycle-common:2.7.0@jar"
+      jars="/Users/quchen/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common/2.7.0/85334205d65cca70ed0109c3acbd29e22a2d9cb1/lifecycle-common-2.7.0.jar"
+      resolved="androidx.lifecycle:lifecycle-common:2.7.0"/>
   <library
-      name="androidx.compose.animation:animation-android:1.6.1@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/b3655ad77ec5fc605551184283531dc2/transformed/animation-release/jars/classes.jar"
-      resolved="androidx.compose.animation:animation-android:1.6.1"
-      folder="/Users/quchen/.gradle/caches/transforms-4/b3655ad77ec5fc605551184283531dc2/transformed/animation-release"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
-      name="androidx.compose.ui:ui-geometry-android:1.6.1@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/d17dd240cf235d000cf6383d9cb03cff/transformed/ui-geometry-release/jars/classes.jar"
-      resolved="androidx.compose.ui:ui-geometry-android:1.6.1"
-      folder="/Users/quchen/.gradle/caches/transforms-4/d17dd240cf235d000cf6383d9cb03cff/transformed/ui-geometry-release"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
-      name="androidx.compose.ui:ui-tooling-data-android:1.6.1@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/a0f4d9ffd7ee8758ab578328952bda2a/transformed/ui-tooling-data-release/jars/classes.jar"
-      resolved="androidx.compose.ui:ui-tooling-data-android:1.6.1"
-      folder="/Users/quchen/.gradle/caches/transforms-4/a0f4d9ffd7ee8758ab578328952bda2a/transformed/ui-tooling-data-release"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
-      name="androidx.compose.ui:ui-tooling-preview-android:1.6.1@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/f2c98052a8ea1a58f98622f33a159de8/transformed/ui-tooling-preview-release/jars/classes.jar"
-      resolved="androidx.compose.ui:ui-tooling-preview-android:1.6.1"
-      folder="/Users/quchen/.gradle/caches/transforms-4/f2c98052a8ea1a58f98622f33a159de8/transformed/ui-tooling-preview-release"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
-      name="androidx.compose.ui:ui-graphics-android:1.6.1@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/5b0d5f9caf4f4e86a1eab99e236cb943/transformed/ui-graphics-release/jars/classes.jar"
-      resolved="androidx.compose.ui:ui-graphics-android:1.6.1"
-      folder="/Users/quchen/.gradle/caches/transforms-4/5b0d5f9caf4f4e86a1eab99e236cb943/transformed/ui-graphics-release"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
-      name="androidx.compose.ui:ui-android:1.6.1@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/07606f357b97730f36feb386f5c37a7c/transformed/ui-release/jars/classes.jar"
-      resolved="androidx.compose.ui:ui-android:1.6.1"
-      folder="/Users/quchen/.gradle/caches/transforms-4/07606f357b97730f36feb386f5c37a7c/transformed/ui-release"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
-      name="androidx.compose.ui:ui-tooling-android:1.6.1@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/61afe23afeda2af6f7647ab704825e9b/transformed/ui-tooling-release/jars/classes.jar"
-      resolved="androidx.compose.ui:ui-tooling-android:1.6.1"
-      folder="/Users/quchen/.gradle/caches/transforms-4/61afe23afeda2af6f7647ab704825e9b/transformed/ui-tooling-release"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
-      name="androidx.compose.ui:ui-test-manifest:1.6.1@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/e8008e7bfdd7888f6edf982b90147c90/transformed/ui-test-manifest-1.6.1/jars/classes.jar"
-      resolved="androidx.compose.ui:ui-test-manifest:1.6.1"
-      folder="/Users/quchen/.gradle/caches/transforms-4/e8008e7bfdd7888f6edf982b90147c90/transformed/ui-test-manifest-1.6.1"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
-      name="androidx.activity:activity:1.8.2@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/94b10b5d0180c4f6bfcb6530bde4aad9/transformed/activity-1.8.2/jars/classes.jar"
-      resolved="androidx.activity:activity:1.8.2"
-      folder="/Users/quchen/.gradle/caches/transforms-4/94b10b5d0180c4f6bfcb6530bde4aad9/transformed/activity-1.8.2"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
-      name="androidx.activity:activity-compose:1.8.2@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/21cb95c4da83ade7c2b7b3b8f2737ca8/transformed/activity-compose-1.8.2/jars/classes.jar"
-      resolved="androidx.activity:activity-compose:1.8.2"
-      folder="/Users/quchen/.gradle/caches/transforms-4/21cb95c4da83ade7c2b7b3b8f2737ca8/transformed/activity-compose-1.8.2"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
-      name="androidx.activity:activity-ktx:1.8.2@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/21cebfff0c5f471e584ece05b931bc58/transformed/activity-ktx-1.8.2/jars/classes.jar"
-      resolved="androidx.activity:activity-ktx:1.8.2"
-      folder="/Users/quchen/.gradle/caches/transforms-4/21cebfff0c5f471e584ece05b931bc58/transformed/activity-ktx-1.8.2"
+      name="androidx.lifecycle:lifecycle-runtime-ktx:2.7.0@aar"
+      jars="/Users/quchen/.gradle/caches/transforms-4/0b449dec55f9b3af6ce6fc9325f89069/transformed/lifecycle-runtime-ktx-2.7.0/jars/classes.jar"
+      resolved="androidx.lifecycle:lifecycle-runtime-ktx:2.7.0"
+      folder="/Users/quchen/.gradle/caches/transforms-4/0b449dec55f9b3af6ce6fc9325f89069/transformed/lifecycle-runtime-ktx-2.7.0"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -433,19 +294,6 @@
       jars="/Users/quchen/.gradle/caches/transforms-4/a20eb80a4d7f9ca22bc59f5f267373c5/transformed/coordinatorlayout-1.1.0/jars/classes.jar"
       resolved="androidx.coordinatorlayout:coordinatorlayout:1.1.0"
       folder="/Users/quchen/.gradle/caches/transforms-4/a20eb80a4d7f9ca22bc59f5f267373c5/transformed/coordinatorlayout-1.1.0"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
-      name="androidx.dynamicanimation:dynamicanimation:1.0.0@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/5e7beb3f40f58a075a3a4ee5fbb733d7/transformed/dynamicanimation-1.0.0/jars/classes.jar"
-      resolved="androidx.dynamicanimation:dynamicanimation:1.0.0"
-      folder="/Users/quchen/.gradle/caches/transforms-4/5e7beb3f40f58a075a3a4ee5fbb733d7/transformed/dynamicanimation-1.0.0"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -533,32 +381,6 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="androidx.legacy:legacy-support-core-utils:1.0.0@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/c3827b777e746024115f6e7af93db6be/transformed/legacy-support-core-utils-1.0.0/jars/classes.jar"
-      resolved="androidx.legacy:legacy-support-core-utils:1.0.0"
-      folder="/Users/quchen/.gradle/caches/transforms-4/c3827b777e746024115f6e7af93db6be/transformed/legacy-support-core-utils-1.0.0"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
-      name="androidx.loader:loader:1.0.0@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/c8d47a48bef7f4b673b90991b6dfe726/transformed/loader-1.0.0/jars/classes.jar"
-      resolved="androidx.loader:loader:1.0.0"
-      folder="/Users/quchen/.gradle/caches/transforms-4/c8d47a48bef7f4b673b90991b6dfe726/transformed/loader-1.0.0"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
       name="androidx.core:core:1.13.0@aar"
       jars="/Users/quchen/.gradle/caches/transforms-4/88c8cdb71ef66f174158d2e25bdbc67d/transformed/core-1.13.0/jars/classes.jar"
       resolved="androidx.core:core:1.13.0"
@@ -572,92 +394,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/a9500b51636fcaf043fd4214096fd645/transformed/lifecycle-livedata-core-ktx-2.7.0/jars/classes.jar"
-      resolved="androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0"
-      folder="/Users/quchen/.gradle/caches/transforms-4/a9500b51636fcaf043fd4214096fd645/transformed/lifecycle-livedata-core-ktx-2.7.0"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
-      name="androidx.lifecycle:lifecycle-livedata:2.7.0@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/93260d9f3f3893f9a8f6f9ab9c48590e/transformed/lifecycle-livedata-2.7.0/jars/classes.jar"
-      resolved="androidx.lifecycle:lifecycle-livedata:2.7.0"
-      folder="/Users/quchen/.gradle/caches/transforms-4/93260d9f3f3893f9a8f6f9ab9c48590e/transformed/lifecycle-livedata-2.7.0"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
-      name="androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/89b3d82acbbd66e9fc9ce06becf45c61/transformed/lifecycle-viewmodel-ktx-2.7.0/jars/classes.jar"
-      resolved="androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0"
-      folder="/Users/quchen/.gradle/caches/transforms-4/89b3d82acbbd66e9fc9ce06becf45c61/transformed/lifecycle-viewmodel-ktx-2.7.0"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
-      name="androidx.lifecycle:lifecycle-livedata-core:2.7.0@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/dffc516060b5c34f8d5ba9c7fbfa500a/transformed/lifecycle-livedata-core-2.7.0/jars/classes.jar"
-      resolved="androidx.lifecycle:lifecycle-livedata-core:2.7.0"
-      folder="/Users/quchen/.gradle/caches/transforms-4/dffc516060b5c34f8d5ba9c7fbfa500a/transformed/lifecycle-livedata-core-2.7.0"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
-      name="androidx.lifecycle:lifecycle-common:2.7.0@jar"
-      jars="/Users/quchen/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common/2.7.0/85334205d65cca70ed0109c3acbd29e22a2d9cb1/lifecycle-common-2.7.0.jar"
-      resolved="androidx.lifecycle:lifecycle-common:2.7.0"/>
-  <library
-      name="androidx.lifecycle:lifecycle-viewmodel:2.7.0@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/3a3899e07ea06f372539b989fefc7eb3/transformed/lifecycle-viewmodel-2.7.0/jars/classes.jar"
-      resolved="androidx.lifecycle:lifecycle-viewmodel:2.7.0"
-      folder="/Users/quchen/.gradle/caches/transforms-4/3a3899e07ea06f372539b989fefc7eb3/transformed/lifecycle-viewmodel-2.7.0"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
       name="androidx.lifecycle:lifecycle-runtime:2.7.0@aar"
       jars="/Users/quchen/.gradle/caches/transforms-4/64e9ce4afc88221aab004c0a28c15407/transformed/lifecycle-runtime-2.7.0/jars/classes.jar"
       resolved="androidx.lifecycle:lifecycle-runtime:2.7.0"
       folder="/Users/quchen/.gradle/caches/transforms-4/64e9ce4afc88221aab004c0a28c15407/transformed/lifecycle-runtime-2.7.0"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
-      name="androidx.lifecycle:lifecycle-runtime-ktx:2.7.0@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/0b449dec55f9b3af6ce6fc9325f89069/transformed/lifecycle-runtime-ktx-2.7.0/jars/classes.jar"
-      resolved="androidx.lifecycle:lifecycle-runtime-ktx:2.7.0"
-      folder="/Users/quchen/.gradle/caches/transforms-4/0b449dec55f9b3af6ce6fc9325f89069/transformed/lifecycle-runtime-ktx-2.7.0"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -710,19 +450,6 @@
       jars="/Users/quchen/.gradle/caches/transforms-4/c7ac808c5484f9742a3ff83c15b05d34/transformed/out/jars/classes.jar:/Users/quchen/.gradle/caches/transforms-4/c7ac808c5484f9742a3ff83c15b05d34/transformed/out/jars/libs/R.jar"
       resolved="markdown-sdk:markdown-common:unspecified"
       folder="/Users/quchen/.gradle/caches/transforms-4/c7ac808c5484f9742a3ff83c15b05d34/transformed/out"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
-      name="androidx.savedstate:savedstate-ktx:1.2.1@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/363276318f540842643d52e4a5604b99/transformed/savedstate-ktx-1.2.1/jars/classes.jar"
-      resolved="androidx.savedstate:savedstate-ktx:1.2.1"
-      folder="/Users/quchen/.gradle/caches/transforms-4/363276318f540842643d52e4a5604b99/transformed/savedstate-ktx-1.2.1"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -957,31 +684,9 @@
       jars="/Users/quchen/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-common/2.2.0/5e1b8b81dfd5f52c56a8d53b18ca759c19a301f3/core-common-2.2.0.jar"
       resolved="androidx.arch.core:core-common:2.2.0"/>
   <library
-      name="androidx.compose.runtime:runtime-android:1.6.1@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/0a571d907bfdcc7cb9af3de8f5a79b81/transformed/runtime-release/jars/classes.jar"
-      resolved="androidx.compose.runtime:runtime-android:1.6.1"
-      folder="/Users/quchen/.gradle/caches/transforms-4/0a571d907bfdcc7cb9af3de8f5a79b81/transformed/runtime-release"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
-      name="androidx.compose.runtime:runtime-saveable-android:1.6.1@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/8c2124f223185a823042ca98a33473ca/transformed/runtime-saveable-release/jars/classes.jar"
-      resolved="androidx.compose.runtime:runtime-saveable-android:1.6.1"
-      folder="/Users/quchen/.gradle/caches/transforms-4/8c2124f223185a823042ca98a33473ca/transformed/runtime-saveable-release"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
+      name="androidx.collection:collection:1.1.0@jar"
+      jars="/Users/quchen/.gradle/caches/modules-2/files-2.1/androidx.collection/collection/1.1.0/1f27220b47669781457de0d600849a5de0e89909/collection-1.1.0.jar"
+      resolved="androidx.collection:collection:1.1.0"/>
   <library
       name="ru.noties:jlatexmath-android:0.2.0@aar"
       jars="/Users/quchen/.gradle/caches/transforms-4/c2179f92e3e346b5e2154b0ce9f5ff6c/transformed/jlatexmath-android-0.2.0/jars/classes.jar"
@@ -1008,10 +713,6 @@
       symbolFile="R.txt"
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
-  <library
-      name="androidx.collection:collection-jvm:1.4.0@jar"
-      jars="/Users/quchen/.gradle/caches/modules-2/files-2.1/androidx.collection/collection-jvm/1.4.0/e209fb7bd1183032f55a0408121c6251a81acb49/collection-jvm-1.4.0.jar"
-      resolved="androidx.collection:collection-jvm:1.4.0"/>
   <library
       name="androidx.documentfile:documentfile:1.0.0@aar"
       jars="/Users/quchen/.gradle/caches/transforms-4/370daf609d98ce25129b78ebc56c9cff/transformed/documentfile-1.0.0/jars/classes.jar"
@@ -1080,6 +781,18 @@
       jars="/Users/quchen/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/23.0.0/8cc20c07506ec18e0834947b84a864bfc094484e/annotations-23.0.0.jar"
       resolved="org.jetbrains:annotations:23.0.0"/>
   <library
+      name="com.atlassian.commonmark:commonmark-ext-gfm-strikethrough:0.13.0@jar"
+      jars="/Users/quchen/.gradle/caches/modules-2/files-2.1/com.atlassian.commonmark/commonmark-ext-gfm-strikethrough/0.13.0/60c7582b118a9c47e859544df04da88cf1282eaf/commonmark-ext-gfm-strikethrough-0.13.0.jar"
+      resolved="com.atlassian.commonmark:commonmark-ext-gfm-strikethrough:0.13.0"/>
+  <library
+      name="com.atlassian.commonmark:commonmark-ext-gfm-tables:0.13.0@jar"
+      jars="/Users/quchen/.gradle/caches/modules-2/files-2.1/com.atlassian.commonmark/commonmark-ext-gfm-tables/0.13.0/c3a5ba4217cacc7833c697e5081da42ae996655f/commonmark-ext-gfm-tables-0.13.0.jar"
+      resolved="com.atlassian.commonmark:commonmark-ext-gfm-tables:0.13.0"/>
+  <library
+      name="com.atlassian.commonmark:commonmark:0.13.0@jar"
+      jars="/Users/quchen/.gradle/caches/modules-2/files-2.1/com.atlassian.commonmark/commonmark/0.13.0/d233ad1436f35c7f88e3488ce6c1e65425c1a059/commonmark-0.13.0.jar"
+      resolved="com.atlassian.commonmark:commonmark:0.13.0"/>
+  <library
       name="androidx.tracing:tracing:1.0.0@aar"
       jars="/Users/quchen/.gradle/caches/transforms-4/c6412c286fba76446276962010049634/transformed/tracing-1.0.0/jars/classes.jar"
       resolved="androidx.tracing:tracing:1.0.0"
@@ -1092,18 +805,6 @@
       symbolFile="R.txt"
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
-  <library
-      name="com.atlassian.commonmark:commonmark-ext-gfm-strikethrough:0.13.0@jar"
-      jars="/Users/quchen/.gradle/caches/modules-2/files-2.1/com.atlassian.commonmark/commonmark-ext-gfm-strikethrough/0.13.0/60c7582b118a9c47e859544df04da88cf1282eaf/commonmark-ext-gfm-strikethrough-0.13.0.jar"
-      resolved="com.atlassian.commonmark:commonmark-ext-gfm-strikethrough:0.13.0"/>
-  <library
-      name="com.atlassian.commonmark:commonmark-ext-gfm-tables:0.13.0@jar"
-      jars="/Users/quchen/.gradle/caches/modules-2/files-2.1/com.atlassian.commonmark/commonmark-ext-gfm-tables/0.13.0/c3a5ba4217cacc7833c697e5081da42ae996655f/commonmark-ext-gfm-tables-0.13.0.jar"
-      resolved="com.atlassian.commonmark:commonmark-ext-gfm-tables:0.13.0"/>
-  <library
-      name="com.atlassian.commonmark:commonmark:0.13.0@jar"
-      jars="/Users/quchen/.gradle/caches/modules-2/files-2.1/com.atlassian.commonmark/commonmark/0.13.0/d233ad1436f35c7f88e3488ce6c1e65425c1a059/commonmark-0.13.0.jar"
-      resolved="com.atlassian.commonmark:commonmark:0.13.0"/>
   <library
       name="androidx.resourceinspection:resourceinspection-annotation:1.0.1@jar"
       jars="/Users/quchen/.gradle/caches/modules-2/files-2.1/androidx.resourceinspection/resourceinspection-annotation/1.0.1/8c21f8ff5d96d5d52c948707f7e4d6ca6773feef/resourceinspection-annotation-1.0.1.jar"
@@ -1147,19 +848,6 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="androidx.compose.material:material-android:1.6.1@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/50414d76fbb1ddd6aafd2697ce9d416f/transformed/material-release/jars/classes.jar"
-      resolved="androidx.compose.material:material-android:1.6.1"
-      folder="/Users/quchen/.gradle/caches/transforms-4/50414d76fbb1ddd6aafd2697ce9d416f/transformed/material-release"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
       name="androidx.emoji2:emoji2-views-helper:1.3.0@aar"
       jars="/Users/quchen/.gradle/caches/transforms-4/9b64d670f0b3b227dcfd2ae8152a6960/transformed/emoji2-views-helper-1.3.0/jars/classes.jar"
       resolved="androidx.emoji2:emoji2-views-helper:1.3.0"
@@ -1185,10 +873,6 @@
       symbolFile="R.txt"
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
-  <library
-      name="androidx.lifecycle:lifecycle-common-java8:2.7.0@jar"
-      jars="/Users/quchen/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common-java8/2.7.0/2ad14aed781c4a73ed4dbb421966d408a0a06686/lifecycle-common-java8-2.7.0.jar"
-      resolved="androidx.lifecycle:lifecycle-common-java8:2.7.0"/>
   <library
       name="androidx.lifecycle:lifecycle-process:2.7.0@aar"
       jars="/Users/quchen/.gradle/caches/transforms-4/7b69bed3ca889937c05d4ff7b71039d0/transformed/lifecycle-process-2.7.0/jars/classes.jar"
@@ -1216,23 +900,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="androidx.customview:customview-poolingcontainer:1.0.0@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/d2291df7ea7c79a14c27c2b098931d56/transformed/customview-poolingcontainer-1.0.0/jars/classes.jar"
-      resolved="androidx.customview:customview-poolingcontainer:1.0.0"
-      folder="/Users/quchen/.gradle/caches/transforms-4/d2291df7ea7c79a14c27c2b098931d56/transformed/customview-poolingcontainer-1.0.0"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
-      name="androidx.autofill:autofill:1.0.0@aar"
-      jars="/Users/quchen/.gradle/caches/transforms-4/3593799b73b8755414ddc97521f49ab6/transformed/autofill-1.0.0/jars/classes.jar"
-      resolved="androidx.autofill:autofill:1.0.0"
-      folder="/Users/quchen/.gradle/caches/transforms-4/3593799b73b8755414ddc97521f49ab6/transformed/autofill-1.0.0"
+      name="androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0@aar"
+      jars="/Users/quchen/.gradle/caches/transforms-4/89b3d82acbbd66e9fc9ce06becf45c61/transformed/lifecycle-viewmodel-ktx-2.7.0/jars/classes.jar"
+      resolved="androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0"
+      folder="/Users/quchen/.gradle/caches/transforms-4/89b3d82acbbd66e9fc9ce06becf45c61/transformed/lifecycle-viewmodel-ktx-2.7.0"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -1271,10 +942,6 @@
       symbolFile="R.txt"
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
-  <library
-      name="androidx.collection:collection-ktx:1.4.0@jar"
-      jars="/Users/quchen/.gradle/caches/modules-2/files-2.1/androidx.collection/collection-ktx/1.4.0/2ad14aed781c4a73ed4dbb421966d408a0a06686/collection-ktx-1.4.0.jar"
-      resolved="androidx.collection:collection-ktx:1.4.0"/>
   <library
       name="com.google.errorprone:error_prone_annotations:2.15.0@jar"
       jars="/Users/quchen/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.15.0/38c8485a652f808c8c149150da4e5c2b0bd17f9a/error_prone_annotations-2.15.0.jar"

@@ -100,7 +100,6 @@
     <string name="app_name">Markdown渲染器</string>
     <string name="cache_cleared">缓存已清理</string>
     <string name="code_copied">代码已复制</string>
-    <string name="compose_demo">Compose</string>
     <string name="content_copied">内容已复制到剪贴板</string>
     <string name="copy_code">复制代码</string>
     <string name="copy_formula">复制公式</string>

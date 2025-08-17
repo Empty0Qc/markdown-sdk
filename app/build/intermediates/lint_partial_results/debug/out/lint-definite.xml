@@ -92,29 +92,15 @@
     <incident
         id="SmallSp"
         severity="warning"
-        message="Avoid using sizes smaller than `11sp`: `9sp`">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="141"
-            column="9"
-            startOffset="5154"
-            endLine="141"
-            endColumn="31"
-            endOffset="5176"/>
-    </incident>
-
-    <incident
-        id="SmallSp"
-        severity="warning"
         message="Avoid using sizes smaller than `11sp`: `10sp`">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="156"
+            line="145"
             column="7"
-            startOffset="5613"
-            endLine="156"
+            startOffset="5128"
+            endLine="145"
             endColumn="30"
-            endOffset="5636"/>
+            endOffset="5151"/>
     </incident>
 
     <incident
@@ -171,10 +157,10 @@
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
             line="32"
             column="39"
-            startOffset="1260"
+            startOffset="1214"
             endLine="32"
             endColumn="50"
-            endOffset="1271"/>
+            endOffset="1225"/>
     </incident>
 
     <incident
@@ -189,10 +175,10 @@
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
             line="74"
             column="32"
-            startOffset="2968"
+            startOffset="2922"
             endLine="74"
             endColumn="40"
-            endOffset="2976"/>
+            endOffset="2930"/>
     </incident>
 
     <incident
@@ -201,12 +187,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/chenge/markdownsdk/MainActivity.kt"
-            line="190"
+            line="188"
             column="40"
-            startOffset="5897"
-            endLine="190"
+            startOffset="5723"
+            endLine="188"
             endColumn="100"
-            endOffset="5957"/>
+            endOffset="5783"/>
     </incident>
 
     <incident
@@ -215,12 +201,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/chenge/markdownsdk/MainActivity.kt"
-            line="190"
+            line="188"
             column="84"
-            startOffset="5941"
-            endLine="190"
+            startOffset="5767"
+            endLine="188"
             endColumn="100"
-            endOffset="5957"/>
+            endOffset="5783"/>
     </incident>
 
     <incident
@@ -246,46 +232,46 @@
         severity="warning"
         message="Use version catalog instead">
         <fix-composite
-            description="Replace with new library catalog declaration for androidx-constraintlayout-constraintlayout2"
+            description="Replace with new library catalog declaration for androidx-constraintlayout-constraintlayout6"
             robot="true">
             <fix-replace
-                description="Replace with androidx-constraintlayout-constraintlayout2 = &quot;2.1.4&quot;..."
+                description="Replace with androidx-constraintlayout-constraintlayout6 = &quot;2.1.4&quot;..."
                 robot="true"
                 oldString="_lint_insert_begin_"
-                replacement="androidx-constraintlayout-constraintlayout2 = &quot;2.1.4&quot;&#xA;">
+                replacement="androidx-constraintlayout-constraintlayout6 = &quot;2.1.4&quot;&#xA;">
                 <range
                     file="$HOME/AndroidStudioProjects/markdownsdk/gradle/libs.versions.toml"
                     startOffset="139"
                     endOffset="139"/>
             </fix-replace>
             <fix-replace
-                description="Replace with androidx-constraintlayout-constraintlayout2 = { module = &quot;androidx.constraintlayout:constraintlayout&quot;, version.ref = &quot;androidx-constraintlayout-constraintlayout2&quot; }..."
+                description="Replace with androidx-constraintlayout-constraintlayout6 = { module = &quot;androidx.constraintlayout:constraintlayout&quot;, version.ref = &quot;androidx-constraintlayout-constraintlayout6&quot; }..."
                 robot="true"
                 oldString="_lint_insert_begin_"
-                replacement="androidx-constraintlayout-constraintlayout2 = { module = &quot;androidx.constraintlayout:constraintlayout&quot;, version.ref = &quot;androidx-constraintlayout-constraintlayout2&quot; }&#xA;">
+                replacement="androidx-constraintlayout-constraintlayout6 = { module = &quot;androidx.constraintlayout:constraintlayout&quot;, version.ref = &quot;androidx-constraintlayout-constraintlayout6&quot; }&#xA;">
                 <range
                     file="$HOME/AndroidStudioProjects/markdownsdk/gradle/libs.versions.toml"
                     startOffset="849"
                     endOffset="849"/>
             </fix-replace>
             <fix-replace
-                description="Replace with libs.androidx.constraintlayout.constraintlayout2"
+                description="Replace with libs.androidx.constraintlayout.constraintlayout6"
                 robot="true"
-                replacement="libs.androidx.constraintlayout.constraintlayout2">
+                replacement="libs.androidx.constraintlayout.constraintlayout6">
                 <range
                     file="${:app*projectDir}/build.gradle.kts"
-                    startOffset="1469"
-                    endOffset="1519"/>
+                    startOffset="1365"
+                    endOffset="1415"/>
             </fix-replace>
         </fix-composite>
         <location
             file="${:app*projectDir}/build.gradle.kts"
-            line="65"
+            line="60"
             column="21"
-            startOffset="1470"
-            endLine="65"
+            startOffset="1366"
+            endLine="60"
             endColumn="69"
-            endOffset="1518"/>
+            endOffset="1414"/>
     </incident>
 
     <incident
@@ -293,46 +279,46 @@
         severity="warning"
         message="Use version catalog instead">
         <fix-composite
-            description="Replace with new library catalog declaration for androidx-swiperefreshlayout-swiperefreshlayout2"
+            description="Replace with new library catalog declaration for androidx-swiperefreshlayout-swiperefreshlayout6"
             robot="true">
             <fix-replace
-                description="Replace with androidx-swiperefreshlayout-swiperefreshlayout2 = &quot;1.1.0&quot;..."
+                description="Replace with androidx-swiperefreshlayout-swiperefreshlayout6 = &quot;1.1.0&quot;..."
                 robot="true"
                 oldString="_lint_insert_begin_"
-                replacement="androidx-swiperefreshlayout-swiperefreshlayout2 = &quot;1.1.0&quot;&#xA;">
+                replacement="androidx-swiperefreshlayout-swiperefreshlayout6 = &quot;1.1.0&quot;&#xA;">
                 <range
                     file="$HOME/AndroidStudioProjects/markdownsdk/gradle/libs.versions.toml"
                     startOffset="139"
                     endOffset="139"/>
             </fix-replace>
             <fix-replace
-                description="Replace with androidx-swiperefreshlayout-swiperefreshlayout2 = { module = &quot;androidx.swiperefreshlayout:swiperefreshlayout&quot;, version.ref = &quot;androidx-swiperefreshlayout-swiperefreshlayout2&quot; }..."
+                description="Replace with androidx-swiperefreshlayout-swiperefreshlayout6 = { module = &quot;androidx.swiperefreshlayout:swiperefreshlayout&quot;, version.ref = &quot;androidx-swiperefreshlayout-swiperefreshlayout6&quot; }..."
                 robot="true"
                 oldString="_lint_insert_begin_"
-                replacement="androidx-swiperefreshlayout-swiperefreshlayout2 = { module = &quot;androidx.swiperefreshlayout:swiperefreshlayout&quot;, version.ref = &quot;androidx-swiperefreshlayout-swiperefreshlayout2&quot; }&#xA;">
+                replacement="androidx-swiperefreshlayout-swiperefreshlayout6 = { module = &quot;androidx.swiperefreshlayout:swiperefreshlayout&quot;, version.ref = &quot;androidx-swiperefreshlayout-swiperefreshlayout6&quot; }&#xA;">
                 <range
                     file="$HOME/AndroidStudioProjects/markdownsdk/gradle/libs.versions.toml"
                     startOffset="849"
                     endOffset="849"/>
             </fix-replace>
             <fix-replace
-                description="Replace with libs.androidx.swiperefreshlayout.swiperefreshlayout2"
+                description="Replace with libs.androidx.swiperefreshlayout.swiperefreshlayout6"
                 robot="true"
-                replacement="libs.androidx.swiperefreshlayout.swiperefreshlayout2">
+                replacement="libs.androidx.swiperefreshlayout.swiperefreshlayout6">
                 <range
                     file="${:app*projectDir}/build.gradle.kts"
-                    startOffset="1540"
-                    endOffset="1594"/>
+                    startOffset="1436"
+                    endOffset="1490"/>
             </fix-replace>
         </fix-composite>
         <location
             file="${:app*projectDir}/build.gradle.kts"
-            line="66"
+            line="61"
             column="21"
-            startOffset="1541"
-            endLine="66"
+            startOffset="1437"
+            endLine="61"
             endColumn="73"
-            endOffset="1593"/>
+            endOffset="1489"/>
     </incident>
 
     <incident
@@ -669,12 +655,12 @@
             replacement="2.2.1"/>
         <location
             file="${:app*projectDir}/build.gradle.kts"
-            line="65"
+            line="60"
             column="21"
-            startOffset="1470"
-            endLine="65"
+            startOffset="1366"
+            endLine="60"
             endColumn="69"
-            endOffset="1518"/>
+            endOffset="1414"/>
     </incident>
 
 </incidents>

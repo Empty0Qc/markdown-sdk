@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/quchen/AndroidStudioProjects/markdownsdk/app/src/main/AndroidManifest.xml:2:1-37:12
-INJECTED from /Users/quchen/AndroidStudioProjects/markdownsdk/app/src/main/AndroidManifest.xml:2:1-37:12
-INJECTED from /Users/quchen/AndroidStudioProjects/markdownsdk/app/src/main/AndroidManifest.xml:2:1-37:12
-INJECTED from /Users/quchen/AndroidStudioProjects/markdownsdk/app/src/main/AndroidManifest.xml:2:1-37:12
+ADDED from /Users/quchen/AndroidStudioProjects/markdownsdk/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /Users/quchen/AndroidStudioProjects/markdownsdk/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /Users/quchen/AndroidStudioProjects/markdownsdk/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /Users/quchen/AndroidStudioProjects/markdownsdk/app/src/main/AndroidManifest.xml:2:1-33:12
 MERGED from [androidx.databinding:viewbinding:8.2.2] /Users/quchen/.gradle/caches/transforms-4/6bddbd828938f5316f684cb788578398/transformed/viewbinding-8.2.2/AndroidManifest.xml:2:1-7:12
 MERGED from [:markdown-engine] /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-engine/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
 MERGED from [:markdown-render] /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-render/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-7:12
@@ -17,24 +17,7 @@ MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/quchen/.gradle/caches/
 MERGED from [io.noties.markwon:image-glide:4.6.2] /Users/quchen/.gradle/caches/transforms-4/fad1a25fe6a913b7221608bb1ee563ed/transformed/image-glide-4.6.2/AndroidManifest.xml:2:1-11:12
 MERGED from [com.github.bumptech.glide:glide:4.16.0] /Users/quchen/.gradle/caches/transforms-4/ba02efe968b7b376b1bf9341bcf9accd/transformed/glide-4.16.0/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.fragment:fragment:1.5.4] /Users/quchen/.gradle/caches/transforms-4/1f2d91f20e742742c2e45705bd7a4511/transformed/fragment-1.5.4/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.activity:activity:1.8.2] /Users/quchen/.gradle/caches/transforms-4/94b10b5d0180c4f6bfcb6530bde4aad9/transformed/activity-1.8.2/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.compose.material3:material3-android:1.2.0] /Users/quchen/.gradle/caches/transforms-4/e7fa87f09716560faa19bb593ad3f8d4/transformed/material3-release/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.activity:activity-compose:1.8.2] /Users/quchen/.gradle/caches/transforms-4/21cb95c4da83ade7c2b7b3b8f2737ca8/transformed/activity-compose-1.8.2/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.animation:animation-core-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/ccec3316d3c706dffe22c0451ca4d39a/transformed/animation-core-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.material:material-icons-core-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/ff1209c65c40dea4fe1d9572cb3fb1f4/transformed/material-icons-core-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.material:material-ripple-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/17b20960f7a97fe0d02851171f4b2f96/transformed/material-ripple-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.animation:animation-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/b3655ad77ec5fc605551184283531dc2/transformed/animation-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/4bdd42c8649e7cf4b397e6743d25f74e/transformed/foundation-layout-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.foundation:foundation-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/164231cbd21fd0a0355c7b323ef50086/transformed/foundation-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.ui:ui-unit-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/e30d0d1bffff9820b9ac42e53ac5373c/transformed/ui-unit-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.ui:ui-geometry-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/d17dd240cf235d000cf6383d9cb03cff/transformed/ui-geometry-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.ui:ui-util-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/9c27d57e59bba26c534282388b1c56c7/transformed/ui-util-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.ui:ui-text-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/23f670b3f076535954837311e772d1ff/transformed/ui-text-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/f2c98052a8ea1a58f98622f33a159de8/transformed/ui-tooling-preview-release/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.compose.ui:ui-graphics-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/5b0d5f9caf4f4e86a1eab99e236cb943/transformed/ui-graphics-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.ui:ui-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/07606f357b97730f36feb386f5c37a7c/transformed/ui-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.activity:activity-ktx:1.8.2] /Users/quchen/.gradle/caches/transforms-4/21cebfff0c5f471e584ece05b931bc58/transformed/activity-ktx-1.8.2/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/quchen/.gradle/caches/transforms-4/363276318f540842643d52e4a5604b99/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.8.0] /Users/quchen/.gradle/caches/transforms-4/bda9c6d4f24294afb3340eebfa9de04e/transformed/activity-1.8.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/quchen/.gradle/caches/transforms-4/3843b12248c50726f0cc90b96441f785/transformed/savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /Users/quchen/.gradle/caches/transforms-4/9b64d670f0b3b227dcfd2ae8152a6960/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/quchen/.gradle/caches/transforms-4/a12b0fe9cead08ddcaa4c69ecb2029ce/transformed/emoji2-1.3.0/AndroidManifest.xml:17:1-35:12
@@ -49,7 +32,6 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.7.0] /Users/quchen/.gra
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] /Users/quchen/.gradle/caches/transforms-4/89b3d82acbbd66e9fc9ce06becf45c61/transformed/lifecycle-viewmodel-ktx-2.7.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] /Users/quchen/.gradle/caches/transforms-4/3a3899e07ea06f372539b989fefc7eb3/transformed/lifecycle-viewmodel-2.7.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] /Users/quchen/.gradle/caches/transforms-4/54d3537552e321cfeae671af9bf61da8/transformed/lifecycle-viewmodel-savedstate-2.7.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/quchen/.gradle/caches/transforms-4/d2291df7ea7c79a14c27c2b098931d56/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:17:1-23:12
 MERGED from [androidx.core:core-ktx:1.13.0] /Users/quchen/.gradle/caches/transforms-4/a1b1f0d03af32bd8fd7d9c9f9b457275/transformed/core-ktx-1.13.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/quchen/.gradle/caches/transforms-4/6da6e0910461bff50cf57c7b2863973f/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/quchen/.gradle/caches/transforms-4/a20eb80a4d7f9ca22bc59f5f267373c5/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
@@ -59,15 +41,12 @@ MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/quchen/.gradle
 MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/quchen/.gradle/caches/transforms-4/75ce4d842248a237f155ebef47dc43c7/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/quchen/.gradle/caches/transforms-4/dead40687cce7688468a33ab87ac14a2/transformed/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.customview:customview:1.1.0] /Users/quchen/.gradle/caches/transforms-4/a7b475b97dc7734bd98258b96e8dc79f/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.autofill:autofill:1.0.0] /Users/quchen/.gradle/caches/transforms-4/3593799b73b8755414ddc97521f49ab6/transformed/autofill-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core:1.13.0] /Users/quchen/.gradle/caches/transforms-4/88c8cdb71ef66f174158d2e25bdbc67d/transformed/core-1.13.0/AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] /Users/quchen/.gradle/caches/transforms-4/64e9ce4afc88221aab004c0a28c15407/transformed/lifecycle-runtime-2.7.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] /Users/quchen/.gradle/caches/transforms-4/0b449dec55f9b3af6ce6fc9325f89069/transformed/lifecycle-runtime-ktx-2.7.0/AndroidManifest.xml:17:1-22:12
 MERGED from [:markdown-core] /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-core/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-7:12
 MERGED from [:markdown-common] /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-common/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/quchen/.gradle/caches/transforms-4/daf2bac710c1c4f6aaf1ac8407b12e51/transformed/annotation-experimental-1.4.0/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.runtime:runtime-saveable-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/8c2124f223185a823042ca98a33473ca/transformed/runtime-saveable-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.runtime:runtime-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/0a571d907bfdcc7cb9af3de8f5a79b81/transformed/runtime-release/AndroidManifest.xml:2:1-7:12
 MERGED from [io.noties.markwon:html:4.6.2] /Users/quchen/.gradle/caches/transforms-4/0a5a84c8078a2143f9e626fa5ff5230b/transformed/html-4.6.2/AndroidManifest.xml:2:1-11:12
 MERGED from [io.noties.markwon:linkify:4.6.2] /Users/quchen/.gradle/caches/transforms-4/47ddfadaed8150140787b41cd7c4601f/transformed/linkify-4.6.2/AndroidManifest.xml:2:1-11:12
 MERGED from [io.noties.markwon:ext-strikethrough:4.6.2] /Users/quchen/.gradle/caches/transforms-4/3f45278ffc5a4fb0572fdfc122455943/transformed/ext-strikethrough-4.6.2/AndroidManifest.xml:2:1-11:12
@@ -107,8 +86,8 @@ ADDED from /Users/quchen/AndroidStudioProjects/markdownsdk/app/src/main/AndroidM
 	android:name
 		ADDED from /Users/quchen/AndroidStudioProjects/markdownsdk/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from /Users/quchen/AndroidStudioProjects/markdownsdk/app/src/main/AndroidManifest.xml:7:5-35:19
-INJECTED from /Users/quchen/AndroidStudioProjects/markdownsdk/app/src/main/AndroidManifest.xml:7:5-35:19
+ADDED from /Users/quchen/AndroidStudioProjects/markdownsdk/app/src/main/AndroidManifest.xml:7:5-31:19
+INJECTED from /Users/quchen/AndroidStudioProjects/markdownsdk/app/src/main/AndroidManifest.xml:7:5-31:19
 MERGED from [:markdown-engine] /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-engine/build/intermediates/merged_manifest/release/AndroidManifest.xml:7:5-20
 MERGED from [:markdown-engine] /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-engine/build/intermediates/merged_manifest/release/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.material:material:1.11.0] /Users/quchen/.gradle/caches/transforms-4/306eed16f01fa14d29212a76a6074e82/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
@@ -171,16 +150,6 @@ category#android.intent.category.LAUNCHER
 ADDED from /Users/quchen/AndroidStudioProjects/markdownsdk/app/src/main/AndroidManifest.xml:25:17-77
 	android:name
 		ADDED from /Users/quchen/AndroidStudioProjects/markdownsdk/app/src/main/AndroidManifest.xml:25:27-74
-activity#com.chenge.markdownsdk.ComposeActivity
-ADDED from /Users/quchen/AndroidStudioProjects/markdownsdk/app/src/main/AndroidManifest.xml:29:9-33:56
-	android:label
-		ADDED from /Users/quchen/AndroidStudioProjects/markdownsdk/app/src/main/AndroidManifest.xml:32:13-38
-	android:exported
-		ADDED from /Users/quchen/AndroidStudioProjects/markdownsdk/app/src/main/AndroidManifest.xml:31:13-37
-	android:theme
-		ADDED from /Users/quchen/AndroidStudioProjects/markdownsdk/app/src/main/AndroidManifest.xml:33:13-53
-	android:name
-		ADDED from /Users/quchen/AndroidStudioProjects/markdownsdk/app/src/main/AndroidManifest.xml:30:13-44
 uses-sdk
 INJECTED from /Users/quchen/AndroidStudioProjects/markdownsdk/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/quchen/AndroidStudioProjects/markdownsdk/app/src/main/AndroidManifest.xml
@@ -211,42 +180,8 @@ MERGED from [com.github.bumptech.glide:glide:4.16.0] /Users/quchen/.gradle/cache
 MERGED from [com.github.bumptech.glide:glide:4.16.0] /Users/quchen/.gradle/caches/transforms-4/ba02efe968b7b376b1bf9341bcf9accd/transformed/glide-4.16.0/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.fragment:fragment:1.5.4] /Users/quchen/.gradle/caches/transforms-4/1f2d91f20e742742c2e45705bd7a4511/transformed/fragment-1.5.4/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.5.4] /Users/quchen/.gradle/caches/transforms-4/1f2d91f20e742742c2e45705bd7a4511/transformed/fragment-1.5.4/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.8.2] /Users/quchen/.gradle/caches/transforms-4/94b10b5d0180c4f6bfcb6530bde4aad9/transformed/activity-1.8.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.8.2] /Users/quchen/.gradle/caches/transforms-4/94b10b5d0180c4f6bfcb6530bde4aad9/transformed/activity-1.8.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.compose.material3:material3-android:1.2.0] /Users/quchen/.gradle/caches/transforms-4/e7fa87f09716560faa19bb593ad3f8d4/transformed/material3-release/AndroidManifest.xml:20:5-44
-MERGED from [androidx.compose.material3:material3-android:1.2.0] /Users/quchen/.gradle/caches/transforms-4/e7fa87f09716560faa19bb593ad3f8d4/transformed/material3-release/AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity-compose:1.8.2] /Users/quchen/.gradle/caches/transforms-4/21cb95c4da83ade7c2b7b3b8f2737ca8/transformed/activity-compose-1.8.2/AndroidManifest.xml:5:5-44
-MERGED from [androidx.activity:activity-compose:1.8.2] /Users/quchen/.gradle/caches/transforms-4/21cb95c4da83ade7c2b7b3b8f2737ca8/transformed/activity-compose-1.8.2/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.animation:animation-core-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/ccec3316d3c706dffe22c0451ca4d39a/transformed/animation-core-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.animation:animation-core-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/ccec3316d3c706dffe22c0451ca4d39a/transformed/animation-core-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.material:material-icons-core-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/ff1209c65c40dea4fe1d9572cb3fb1f4/transformed/material-icons-core-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.material:material-icons-core-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/ff1209c65c40dea4fe1d9572cb3fb1f4/transformed/material-icons-core-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.material:material-ripple-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/17b20960f7a97fe0d02851171f4b2f96/transformed/material-ripple-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.material:material-ripple-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/17b20960f7a97fe0d02851171f4b2f96/transformed/material-ripple-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.animation:animation-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/b3655ad77ec5fc605551184283531dc2/transformed/animation-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.animation:animation-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/b3655ad77ec5fc605551184283531dc2/transformed/animation-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/4bdd42c8649e7cf4b397e6743d25f74e/transformed/foundation-layout-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/4bdd42c8649e7cf4b397e6743d25f74e/transformed/foundation-layout-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.foundation:foundation-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/164231cbd21fd0a0355c7b323ef50086/transformed/foundation-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.foundation:foundation-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/164231cbd21fd0a0355c7b323ef50086/transformed/foundation-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-unit-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/e30d0d1bffff9820b9ac42e53ac5373c/transformed/ui-unit-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-unit-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/e30d0d1bffff9820b9ac42e53ac5373c/transformed/ui-unit-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-geometry-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/d17dd240cf235d000cf6383d9cb03cff/transformed/ui-geometry-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-geometry-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/d17dd240cf235d000cf6383d9cb03cff/transformed/ui-geometry-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-util-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/9c27d57e59bba26c534282388b1c56c7/transformed/ui-util-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-util-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/9c27d57e59bba26c534282388b1c56c7/transformed/ui-util-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-text-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/23f670b3f076535954837311e772d1ff/transformed/ui-text-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-text-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/23f670b3f076535954837311e772d1ff/transformed/ui-text-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/f2c98052a8ea1a58f98622f33a159de8/transformed/ui-tooling-preview-release/AndroidManifest.xml:20:5-44
-MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/f2c98052a8ea1a58f98622f33a159de8/transformed/ui-tooling-preview-release/AndroidManifest.xml:20:5-44
-MERGED from [androidx.compose.ui:ui-graphics-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/5b0d5f9caf4f4e86a1eab99e236cb943/transformed/ui-graphics-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-graphics-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/5b0d5f9caf4f4e86a1eab99e236cb943/transformed/ui-graphics-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/07606f357b97730f36feb386f5c37a7c/transformed/ui-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/07606f357b97730f36feb386f5c37a7c/transformed/ui-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.activity:activity-ktx:1.8.2] /Users/quchen/.gradle/caches/transforms-4/21cebfff0c5f471e584ece05b931bc58/transformed/activity-ktx-1.8.2/AndroidManifest.xml:5:5-44
-MERGED from [androidx.activity:activity-ktx:1.8.2] /Users/quchen/.gradle/caches/transforms-4/21cebfff0c5f471e584ece05b931bc58/transformed/activity-ktx-1.8.2/AndroidManifest.xml:5:5-44
-MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/quchen/.gradle/caches/transforms-4/363276318f540842643d52e4a5604b99/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/quchen/.gradle/caches/transforms-4/363276318f540842643d52e4a5604b99/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.0] /Users/quchen/.gradle/caches/transforms-4/bda9c6d4f24294afb3340eebfa9de04e/transformed/activity-1.8.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.0] /Users/quchen/.gradle/caches/transforms-4/bda9c6d4f24294afb3340eebfa9de04e/transformed/activity-1.8.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/quchen/.gradle/caches/transforms-4/3843b12248c50726f0cc90b96441f785/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/quchen/.gradle/caches/transforms-4/3843b12248c50726f0cc90b96441f785/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /Users/quchen/.gradle/caches/transforms-4/9b64d670f0b3b227dcfd2ae8152a6960/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:5:5-44
@@ -275,8 +210,6 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] /Users/quchen/.gradle
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] /Users/quchen/.gradle/caches/transforms-4/3a3899e07ea06f372539b989fefc7eb3/transformed/lifecycle-viewmodel-2.7.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] /Users/quchen/.gradle/caches/transforms-4/54d3537552e321cfeae671af9bf61da8/transformed/lifecycle-viewmodel-savedstate-2.7.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] /Users/quchen/.gradle/caches/transforms-4/54d3537552e321cfeae671af9bf61da8/transformed/lifecycle-viewmodel-savedstate-2.7.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/quchen/.gradle/caches/transforms-4/d2291df7ea7c79a14c27c2b098931d56/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
-MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/quchen/.gradle/caches/transforms-4/d2291df7ea7c79a14c27c2b098931d56/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
 MERGED from [androidx.core:core-ktx:1.13.0] /Users/quchen/.gradle/caches/transforms-4/a1b1f0d03af32bd8fd7d9c9f9b457275/transformed/core-ktx-1.13.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.core:core-ktx:1.13.0] /Users/quchen/.gradle/caches/transforms-4/a1b1f0d03af32bd8fd7d9c9f9b457275/transformed/core-ktx-1.13.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/quchen/.gradle/caches/transforms-4/6da6e0910461bff50cf57c7b2863973f/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
@@ -295,8 +228,6 @@ MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/quchen/.gradle/cac
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/quchen/.gradle/caches/transforms-4/dead40687cce7688468a33ab87ac14a2/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.customview:customview:1.1.0] /Users/quchen/.gradle/caches/transforms-4/a7b475b97dc7734bd98258b96e8dc79f/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.customview:customview:1.1.0] /Users/quchen/.gradle/caches/transforms-4/a7b475b97dc7734bd98258b96e8dc79f/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.autofill:autofill:1.0.0] /Users/quchen/.gradle/caches/transforms-4/3593799b73b8755414ddc97521f49ab6/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.autofill:autofill:1.0.0] /Users/quchen/.gradle/caches/transforms-4/3593799b73b8755414ddc97521f49ab6/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core:1.13.0] /Users/quchen/.gradle/caches/transforms-4/88c8cdb71ef66f174158d2e25bdbc67d/transformed/core-1.13.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core:1.13.0] /Users/quchen/.gradle/caches/transforms-4/88c8cdb71ef66f174158d2e25bdbc67d/transformed/core-1.13.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] /Users/quchen/.gradle/caches/transforms-4/64e9ce4afc88221aab004c0a28c15407/transformed/lifecycle-runtime-2.7.0/AndroidManifest.xml:5:5-44
@@ -309,10 +240,6 @@ MERGED from [:markdown-common] /Users/quchen/AndroidStudioProjects/markdownsdk/m
 MERGED from [:markdown-common] /Users/quchen/AndroidStudioProjects/markdownsdk/markdown-common/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/quchen/.gradle/caches/transforms-4/daf2bac710c1c4f6aaf1ac8407b12e51/transformed/annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/quchen/.gradle/caches/transforms-4/daf2bac710c1c4f6aaf1ac8407b12e51/transformed/annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.runtime:runtime-saveable-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/8c2124f223185a823042ca98a33473ca/transformed/runtime-saveable-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.runtime:runtime-saveable-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/8c2124f223185a823042ca98a33473ca/transformed/runtime-saveable-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.runtime:runtime-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/0a571d907bfdcc7cb9af3de8f5a79b81/transformed/runtime-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.runtime:runtime-android:1.6.1] /Users/quchen/.gradle/caches/transforms-4/0a571d907bfdcc7cb9af3de8f5a79b81/transformed/runtime-release/AndroidManifest.xml:5:5-44
 MERGED from [io.noties.markwon:html:4.6.2] /Users/quchen/.gradle/caches/transforms-4/0a5a84c8078a2143f9e626fa5ff5230b/transformed/html-4.6.2/AndroidManifest.xml:7:5-9:41
 MERGED from [io.noties.markwon:html:4.6.2] /Users/quchen/.gradle/caches/transforms-4/0a5a84c8078a2143f9e626fa5ff5230b/transformed/html-4.6.2/AndroidManifest.xml:7:5-9:41
 MERGED from [io.noties.markwon:linkify:4.6.2] /Users/quchen/.gradle/caches/transforms-4/47ddfadaed8150140787b41cd7c4601f/transformed/linkify-4.6.2/AndroidManifest.xml:7:5-9:41

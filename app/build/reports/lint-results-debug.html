@@ -177,23 +177,22 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 149 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 147 warnings</span>
       <div class="mdl-layout-spacer"></div>
-      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Sun Aug 17 15:28:21 CST 2025 by AGP (8.2.2)</nav>
+      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Sun Aug 17 18:55:52 CST 2025 by AGP (8.2.2)</nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">Issue Types</span>
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="#overview"><i class="material-icons">dashboard</i>Overview</a>
-      <a class="mdl-navigation__link" href="#ObsoleteLintCustomCheck"><i class="material-icons warning-icon">warning</i>Obsolete custom lint check (1)</a>
       <a class="mdl-navigation__link" href="#OldTargetApi"><i class="material-icons warning-icon">warning</i>Target SDK attribute is not targeting latest version (1)</a>
       <a class="mdl-navigation__link" href="#RedundantLabel"><i class="material-icons warning-icon">warning</i>Redundant label on activity (1)</a>
       <a class="mdl-navigation__link" href="#AndroidGradlePluginVersion"><i class="material-icons warning-icon">warning</i>Obsolete Android Gradle Plugin Version (1)</a>
       <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (17)</a>
       <a class="mdl-navigation__link" href="#UnusedResources"><i class="material-icons warning-icon">warning</i>Unused resources (112)</a>
       <a class="mdl-navigation__link" href="#TypographyEllipsis"><i class="material-icons warning-icon">warning</i>Ellipsis string can be replaced with ellipsis character (2)</a>
-      <a class="mdl-navigation__link" href="#SmallSp"><i class="material-icons warning-icon">warning</i>Text size is too small (5)</a>
+      <a class="mdl-navigation__link" href="#SmallSp"><i class="material-icons warning-icon">warning</i>Text size is too small (4)</a>
       <a class="mdl-navigation__link" href="#UseTomlInstead"><i class="material-icons warning-icon">warning</i>Use TOML Version Catalog Instead (2)</a>
       <a class="mdl-navigation__link" href="#SetTextI18n"><i class="material-icons warning-icon">warning</i>TextView Internationalization (2)</a>
       <a class="mdl-navigation__link" href="#HardcodedText"><i class="material-icons warning-icon">warning</i>Hardcoded text (5)</a>
@@ -209,11 +208,6 @@ document.getElementById(id).style.display = 'none';
   </div>
               <div class="mdl-card__supporting-text">
 <table class="overview">
-<tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Lint">Lint</a>
-</td></tr>
-<tr>
-<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
-<a href="#ObsoleteLintCustomCheck">ObsoleteLintCustomCheck</a>: Obsolete custom lint check</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Correctness">Correctness</a>
 </td></tr>
 <tr>
@@ -241,7 +235,7 @@ document.getElementById(id).style.display = 'none';
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Usability">Usability</a>
 </td></tr>
 <tr>
-<td class="countColumn">5</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">4</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#SmallSp">SmallSp</a>: Text size is too small</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Productivity">Productivity</a>
 </td></tr>
@@ -256,7 +250,7 @@ document.getElementById(id).style.display = 'none';
 <tr>
 <td class="countColumn">5</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#HardcodedText">HardcodedText</a>: Hardcoded text</td></tr>
-<tr><td></td><td class="categoryColumn"><a href="#ExtraIssues">Included Additional Checks (56)</a>
+<tr><td></td><td class="categoryColumn"><a href="#ExtraIssues">Included Additional Checks (29)</a>
 </td></tr>
 <tr><td></td><td class="categoryColumn"><a href="#MissingIssues">Disabled Checks (39)</a>
 </td></tr>
@@ -264,72 +258,6 @@ document.getElementById(id).style.display = 'none';
 <br/>              </div>
               <div class="mdl-card__actions mdl-card--border">
 <button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="OverviewCardLink" onclick="hideid('OverviewCard');">
-Dismiss</button>            </div>
-            </div>
-          </section>
-<a name="Lint"></a>
-<a name="ObsoleteLintCustomCheck"></a>
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="ObsoleteLintCustomCheckCard" style="display: block;">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-  <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">Obsolete custom lint check</h2>
-  </div>
-              <div class="mdl-card__supporting-text">
-<div class="issue">
-<div class="warningslist">
-<span class="location"><a href="../../../../../.gradle/caches/transforms-4/0a571d907bfdcc7cb9af3de8f5a79b81/transformed/runtime-release/jars/lint.jar">../../../../../.gradle/caches/transforms-4/0a571d907bfdcc7cb9af3de8f5a79b81/transformed/runtime-release/jars/lint.jar</a></span>: <span class="message">Library lint checks reference invalid APIs; these checks <b>will be skipped</b>!<br/>
-<br/>
-Lint found an issue registry (<code>androidx.compose.runtime.lint.RuntimeIssueRegistry</code>)<br/>
-which contains some references to invalid API:<br/>
-org.jetbrains.kotlin.analysis.api.session.KtAnalysisSessionProvider: org.jetbrains.kotlin.analysis.api.lifetime.KtLifetimeTokenFactory getTokenFactory()<br/>
-(Referenced from androidx/compose/runtime/lint/AutoboxingStateCreationDetector.class)<br/>
-<br/>
-Therefore, this lint check library is <b>not</b> included<br/>
-in analysis. This affects the following lint checks:<br/>
-<code>AutoboxingStateValueProperty</code><br/>
-<code>AutoboxingStateCreation</code><br/>
-<code>CoroutineCreationDuringComposition</code><br/>
-<code>FlowOperatorInvokedInComposition</code><br/>
-<code>ComposableLambdaParameterNaming</code><br/>
-<code>ComposableLambdaParameterPosition</code><br/>
-<code>ComposableNaming</code><br/>
-<code>StateFlowValueCalledInComposition</code><br/>
-<code>CompositionLocalNaming</code><br/>
-<code>MutableCollectionMutableState</code><br/>
-<code>ProduceStateDoesNotAssignValue</code><br/>
-<code>RememberReturnType</code><br/>
-<code>OpaqueUnitKey</code><br/>
-<code>UnrememberedMutableState</code><br/>
-<br/>
-To use this lint check, upgrade to a more recent version<br/>
-of the library.</span><br />
-</div>
-<div class="metadata"><div class="explanation" id="explanationObsoleteLintCustomCheck" style="display: none;">
-Lint can be extended with "custom checks": additional checks implemented by developers and libraries to for example enforce specific API usages required by a library or a company coding style guideline.<br/>
-<br/>
-The Lint APIs are not yet stable, so these checks may either cause a performance degradation, or stop working, or provide wrong results.<br/>
-<br/>
-This warning flags custom lint checks that are found to be using obsolete APIs and will need to be updated to run in the current lint environment.<br/>
-<br/>
-It may also flag issues found to be using a <b>newer</b> version of the API, meaning that you need to use a newer version of lint (or Android Studio or Gradle plugin etc) to work with these checks.<br/>To suppress this error, use the issue id "ObsoleteLintCustomCheck" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
-<br/></div>
-</div>
-</div>
-<div class="chips">
-<span class="mdl-chip">
-    <span class="mdl-chip__text">ObsoleteLintCustomCheck</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Warning</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Priority 10/10</span>
-</span>
-</div>
-              </div>
-              <div class="mdl-card__actions mdl-card--border">
-<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationObsoleteLintCustomCheckLink" onclick="reveal('explanationObsoleteLintCustomCheck');">
-Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="ObsoleteLintCustomCheckCardLink" onclick="hideid('ObsoleteLintCustomCheckCard');">
 Dismiss</button>            </div>
             </div>
           </section>
@@ -483,14 +411,13 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../build.gradle.kts">../../build.gradle.kts</a>:65</span>: <span class="message">A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.1</span><br /><pre class="errorlines">
-<span class="lineno"> 62 </span>    implementation(libs.androidx.lifecycle.runtime.ktx)
-<span class="lineno"> 63 </span>    implementation(libs.androidx.appcompat)
-<span class="lineno"> 64 </span>    implementation(libs.material)
-<span class="caretline"><span class="lineno"> 65 </span>    implementation("<span class="warning">androidx.constraintlayout:constraintlayout:2.1.4</span>")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 66 </span>    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
-<span class="lineno"> 67 </span>    
-<span class="lineno"> 68 </span>    // Compose
+<span class="location"><a href="../../build.gradle.kts">../../build.gradle.kts</a>:60</span>: <span class="message">A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.1</span><br /><pre class="errorlines">
+<span class="lineno"> 57 </span>    implementation(libs.androidx.lifecycle.runtime.ktx)
+<span class="lineno"> 58 </span>    implementation(libs.androidx.appcompat)
+<span class="lineno"> 59 </span>    implementation(libs.material)
+<span class="caretline"><span class="lineno"> 60 </span>    implementation("<span class="warning">androidx.constraintlayout:constraintlayout:2.1.4</span>")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 61 </span>    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+<span class="lineno"> 62 </span>    
 </pre>
 
 <span class="location"><a href="../../../gradle/libs.versions.toml">../../../gradle/libs.versions.toml</a>:3</span>: <span class="message">A newer version of com.android.application than 8.2.2 is available: 8.12.0</span><br /><pre class="errorlines">
@@ -982,14 +909,14 @@ Dismiss</button>            </div>
 <span class="caretline"><span class="lineno">   6 </span>  <span class="tag">&lt;string</span><span class="attribute"> </span><span class="warning"><span class="attribute">name</span>=<span class="value">"main_activity_title"</span></span>>Markdown渲染器演示<span class="tag">&lt;/string></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno">   7 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"debug_render"</span>>调试渲染<span class="tag">&lt;/string></span>
 <span class="lineno">   8 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"render_time_simple"</span>>耗时: 0ms<span class="tag">&lt;/string></span>
-<span class="lineno">   9 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"compose_demo"</span>>Compose<span class="tag">&lt;/string></span></pre>
+</pre>
 
 <span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:8</span>: <span class="message">The resource <code>R.string.render_time_simple</code> appears to be unused</span><br /><pre class="errorlines">
 <span class="lineno">   5 </span>  <span class="comment">&lt;!-- Main Activity --></span>
 <span class="lineno">   6 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"main_activity_title"</span>>Markdown渲染器演示<span class="tag">&lt;/string></span>
 <span class="lineno">   7 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"debug_render"</span>>调试渲染<span class="tag">&lt;/string></span>
 <span class="caretline"><span class="lineno">   8 </span>  <span class="tag">&lt;string</span><span class="attribute"> </span><span class="warning"><span class="attribute">name</span>=<span class="value">"render_time_simple"</span></span>>耗时: 0ms<span class="tag">&lt;/string></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">   9 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"compose_demo"</span>>Compose<span class="tag">&lt;/string></span>
+<span class="lineno">   9 </span>
 <span class="lineno">  10 </span>
 <span class="lineno">  11 </span>  <span class="comment">&lt;!-- Menu Items --></span></pre>
 
@@ -1278,22 +1205,13 @@ Dismiss</button>            </div>
 <span class="lineno"> 130 </span>        <span class="prefix">android:</span><span class="attribute">insetTop</span>=<span class="value">"0dp"</span>
 <span class="lineno"> 131 </span>        <span class="prefix">android:</span><span class="attribute">insetBottom</span>=<span class="value">"0dp"</span></pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_main.xml">../../src/main/res/layout/activity_main.xml</a>:141</span>: <span class="message">Avoid using sizes smaller than <code>11sp</code>: <code>9sp</code></span><br /><pre class="errorlines">
-<span class="lineno"> 138 </span>        <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span>
-<span class="lineno"> 139 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginHorizontal</span>=<span class="value">"1dp"</span>
-<span class="lineno"> 140 </span>        <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"@string/compose_demo"</span>
-<span class="caretline"><span class="lineno"> 141 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"9sp"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 142 </span>        <span class="prefix">android:</span><span class="attribute">minHeight</span>=<span class="value">"0dp"</span>
-<span class="lineno"> 143 </span>        <span class="prefix">android:</span><span class="attribute">insetTop</span>=<span class="value">"0dp"</span>
-<span class="lineno"> 144 </span>        <span class="prefix">android:</span><span class="attribute">insetBottom</span>=<span class="value">"0dp"</span></pre>
-
-<span class="location"><a href="../../src/main/res/layout/activity_main.xml">../../src/main/res/layout/activity_main.xml</a>:156</span>: <span class="message">Avoid using sizes smaller than <code>11sp</code>: <code>10sp</code></span><br /><pre class="errorlines">
-<span class="lineno"> 153 </span>      <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 154 </span>      <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"center"</span>
-<span class="lineno"> 155 </span>      <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"@string/render_time"</span>
-<span class="caretline"><span class="lineno"> 156 </span>      <span class="warning"><span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"10sp"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 157 </span>      <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"?attr/colorOnSurface"</span>
-<span class="lineno"> 158 </span>      <span class="prefix">android:</span><span class="attribute">padding</span>=<span class="value">"4dp"</span> />
+<span class="location"><a href="../../src/main/res/layout/activity_main.xml">../../src/main/res/layout/activity_main.xml</a>:145</span>: <span class="message">Avoid using sizes smaller than <code>11sp</code>: <code>10sp</code></span><br /><pre class="errorlines">
+<span class="lineno"> 142 </span>      <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 143 </span>      <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"center"</span>
+<span class="lineno"> 144 </span>      <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"@string/render_time"</span>
+<span class="caretline"><span class="lineno"> 145 </span>      <span class="warning"><span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"10sp"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 146 </span>      <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"?attr/colorOnSurface"</span>
+<span class="lineno"> 147 </span>      <span class="prefix">android:</span><span class="attribute">padding</span>=<span class="value">"4dp"</span> />
 </pre>
 
 </div>
@@ -1333,24 +1251,23 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../build.gradle.kts">../../build.gradle.kts</a>:65</span>: <span class="message">Use version catalog instead</span><br /><pre class="errorlines">
-<span class="lineno"> 62 </span>    implementation(libs.androidx.lifecycle.runtime.ktx)
-<span class="lineno"> 63 </span>    implementation(libs.androidx.appcompat)
-<span class="lineno"> 64 </span>    implementation(libs.material)
-<span class="caretline"><span class="lineno"> 65 </span>    implementation("<span class="warning">androidx.constraintlayout:constraintlayout:2.1.4</span>")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 66 </span>    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
-<span class="lineno"> 67 </span>    
-<span class="lineno"> 68 </span>    // Compose
+<span class="location"><a href="../../build.gradle.kts">../../build.gradle.kts</a>:60</span>: <span class="message">Use version catalog instead</span><br /><pre class="errorlines">
+<span class="lineno"> 57 </span>    implementation(libs.androidx.lifecycle.runtime.ktx)
+<span class="lineno"> 58 </span>    implementation(libs.androidx.appcompat)
+<span class="lineno"> 59 </span>    implementation(libs.material)
+<span class="caretline"><span class="lineno"> 60 </span>    implementation("<span class="warning">androidx.constraintlayout:constraintlayout:2.1.4</span>")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 61 </span>    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+<span class="lineno"> 62 </span>    
 </pre>
 
-<span class="location"><a href="../../build.gradle.kts">../../build.gradle.kts</a>:66</span>: <span class="message">Use version catalog instead</span><br /><pre class="errorlines">
-<span class="lineno"> 63 </span>    implementation(libs.androidx.appcompat)
-<span class="lineno"> 64 </span>    implementation(libs.material)
-<span class="lineno"> 65 </span>    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-<span class="caretline"><span class="lineno"> 66 </span>    implementation("<span class="warning">androidx.swiperefreshlayout:swiperefreshlayout:1.1.0</span>")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 67 </span>    
-<span class="lineno"> 68 </span>    // Compose
-<span class="lineno"> 69 </span>    implementation(libs.androidx.activity.compose)
+<span class="location"><a href="../../build.gradle.kts">../../build.gradle.kts</a>:61</span>: <span class="message">Use version catalog instead</span><br /><pre class="errorlines">
+<span class="lineno"> 58 </span>    implementation(libs.androidx.appcompat)
+<span class="lineno"> 59 </span>    implementation(libs.material)
+<span class="lineno"> 60 </span>    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+<span class="caretline"><span class="lineno"> 61 </span>    implementation("<span class="warning">androidx.swiperefreshlayout:swiperefreshlayout:1.1.0</span>")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 62 </span>    
+<span class="lineno"> 63 </span>
+<span class="lineno"> 64 </span>    
 </pre>
 
 </div>
@@ -1390,24 +1307,24 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/chenge/markdownsdk/MainActivity.kt">../../src/main/java/com/chenge/markdownsdk/MainActivity.kt</a>:190</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
-<span class="lineno"> 187 </span>    <span class="comment">// 隐藏加载状态，显示错误</span>
-<span class="lineno"> 188 </span>    binding.progressBar.visibility = android.view.View.GONE
-<span class="lineno"> 189 </span>    binding.contentTextView.visibility = android.view.View.VISIBLE
-<span class="caretline"><span class="lineno"> 190 </span>    binding.contentTextView.text = <span class="warning">getString(R.string.error_loading_content) + <span class="string">": ${</span>e.message<span class="string">}"</span></span>&nbsp;</span>
-<span class="lineno"> 191 </span>  } finally {
-<span class="lineno"> 192 </span>    binding.swipeRefreshLayout.isRefreshing = <span class="keyword">false</span>
-<span class="lineno"> 193 </span>  }
+<span class="location"><a href="../../src/main/java/com/chenge/markdownsdk/MainActivity.kt">../../src/main/java/com/chenge/markdownsdk/MainActivity.kt</a>:188</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
+<span class="lineno"> 185 </span>    <span class="comment">// 隐藏加载状态，显示错误</span>
+<span class="lineno"> 186 </span>    binding.progressBar.visibility = android.view.View.GONE
+<span class="lineno"> 187 </span>    binding.contentTextView.visibility = android.view.View.VISIBLE
+<span class="caretline"><span class="lineno"> 188 </span>    binding.contentTextView.text = <span class="warning">getString(R.string.error_loading_content) + <span class="string">": ${</span>e.message<span class="string">}"</span></span>&nbsp;</span>
+<span class="lineno"> 189 </span>  } finally {
+<span class="lineno"> 190 </span>    binding.swipeRefreshLayout.isRefreshing = <span class="keyword">false</span>
+<span class="lineno"> 191 </span>  }
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/chenge/markdownsdk/MainActivity.kt">../../src/main/java/com/chenge/markdownsdk/MainActivity.kt</a>:190</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
-<span class="lineno"> 187 </span>    <span class="comment">// 隐藏加载状态，显示错误</span>
-<span class="lineno"> 188 </span>    binding.progressBar.visibility = android.view.View.GONE
-<span class="lineno"> 189 </span>    binding.contentTextView.visibility = android.view.View.VISIBLE
-<span class="caretline"><span class="lineno"> 190 </span>    binding.contentTextView.text = getString(R.string.error_loading_content) + <span class="warning"><span class="string">": ${</span>e.message<span class="string">}"</span></span>&nbsp;</span>
-<span class="lineno"> 191 </span>  } finally {
-<span class="lineno"> 192 </span>    binding.swipeRefreshLayout.isRefreshing = <span class="keyword">false</span>
-<span class="lineno"> 193 </span>  }
+<span class="location"><a href="../../src/main/java/com/chenge/markdownsdk/MainActivity.kt">../../src/main/java/com/chenge/markdownsdk/MainActivity.kt</a>:188</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
+<span class="lineno"> 185 </span>    <span class="comment">// 隐藏加载状态，显示错误</span>
+<span class="lineno"> 186 </span>    binding.progressBar.visibility = android.view.View.GONE
+<span class="lineno"> 187 </span>    binding.contentTextView.visibility = android.view.View.VISIBLE
+<span class="caretline"><span class="lineno"> 188 </span>    binding.contentTextView.text = getString(R.string.error_loading_content) + <span class="warning"><span class="string">": ${</span>e.message<span class="string">}"</span></span>&nbsp;</span>
+<span class="lineno"> 189 </span>  } finally {
+<span class="lineno"> 190 </span>    binding.swipeRefreshLayout.isRefreshing = <span class="keyword">false</span>
+<span class="lineno"> 191 </span>  }
 </pre>
 
 </div>
@@ -1540,19 +1457,6 @@ whether a particular check is included in analysis when configuring builds.
 (Note that the list does not include the hundreds of built-in checks into lint,
 only additional ones.)
 <div id="IncludedIssues" style="display: none;"><br/><br/><div class="issue">
-<div class="id">ConflictingOnColor<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-In the Material color system background colors have a corresponding 'on' color which is used for the content color inside a component. For example, a button colored <code>primary</code> will have <code>onPrimary</code> text. Because of this, it is important that there is only one possible <code>onColor</code> for a given color value, otherwise there is no way to know which 'on' color should be used inside a component. To fix this either use the same 'on' color for identical background colors, or use a different background color for each 'on' color.<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.material<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
 <div class="id">DetachAndAttachSameFragment<div class="issueSeparator"></div>
 </div>
 <div class="metadata"><div class="explanation">
@@ -1671,32 +1575,6 @@ Feedback: <a href="https://issuetracker.google.com/issues/new?component=460964">
 </div>
 </div>
 <div class="issue">
-<div class="id">FrequentlyChangedStateReadInComposition<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-This property is observable and is updated after every scroll or remeasure. If you use it in the composable function directly, it will be recomposed on every change, causing potential performance issues including infinity recomposition loops. Prefer wrapping it with derivedStateOf to use calculation based on this property in composition or collect changes inside LaunchedEffect instead.<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.foundation<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">InvalidColorHexValue<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-Creating a Color with a hex value requires a 32 bit value (such as 0xFF000000), with 8 bits being used per channel (ARGB). Not passing a full 32 bit value will result in channels being undefined / incorrect.<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.ui.graphics<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
 <div class="id">InvalidFragmentVersionForActivityResult<div class="issueSeparator"></div>
 </div>
 <div class="metadata"><div class="explanation">
@@ -1705,127 +1583,6 @@ In order to use the ActivityResult APIs you must upgrade your                 Fr
 Vendor: Android Open Source Project<br/>
 Identifier: androidx.activity<br/>
 Feedback: <a href="https://issuetracker.google.com/issues/new?component=527362">https://issuetracker.google.com/issues/new?component=527362</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">LaunchDuringComposition<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-Calling <code>launch</code> during composition is incorrect. Doing so will cause launch to be called multiple times resulting in a RuntimeException. Instead, use <code>SideEffect</code> and <code>launch</code> inside of the suspending block. The block will only run after a successful composition.<br/><div class="vendor">
-Vendor: Jetpack Activity Compose<br/>
-Identifier: androidx.activity.compose<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">MissingColorAlphaChannel<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-Creating a Color with a hex value requires a 32 bit value (such as 0xFF000000), with 8 bits being used per channel (ARGB). Not passing a full 32 bit value will result in channels being undefined. For example, passing 0xFF0000 will result in a missing alpha channel, so the color will not appear visible.<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.ui.graphics<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">ModifierFactoryExtensionFunction<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-Modifier factory functions should be defined as extension functions on Modifier to allow modifiers to be fluently chained.<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.ui<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">ModifierFactoryReturnType<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-Modifier factory functions should return Modifier as their type, and not a subtype of Modifier (such as Modifier.Element).<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.ui<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">ModifierFactoryUnreferencedReceiver<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-Modifier factory functions are fluently chained to construct a chain of Modifier objects that will be applied to a layout. As a result, each factory function <i>must</i> use the receiver <code>Modifier</code> parameter, to ensure that the function is returning a chain that includes previous items in the chain. Make sure the returned chain either explicitly includes <code>this</code>, such as <code>return this.then(MyModifier)</code> or implicitly by returning a chain that starts with an implicit call to another factory function, such as <code>return myModifier()</code>, where <code>myModifier</code> is defined as <code>fun Modifier.myModifier(): Modifier</code>.<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.ui<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">ModifierNodeInspectableProperties<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-ModifierNodeElements may override inspectableProperties() to provide information about the modifier in the layout inspector. The default implementation attempts to read all of the properties on the class reflectively, which may not comprehensively or effectively describe the modifier.<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.ui<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">ModifierParameter<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-The first (or only) Modifier parameter in a Composable function should follow the following rules:<br/>
-- Be named <code>modifier</code><br/>
-- Have a type of <code>Modifier</code><br/>
-- Either have no default value, or have a default value of <code>Modifier</code><br/>
-- If optional, be the first optional parameter in the parameter list<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.ui<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">MultipleAwaitPointerEventScopes<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-Pointer Input events are queued inside awaitPointerEventScope. Multiple calls to awaitPointerEventScope may exit the scope. During this time there is no guarantee that the events will be queued and some events may be dropped. It is recommended to use a single top-level block and perform the pointer events processing within such block.<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.ui<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">NoCollectCallFound<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-You must call collect on the progress in the onBack function. The collect call is what properly splits the callback so it knows what to do when the back gestures is started vs when it is completed. Failing to call collect will cause all code in the block to run when the gesture is started.<br/><div class="vendor">
-Vendor: Jetpack Activity Compose<br/>
-Identifier: androidx.activity.compose<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
 </div>
 <br/>
 <br/></div>
@@ -1847,19 +1604,6 @@ Feedback: <a href="https://issuetracker.google.com/issues/new?component=413132">
 </div>
 </div>
 <div class="issue">
-<div class="id">RememberSaveableSaverParameter<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-The first parameter to <code>rememberSaveable</code> is a vararg parameter for inputs that when changed will cause the state to reset. Passing a <code>Saver</code> object to this parameter is an error, as the intention is to pass the <code>Saver</code> object to the saver parameter. Since the saver parameter is not the first parameter, it must be explicitly named.<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.runtime.saveable<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
 <div class="id">RepeatOnLifecycleWrongUsage<div class="issueSeparator"></div>
 </div>
 <div class="metadata"><div class="explanation">
@@ -1867,85 +1611,6 @@ The repeatOnLifecycle APIs should be used when the View is created,             
 Vendor: Android Open Source Project<br/>
 Identifier: androidx.lifecycle<br/>
 Feedback: <a href="https://issuetracker.google.com/issues/new?component=413132">https://issuetracker.google.com/issues/new?component=413132</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">ReturnFromAwaitPointerEventScope<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-Pointer Input events are queued inside awaitPointerEventScope. By using the return value of awaitPointerEventScope one might unexpectedly lose events. If another awaitPointerEventScope is restarted there is no guarantee that the events will persist between those calls. In this case you should keep all events inside the awaitPointerEventScope block<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.ui<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">SuspiciousCompositionLocalModifierRead<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-Jetpack Compose is unable to send updated values of a CompositionLocal when it's read in a Modifier.Node's initializer and onAttach() or onDetach() callbacks. Modifier.Node's callbacks are not aware of snapshot reads, and their lifecycle callbacks are not invoked on every recomposition. If you read a CompositionLocal in onAttach() or onDetach(), you will only get the CompositionLocal's value once at the moment of the read, which may lead to unexpected behaviors. We recommend instead reading CompositionLocals at time-of-use in callbacks that apply your Modifier's behavior, like measure() for LayoutModifierNode, draw() for DrawModifierNode, and so on. To observe the value of the CompositionLocal manually, extend from the ObserverNode interface and place the read inside an observeReads {} block within the onObservedReadsChanged() callback.<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.ui<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">TestManifestGradleConfiguration<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-The androidx.compose.ui:ui-test-manifest dependency is needed for launching a Compose host, such as with createComposeRule. However, it only needs to be present in testing configurations therefore use this dependency with the debugImplementation configuration<br/><div class="moreinfo">More info: <a href="https://developer.android.com/jetpack/compose/testing#setup">https://developer.android.com/jetpack/compose/testing#setup</a>
-</div><div class="vendor">
-Vendor: Android Open Source Project<br/>
-Identifier: androidx.compose.ui.test.manifest<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=741505">https://issuetracker.google.com/issues/new?component=741505</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">UnnecessaryComposedModifier<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-<code>Modifier.composed</code> allows invoking @Composable functions when creating a <code>Modifier</code> instance - for example, using <code>remember</code> to have instance-specific state, allowing the same <code>Modifier</code> object to be safely used in multiple places. Using <code>Modifier.composed</code> without calling any @Composable functions inside is unnecessary, and since the Modifier is no longer skippable, this can cause a lot of extra work inside the composed body, leading to worse performance.<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.ui<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">UnrememberedAnimatable<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-Animatable instances created during composition need to be `remember`ed, otherwise they will be recreated during recomposition, and lose their state. Either hoist the Animatable to an object that is not created during composition, or wrap the Animatable in a call to <code>remember</code>.<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.animation.core<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">UnrememberedMutableInteractionSource<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-MutableInteractionSource instances created during composition need to be `remember`ed, otherwise they will be recreated during recomposition, and lose their state. Either hoist the MutableInteractionSource to an object that is not created during composition, or wrap the MutableInteractionSource in a call to <code>remember</code>.<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.foundation<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
 </div>
 <br/>
 <br/></div>
@@ -2034,84 +1699,6 @@ The repeatOnLifecycle APIs should be used with the viewLifecycleOwner           
 Vendor: Android Open Source Project<br/>
 Identifier: androidx.fragment<br/>
 Feedback: <a href="https://issuetracker.google.com/issues/new?component=460964">https://issuetracker.google.com/issues/new?component=460964</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">UnusedBoxWithConstraintsScope<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-The <code>content</code> lambda in BoxWithConstraints has a scope which will include the incoming constraints. If this scope is ignored, then the cost of subcomposition is being wasted and this BoxWithConstraints should be replaced with a Box.<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.foundation<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">UnusedContentLambdaTargetStateParameter<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-<code>content</code> lambda in AnimatedContent works as a lookup function that returns the corresponding content based on the parameter (a state of type <code>T</code>). It is important for this lambda to return content <i>specific</i> to the input parameter, so that the different contents can be properly animated. Not using the input parameter to the content lambda will result in the same content for different input (i.e. target state) and therefore an erroneous transition between the exact same content.`<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.animation<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">UnusedCrossfadeTargetStateParameter<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-<code>content</code> lambda in Crossfade works as a lookup function that returns the corresponding content based on the parameter (a state of type <code>T</code>). It is important for this lambda to return content <i>specific</i> to the input parameter, so that the different contents can be properly crossfaded. Not using the input parameter to the content lambda will result in the same content for different input (i.e. target state) and therefore an erroneous crossfade between the exact same content.`<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.animation<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">UnusedMaterial3ScaffoldPaddingParameter<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-The <code>content</code> lambda in Scaffold has a padding parameter which will include any inner padding for the content due to app bars. If this parameter is ignored, then content may be obscured by the app bars resulting in visual issues or elements that can't be interacted with.<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.material3<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">UnusedMaterialScaffoldPaddingParameter<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-The <code>content</code> lambda in Scaffold has a padding parameter which will include any inner padding for the content due to app bars. If this parameter is ignored, then content may be obscured by the app bars resulting in visual issues or elements that can't be interacted with.<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.material<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">UnusedTransitionTargetStateParameter<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-Transition.animate* functions provide a target state parameter in the lambda that will be used to calculate the value for a given state. This target state parameter in the lambda may or may not be the same as the actual state, as the animation system occasionally needs to look up target values for other states to do proper seeking/tooling preview. Relying on other state than the provided <code>targetState</code> could also result in unnecessary recompositions. Therefore, it is generally considered an error if this <code>targetState</code> parameter is not used.<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.animation.core<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
 </div>
 <br/>
 <br/></div>
@@ -2209,19 +1796,6 @@ Feedback: <a href="https://issuetracker.google.com/issues/new?component=460964">
 </div>
 </div>
 <div class="issue">
-<div class="id">UseOfNonLambdaOffsetOverload<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-<code>Modifier.offset()</code> is recommended to be used with static arguments only to avoid unnecessary recompositions. <code>Modifier.offset{ }</code> is preferred in the cases where the arguments are backed by a <code>State</code>.<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.foundation<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
 <div class="id">UseRequireInsteadOfGet<div class="issueSeparator"></div>
 </div>
 <div class="metadata"><div class="explanation">
@@ -2268,19 +1842,6 @@ Use <code>SwitchCompat</code> from AppCompat or <code>MaterialSwitch</code> from
 Vendor: Android Open Source Project<br/>
 Identifier: androidx.appcompat<br/>
 Feedback: <a href="https://issuetracker.google.com/issues/new?component=460343">https://issuetracker.google.com/issues/new?component=460343</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">UsingMaterialAndMaterial3Libraries<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-material and material3 are separate design system libraries that are incompatible with each other, as they have their own distinct theming systems. Using components from both libraries concurrently can cause issues: for example material components will not pick up the correct content color from a material3 container, and vice versa.<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.material3<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
 </div>
 <br/>
 <br/></div>

@@ -26,9 +26,6 @@ public final class ActivityMainBinding implements ViewBinding {
   private final CoordinatorLayout rootView;
 
   @NonNull
-  public final MaterialButton composeButton;
-
-  @NonNull
   public final MarkdownView contentTextView;
 
   @NonNull
@@ -56,13 +53,12 @@ public final class ActivityMainBinding implements ViewBinding {
   public final MaterialButton typewriterButton;
 
   private ActivityMainBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull MaterialButton composeButton, @NonNull MarkdownView contentTextView,
-      @NonNull MaterialButton debugRenderButton, @NonNull FloatingActionButton fab,
-      @NonNull CircularProgressIndicator progressBar, @NonNull MaterialButton streamingModeButton,
-      @NonNull SwipeRefreshLayout swipeRefreshLayout, @NonNull TextView timeTextView,
-      @NonNull MaterialToolbar toolbar, @NonNull MaterialButton typewriterButton) {
+      @NonNull MarkdownView contentTextView, @NonNull MaterialButton debugRenderButton,
+      @NonNull FloatingActionButton fab, @NonNull CircularProgressIndicator progressBar,
+      @NonNull MaterialButton streamingModeButton, @NonNull SwipeRefreshLayout swipeRefreshLayout,
+      @NonNull TextView timeTextView, @NonNull MaterialToolbar toolbar,
+      @NonNull MaterialButton typewriterButton) {
     this.rootView = rootView;
-    this.composeButton = composeButton;
     this.contentTextView = contentTextView;
     this.debugRenderButton = debugRenderButton;
     this.fab = fab;
@@ -101,12 +97,6 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.composeButton;
-      MaterialButton composeButton = ViewBindings.findChildViewById(rootView, id);
-      if (composeButton == null) {
-        break missingId;
-      }
-
       id = R.id.contentTextView;
       MarkdownView contentTextView = ViewBindings.findChildViewById(rootView, id);
       if (contentTextView == null) {
@@ -161,7 +151,7 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((CoordinatorLayout) rootView, composeButton, contentTextView,
+      return new ActivityMainBinding((CoordinatorLayout) rootView, contentTextView,
           debugRenderButton, fab, progressBar, streamingModeButton, swipeRefreshLayout,
           timeTextView, toolbar, typewriterButton);
     }

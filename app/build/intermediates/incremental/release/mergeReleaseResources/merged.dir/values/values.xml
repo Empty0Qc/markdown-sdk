@@ -1876,17 +1876,11 @@
     <item name="action_bar_spinner" type="id"/>
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
-    <item name="androidx_compose_ui_view_composition_context" type="id"/>
-    <item name="compose_view_saveable_id_tag" type="id"/>
-    <item name="consume_window_insets_tag" type="id"/>
     <item name="fragment_container_view_tag" type="id"/>
     <item name="ghost_view" type="id"/>
     <item name="ghost_view_holder" type="id"/>
     <item name="glide_custom_view_target_tag" type="id"/>
-    <item name="hide_in_inspector_tag" type="id"/>
     <item name="home" type="id"/>
-    <item name="inspection_slot_table_set" type="id"/>
-    <item name="is_pooling_container_tag" type="id"/>
     <item name="item_touch_helper_previous_elevation" type="id"/>
     <item name="line1" type="id"/>
     <item name="line3" type="id"/>
@@ -1910,7 +1904,6 @@
     <item name="navigation_bar_item_large_label_view" type="id"/>
     <item name="navigation_bar_item_small_label_view" type="id"/>
     <item name="parent_matrix" type="id"/>
-    <item name="pooling_container_listener_holder_tag" type="id"/>
     <item name="progress_circular" type="id"/>
     <item name="progress_horizontal" type="id"/>
     <item name="report_drawn" type="id"/>
@@ -1958,7 +1951,6 @@
     <id name="view_tree_saved_state_registry_owner"/>
     <id name="view_tree_view_model_store_owner"/>
     <item name="visible_removing_fragment_view_tag" type="id"/>
-    <item name="wrapped_composition_tag" type="id"/>
     <integer name="abc_config_activityDefaultDur">220</integer>
     <integer name="abc_config_activityShortDur">150</integer>
     <integer name="app_bar_elevation_anim_duration">150</integer>
@@ -2093,21 +2085,15 @@
     <string name="character_counter_overflowed_content_description">Character limit exceeded %1$d of %2$d</string>
     <string name="character_counter_pattern" translatable="false">%1$d/%2$d</string>
     <string name="clear_text_end_icon_content_description">Clear text</string>
-    <string name="close_drawer">"Close navigation menu"</string>
-    <string name="close_sheet">"Close sheet"</string>
     <string name="code_copied">代码已复制</string>
-    <string name="compose_demo">Compose</string>
     <string name="content_copied">内容已复制到剪贴板</string>
     <string name="copy_code">复制代码</string>
     <string name="copy_formula">复制公式</string>
     <string name="copy_link">复制链接</string>
     <string name="debug_render">调试渲染</string>
     <string name="decrease_font_size">减小字体</string>
-    <string name="default_error_message">"Invalid input"</string>
-    <string name="default_popup_window_title" ns1:ignore="ExtraTranslation">"Pop-Up Window"</string>
     <string name="dialog_cancel">取消</string>
     <string name="dialog_ok">确定</string>
-    <string name="dropdown_menu">"Dropdown menu"</string>
     <string name="enable_cache">启用缓存</string>
     <string description="Screen reader announcement for when a checkbox is on error. [CHAR LIMIT=NONE]" name="error_a11y_label">
     Error: invalid
@@ -2139,9 +2125,7 @@
     <string description="Content description for an icon that appears in the title area of a dialog" name="icon_content_description">Dialog Icon</string>
     <string name="image_load_failed">图片加载失败</string>
     <string name="image_loading">图片加载中...</string>
-    <string name="in_progress">In progress</string>
     <string name="increase_font_size">增大字体</string>
-    <string name="indeterminate">Partially checked</string>
     <string name="item_view_role_description">Tab</string>
     <string name="keyboard_navigation">键盘导航</string>
     <string name="keyboard_shortcuts">键盘快捷键</string>
@@ -2165,66 +2149,6 @@
     <string name="m3_sys_motion_easing_standard" translatable="false">cubic-bezier(0.2, 0, 0, 1)</string>
     <string name="m3_sys_motion_easing_standard_accelerate" translatable="false">cubic-bezier(0.3, 0, 1, 1)</string>
     <string name="m3_sys_motion_easing_standard_decelerate" translatable="false">cubic-bezier(0, 0, 0, 1)</string>
-    <string name="m3c_bottom_sheet_collapse_description">Collapse bottom sheet</string>
-    <string name="m3c_bottom_sheet_dismiss_description">Dismiss bottom sheet</string>
-    <string name="m3c_bottom_sheet_drag_handle_description">Drag handle</string>
-    <string name="m3c_bottom_sheet_expand_description">Expand bottom sheet</string>
-    <string name="m3c_bottom_sheet_pane_title">Bottom Sheet</string>
-    <string name="m3c_date_input_headline">Entered date</string>
-    <string name="m3c_date_input_headline_description">Entered date: %1$s</string>
-    <string name="m3c_date_input_invalid_for_pattern">Date does not match expected pattern: %1$s</string>
-    <string name="m3c_date_input_invalid_not_allowed">Date not allowed: %1$s</string>
-    <string name="m3c_date_input_invalid_year_range">
-        Date out of expected year range %1$s - %2$s
-    </string>
-    <string name="m3c_date_input_label">Date</string>
-    <string name="m3c_date_input_no_input_description">None</string>
-    <string name="m3c_date_input_title">Select date</string>
-    <string name="m3c_date_picker_headline">"Selected date"</string>
-    <string name="m3c_date_picker_headline_description">Current selection: %1$s</string>
-    <string name="m3c_date_picker_navigate_to_year_description">Navigate to year %1$s</string>
-    <string name="m3c_date_picker_no_selection_description">None</string>
-    <string name="m3c_date_picker_scroll_to_earlier_years">Scroll to show earlier years</string>
-    <string name="m3c_date_picker_scroll_to_later_years">Scroll to show later years</string>
-    <string name="m3c_date_picker_switch_to_calendar_mode">Switch to calendar input mode</string>
-    <string name="m3c_date_picker_switch_to_day_selection">
-        "Swipe to select a year, or tap to switch back to selecting a day"
-    </string>
-    <string name="m3c_date_picker_switch_to_input_mode">Switch to text input mode</string>
-    <string name="m3c_date_picker_switch_to_next_month">"Change to next month"</string>
-    <string name="m3c_date_picker_switch_to_previous_month">"Change to previous month"</string>
-    <string name="m3c_date_picker_switch_to_year_selection">"Switch to selecting a year"</string>
-    <string name="m3c_date_picker_title">"Select date"</string>
-    <string name="m3c_date_picker_today_description">Today</string>
-    <string name="m3c_date_picker_year_picker_pane_title">Year picker visible</string>
-    <string name="m3c_date_range_input_invalid_range_input">Invalid date range input</string>
-    <string name="m3c_date_range_input_title">Enter dates</string>
-    <string name="m3c_date_range_picker_day_in_range">In range</string>
-    <string name="m3c_date_range_picker_end_headline">End date</string>
-    <string name="m3c_date_range_picker_scroll_to_next_month">Scroll to show the next month</string>
-    <string name="m3c_date_range_picker_scroll_to_previous_month">Scroll to show the previous month</string>
-    <string name="m3c_date_range_picker_start_headline">Start date</string>
-    <string name="m3c_date_range_picker_title">Select dates</string>
-    <string name="m3c_dialog">"Dialog"</string>
-    <string name="m3c_dropdown_menu_collapsed">Collapsed</string>
-    <string name="m3c_dropdown_menu_expanded">Expanded</string>
-    <string name="m3c_search_bar_search">Search</string>
-    <string name="m3c_snackbar_dismiss">Dismiss</string>
-    <string name="m3c_suggestions_available">Suggestions below</string>
-    <string name="m3c_time_picker_am">AM</string>
-    <string name="m3c_time_picker_hour">Hour</string>
-    <string name="m3c_time_picker_hour_24h_suffix">%1$d hours</string>
-    <string name="m3c_time_picker_hour_selection">Select hour</string>
-    <string name="m3c_time_picker_hour_suffix">%1$d o\'clock</string>
-    <string name="m3c_time_picker_hour_text_field">for hour</string>
-    <string name="m3c_time_picker_minute">Minute</string>
-    <string name="m3c_time_picker_minute_selection">Select minutes</string>
-    <string name="m3c_time_picker_minute_suffix">%1$d minutes</string>
-    <string name="m3c_time_picker_minute_text_field">for minutes</string>
-    <string name="m3c_time_picker_period_toggle_description">Select AM or PM</string>
-    <string name="m3c_time_picker_pm">PM</string>
-    <string name="m3c_tooltip_long_press_label">Show tooltip</string>
-    <string name="m3c_tooltip_pane_description">Tooltip</string>
     <string name="main_activity_title">Markdown渲染器演示</string>
     <string name="markdown_content_description">Markdown文档内容</string>
     <string name="markdown_syntax_help">Markdown语法帮助</string>
@@ -2320,10 +2244,6 @@
     <string name="mtrl_switch_track_path" translatable="false">M0,16 A16,16 0 0,1 16,0 H36 A16,16 0 0,1 36,32 H16 A16,16 0 0,1 0,16</string>
     <string description="Button text to indicate that the widget will ignore the user&apos;s selection [CHAR_LIMIT=16]" name="mtrl_timepicker_cancel">Cancel</string>
     <string description="Button text to indicate that the widget will save the user&apos;s selection [CHAR_LIMIT=16]" name="mtrl_timepicker_confirm">OK</string>
-    <string name="navigation_menu">"Navigation menu"</string>
-    <string name="not_selected">Not selected</string>
-    <string name="off">Off</string>
-    <string name="on">On</string>
     <string name="open_link">打开链接</string>
     <string name="password_toggle_content_description">Show password</string>
     <string name="path_password_eye" translatable="false">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
@@ -2333,8 +2253,6 @@
     <string name="performance_mode">性能模式</string>
     <string name="performance_settings">性能设置</string>
     <string name="preview_link">预览链接</string>
-    <string name="range_end">"Range end"</string>
-    <string name="range_start">"Range start"</string>
     <string name="render_failed">渲染失败: %1$s</string>
     <string name="render_time">渲染时间: %1$d ms</string>
     <string name="render_time_simple">耗时: 0ms</string>
@@ -2348,7 +2266,6 @@
     <string description="Content description for the X button to clear text [CHAR_LIMIT=NONE]" name="searchview_clear_text_content_description">Clear text</string>
     <string description="Content description for the navigation button to return to the previous screen [CHAR_LIMIT=NONE]" name="searchview_navigation_content_description">Back</string>
     <string name="select_all">全选</string>
-    <string name="selected">Selected</string>
     <string name="settings">设置</string>
     <string name="share_code">分享代码</string>
     <string name="share_image">分享图片</string>
@@ -2358,9 +2275,6 @@
     <string name="sort_ascending">升序排列</string>
     <string name="sort_descending">降序排列</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="switch_role">Switch</string>
-    <string name="tab">Tab</string>
-    <string name="template_percent"><ns2:g id="percentage">%1$d</ns2:g> percent.</string>
     <string name="theme_auto">跟随系统</string>
     <string name="theme_dark">深色主题</string>
     <string name="theme_light">浅色主题</string>
@@ -2368,8 +2282,6 @@
     <string name="theme_switched">主题已切换</string>
     <string name="theme_toggle_description">切换深色/浅色主题</string>
     <string name="toggle_theme">切换主题</string>
-    <string name="tooltip_description">tooltip</string>
-    <string name="tooltip_label">show tooltip</string>
     <string name="troubleshooting">故障排除</string>
     <string name="view_formula_source">查看公式源码</string>
     <string name="view_image">查看图片</string>
@@ -5834,16 +5746,6 @@
     </style>
     <style name="CardView.Light">
         <item name="cardBackgroundColor">@color/cardview_light_background</item>
-    </style>
-    <style name="DialogWindowTheme">
-        <item name="android:windowClipToOutline">false</item>
-    </style>
-    <style name="FloatingDialogTheme">
-        <item name="android:windowIsFloating">false</item>
-    </style>
-    <style name="FloatingDialogWindowTheme">
-        <item name="android:windowClipToOutline">false</item>
-        <item name="android:dialogTheme">@style/FloatingDialogTheme</item>
     </style>
     <style name="MaterialAlertDialog.Material3" parent="MaterialAlertDialog.MaterialComponents">
     <item name="backgroundTint">@macro/m3_comp_dialog_container_color</item>

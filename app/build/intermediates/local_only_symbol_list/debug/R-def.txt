@@ -98,7 +98,6 @@ id action_toggle_theme
 id action_typewriter_fast
 id action_typewriter_normal
 id action_typewriter_slow
-id composeButton
 id contentTextView
 id debugRenderButton
 id fab
@@ -131,7 +130,6 @@ string accessibility_table
 string app_name
 string cache_cleared
 string code_copied
-string compose_demo
 string content_copied
 string copy_code
 string copy_formula
