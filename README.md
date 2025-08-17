@@ -25,7 +25,8 @@
 
 ```
 markdown-sdk/
-├── app/                     # 示例应用
+├── app/                     # 传统 Android View 示例应用
+├── app-compose/             # Jetpack Compose 示例应用
 ├── markdown-common/         # 公共组件和接口定义
 ├── markdown-core/           # 核心解析器和工具类
 ├── markdown-engine/         # 统一入口和引擎封装
@@ -37,7 +38,16 @@ markdown-sdk/
 ### 模块依赖关系
 
 ```
-app
+app (传统 Android View)
+ └── markdown-engine (统一入口)
+     ├── markdown-core (核心解析)
+     │   └── markdown-common (公共组件)
+     ├── markdown-render (渲染逻辑)
+     │   └── markdown-common
+     └── markdown-plugins (插件系统)
+         └── markdown-common
+
+app-compose (Jetpack Compose)
  └── markdown-engine (统一入口)
      ├── markdown-core (核心解析)
      │   └── markdown-common (公共组件)
@@ -55,7 +65,7 @@ app
 
 | 层级 | 模块 | 职责 |
 |------|------|------|
-| **应用层** | `app` | 示例应用，展示 SDK 使用方式 |
+| **应用层** | `app`<br>`app-compose` | 传统 Android View 示例应用<br>Jetpack Compose 示例应用 |
 | **引擎层** | `markdown-engine` | 统一入口，封装所有功能 |
 | **业务层** | `markdown-core`<br>`markdown-render`<br>`markdown-plugins` | 核心解析逻辑<br>渲染和调度<br>插件和扩展 |
 | **基础层** | `markdown-common` | 公共接口、配置、工具类 |
@@ -200,17 +210,45 @@ interface MarkdownPlugin {
 - 向后兼容性保证
 
 ### app
-**示例应用模块**
+**传统 Android View 示例应用模块**
 
 **主要功能:**
-- 展示 SDK 各种使用方式
+- 展示基于 TextView 的 Markdown 渲染
+- Material Design 3 主题支持
+- 深色/浅色模式切换
 - 性能测试和基准测试
 - 同步/异步渲染对比
-- 插件功能演示
+- 调试工具和性能分析
+
+### app-compose
+**Jetpack Compose 示例应用模块**
+
+**主要功能:**
+- 展示基于 Compose 的 Markdown 渲染
+- 现代化 Compose UI 设计
+- 响应式状态管理
+- Compose 特有的渲染优化
+- 与传统 View 系统的对比演示
 
 ---
 
 ## 🛠️ 快速开始
+
+### 0. 运行示例应用
+
+项目提供了两个示例应用，展示不同的 UI 技术栈：
+
+**传统 Android View 应用 (app 模块):**
+```bash
+./gradlew :app:installDebug
+```
+
+**Jetpack Compose 应用 (app-compose 模块):**
+```bash
+./gradlew :app-compose:installDebug
+```
+
+两个应用功能相同但 UI 实现不同，可以对比体验传统 View 系统和 Compose 的差异。
 
 ### 1. 添加依赖
 
