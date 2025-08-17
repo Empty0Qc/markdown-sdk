@@ -1,6 +1,7 @@
 package com.chenge.markdown.engine
 
 import com.chenge.markdown.common.MarkdownConfig
+import com.chenge.markdown.common.CodeHighlight
 import com.chenge.markdown.common.markdownConfig
 import org.junit.Test
 import org.junit.Assert.*
@@ -21,6 +22,7 @@ class MarkdownConfigDslTest {
         assertTrue(config.enableLinkClick)
         assertFalse(config.asyncRendering)
         assertFalse(config.debugMode)
+        assertEquals(CodeHighlight.NONE, config.codeHighlight)
     }
 
     @Test
@@ -33,6 +35,7 @@ class MarkdownConfigDslTest {
         assertTrue(blogConfig.enableLatex)
         assertTrue(blogConfig.enableImageLoading)
         assertTrue(blogConfig.enableLinkClick)
+        assertEquals(CodeHighlight.PRISM_LIGHT, blogConfig.codeHighlight)
 
         // 测试聊天配置
         val chatConfig = MarkdownConfig.chat()
@@ -43,6 +46,7 @@ class MarkdownConfigDslTest {
         assertTrue(chatConfig.enableImageLoading)
         assertTrue(chatConfig.enableLinkClick)
         assertTrue(chatConfig.asyncRendering)
+        assertEquals(CodeHighlight.NONE, chatConfig.codeHighlight)
 
         // 测试编辑器配置
         val editorConfig = MarkdownConfig.editor()
@@ -53,6 +57,7 @@ class MarkdownConfigDslTest {
         assertTrue(editorConfig.enableImageLoading)
         assertTrue(editorConfig.enableLinkClick)
         assertTrue(editorConfig.debugMode)
+        assertEquals(CodeHighlight.PRISM_DARK, editorConfig.codeHighlight)
     }
 
     @Test
@@ -76,6 +81,7 @@ class MarkdownConfigDslTest {
         assertEquals(1200, config.maxImageWidth)
         assertEquals(800, config.maxImageHeight)
         assertTrue(config.customPlugins.contains("test-plugin"))
+        assertEquals(CodeHighlight.NONE, config.codeHighlight)
     }
 
     @Test

@@ -23,6 +23,7 @@ data class MarkdownConfig(
   val enableLatex: Boolean = false,
   val enableImageLoading: Boolean = true,
   val enableLinkClick: Boolean = true,
+  val codeHighlight: CodeHighlight = CodeHighlight.NONE,
   val maxImageWidth: Int = 800,
   val maxImageHeight: Int = 600,
   val asyncRendering: Boolean = false,
@@ -44,7 +45,8 @@ data class MarkdownConfig(
       enableTaskList = true,
       enableLatex = true,
       enableImageLoading = true,
-      enableLinkClick = true
+      enableLinkClick = true,
+      codeHighlight = CodeHighlight.PRISM_LIGHT
     )
     
     /**
@@ -78,7 +80,8 @@ data class MarkdownConfig(
       enableTaskList = true,
       enableLatex = true,
       enableImageLoading = true,
-      enableLinkClick = true
+      enableLinkClick = true,
+      codeHighlight = CodeHighlight.PRISM_LIGHT
     )
     
     /**
@@ -104,7 +107,8 @@ data class MarkdownConfig(
       enableLatex = true,
       enableImageLoading = true,
       enableLinkClick = true,
-      debugMode = true
+      debugMode = true,
+      codeHighlight = CodeHighlight.PRISM_DARK
     )
   }
 }
@@ -119,6 +123,7 @@ class MarkdownConfigBuilder {
   var enableLatex: Boolean = false
   var enableImageLoading: Boolean = true
   var enableLinkClick: Boolean = true
+  var codeHighlight: CodeHighlight = CodeHighlight.NONE
   var maxImageWidth: Int = 800
   var maxImageHeight: Int = 600
   var asyncRendering: Boolean = false
@@ -199,6 +204,13 @@ class MarkdownConfigBuilder {
   fun latex() {
     enableLatex = true
   }
+
+  /**
+   * 设置代码高亮实现
+   */
+  fun highlight(style: CodeHighlight) {
+    codeHighlight = style
+  }
   
   fun build(): MarkdownConfig {
     return MarkdownConfig(
@@ -208,6 +220,7 @@ class MarkdownConfigBuilder {
       enableLatex = enableLatex,
       enableImageLoading = enableImageLoading,
       enableLinkClick = enableLinkClick,
+      codeHighlight = codeHighlight,
       maxImageWidth = maxImageWidth,
       maxImageHeight = maxImageHeight,
       asyncRendering = asyncRendering,

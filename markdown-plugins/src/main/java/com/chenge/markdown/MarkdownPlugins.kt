@@ -2,6 +2,7 @@ package com.chenge.markdown.plugins
 
 import android.content.Context
 import com.chenge.markdown.common.MarkdownConfig
+import com.chenge.markdown.common.CodeHighlight
 import com.chenge.markdown.plugins.MarkdownPlugins.create
 import io.noties.markwon.Markwon
 import io.noties.markwon.core.CorePlugin
@@ -12,6 +13,12 @@ import io.noties.markwon.ext.tasklist.TaskListPlugin
 import io.noties.markwon.html.HtmlPlugin
 import io.noties.markwon.image.glide.GlideImagesPlugin
 import io.noties.markwon.inlineparser.MarkwonInlineParserPlugin
+import io.noties.markwon.syntax.Prism4jSyntaxHighlight
+import io.noties.markwon.syntax.SyntaxHighlightPlugin
+import io.noties.prism4j.Prism4j
+import io.noties.prism4j.themes.Prism4jThemeDarkula
+import io.noties.prism4j.themes.Prism4jThemeDefault
+import io.noties.prism4j.GrammarLocatorDefault
 
 /**
  * 插件注册与 Markwon 创建器
@@ -48,6 +55,31 @@ object MarkdownPlugins {
 
     if (config.enableTaskList) {
       builder.usePlugin(TaskListPlugin.create(context))
+    }
+
+    when (config.codeHighlight) {
+      CodeHighlight.SIMPLE -> {
+        builder.usePlugin(
+          SyntaxHighlightPlugin.create(SimpleSyntaxHighlight())
+        )
+      }
+      CodeHighlight.PRISM_LIGHT -> {
+        val prism4j = Prism4j(GrammarLocatorDefault())
+        builder.usePlugin(
+          SyntaxHighlightPlugin.create(
+            Prism4jSyntaxHighlight.create(prism4j, Prism4jThemeDefault.create())
+          )
+        )
+      }
+      CodeHighlight.PRISM_DARK -> {
+        val prism4j = Prism4j(GrammarLocatorDefault())
+        builder.usePlugin(
+          SyntaxHighlightPlugin.create(
+            Prism4jSyntaxHighlight.create(prism4j, Prism4jThemeDarkula.create())
+          )
+        )
+      }
+      else -> {}
     }
 
     // 如需HTML支持，未来可用HtmlPlugin
