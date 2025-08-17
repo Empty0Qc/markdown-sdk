@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Markdown Compose Demo</string>
+    <string name="markdown_title">Markdown Compose 示例</string>
+    <string name="sample_markdown_title">示例 Markdown 内容</string>
+    <string name="async_render_title">异步渲染示例</string>
+    <string name="custom_config_title">自定义配置示例</string>
+    <string name="performance_title">性能测试</string>
+    <string name="render_button">渲染 Markdown</string>
+    <string name="clear_button">清除内容</string>
+    <string name="async_render_button">异步渲染</string>
+    <string name="loading_text">正在渲染...</string>
+    <string name="error_text">渲染失败</string>
+</resources>
