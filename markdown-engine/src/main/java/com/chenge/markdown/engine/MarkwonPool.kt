@@ -69,6 +69,7 @@ object MarkwonPool {
             append("|latex:").append(config.enableLatex)
             append("|img:").append(config.enableImageLoading)
             append("|click:").append(config.enableLinkClick)
+            append("|highlight:").append(config.codeHighlight)
             append("|async:").append(config.asyncRendering)
             append("|debug:").append(config.debugMode)
             append("|maxW:").append(config.maxImageWidth)
