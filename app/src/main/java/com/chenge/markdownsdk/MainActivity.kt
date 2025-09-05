@@ -1,12 +1,13 @@
 package com.chenge.markdownsdk
 
+
 import android.os.Bundle
+import android.text.method.LinkMovementMethod
 import android.util.Log
-import android.util.TypedValue
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
@@ -20,6 +21,8 @@ import com.chenge.markdown.engine.MarkdownParser
 import com.chenge.markdown.engine.MarkdownPlugins
 import com.chenge.markdownsdk.databinding.ActivityMainBinding
 import kotlinx.coroutines.launch
+
+import androidx.core.view.isVisible
 
 /**
  * 主Activity - 现代化Markdown渲染器演示
@@ -43,6 +46,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var progressiveRenderer: ProgressiveRenderer // 统一的渐进式渲染器
     private var renderMode = ProgressiveRenderer.RenderMode.PROGRESSIVE // 渲染模式
     private var renderSpeed = ProgressiveRenderer.RenderSpeed.NORMAL // 渲染速度
+    private lateinit var screenshotComparator: ScreenshotComparator // 截图对比器
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,23 +73,6 @@ class MainActivity : AppCompatActivity() {
     private fun initializeMarkdownEngine() {
         // 注册插件
         MarkdownPlugins.register(ImageSizePlugin(this))
-        // 移除 ClickablePlugin 以消除交互式覆盖层
-        // MarkdownPlugins.register(
-        //   ClickablePlugin(
-        //     onLinkClick = { url ->
-        //       try {
-        //         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-        //         startActivity(intent)
-        //       } catch (e: Exception) {
-        //         // 无法打开链接
-        //       }
-        //     },
-        //     onCodeClick = { code ->
-        //       Log.d("CodeClick", "点击代码: $code")
-        //       // 代码点击事件
-        //     }
-        //   )
-        // )
 
         // 使用 DSL 配置初始化引擎
         markdownEngine = MarkdownEngine.with(this) {
@@ -97,6 +84,9 @@ class MainActivity : AppCompatActivity() {
             debug()
             plugin("syntax-highlight")
         }
+
+        // 初始化截图对比器
+        screenshotComparator = ScreenshotComparator(this)
     }
 
     private fun setupUI() {
@@ -104,7 +94,7 @@ class MainActivity : AppCompatActivity() {
         progressiveRenderer = ProgressiveRenderer()
         progressiveRenderer.setRenderMode(renderMode)
         progressiveRenderer.setRenderSpeed(renderSpeed)
-        progressiveRenderer.setProgressCallback { progress, message ->
+        progressiveRenderer.setProgressCallback { _, message ->
             runOnUiThread {
                 binding.timeTextView.text = message
             }
@@ -120,8 +110,10 @@ class MainActivity : AppCompatActivity() {
             toggleTheme()
         }
 
-        // 移除LinkMovementMethod以消除链接点击的交互式覆盖层
-        // binding.contentTextView.movementMethod = LinkMovementMethod.getInstance()
+        // 设置跳转到底部按钮
+        binding.jumpToBottomFab.setOnClickListener {
+            jumpToBottom()
+        }
 
         // 设置底部按钮点击事件
         binding.debugRenderButton.setOnClickListener {
@@ -147,8 +139,8 @@ class MainActivity : AppCompatActivity() {
                 binding.progressBar.visibility = android.view.View.VISIBLE
                 binding.contentTextView.visibility = android.view.View.GONE
 
-                // 加载 assets 文件里的全格式 Markdown 内容
-                val rawMarkdown = MarkdownLoader.loadFromAssets(this@MainActivity, "full_format_test.md")
+                // 加载综合性测试 Markdown 内容
+                val rawMarkdown = MarkdownLoader.loadFromAssets(this@MainActivity, "comprehensive_test.md")
 
                 // 使用 MarkdownParser 进一步处理文本
                 val parsedMarkdown = MarkdownParser.parse(rawMarkdown)
@@ -166,7 +158,7 @@ class MainActivity : AppCompatActivity() {
                 // 隐藏加载状态，显示错误
                 binding.progressBar.visibility = android.view.View.GONE
                 binding.contentTextView.visibility = android.view.View.VISIBLE
-                binding.contentTextView.text = getString(R.string.error_loading_content) + ": ${e.message}"
+                binding.contentTextView.getTextView().text = getString(R.string.error_loading_content) + ": ${e.message}"
             } finally {
                 binding.swipeRefreshLayout.isRefreshing = false
             }
@@ -195,31 +187,51 @@ class MainActivity : AppCompatActivity() {
                     binding.progressBar.visibility = android.view.View.GONE
                     binding.contentTextView.visibility = android.view.View.VISIBLE
 
+                    // 记录设备、窗口、视图维度的调试信息
+                    logRenderDebugInfo()
+
                     // 获取渲染后的Spanned内容
-                    val renderedContent = binding.contentTextView.text as? android.text.Spanned
-                        ?: android.text.SpannableString(binding.contentTextView.text)
+                    val renderedContent = binding.contentTextView.getTextView().text as? android.text.Spanned
+                        ?: android.text.SpannableString(binding.contentTextView.getTextView().text)
 
                     // 设置自动滚动管理器
                     progressiveRenderer.setAutoScrollManager(
                         binding.swipeRefreshLayout.getChildAt(0) as androidx.core.widget.NestedScrollView,
-                        binding.contentTextView,
+                        binding.contentTextView.getTextView(),
                         this@MainActivity
                     )
 
-                    // 启用自动滚动（仅在渐进式模式下）
-                    progressiveRenderer.setAutoScrollEnabled(
-                        renderMode == ProgressiveRenderer.RenderMode.PROGRESSIVE ||
-                            renderMode == ProgressiveRenderer.RenderMode.CHUNKED
-                    )
+                    // 设置用户滚动状态监听器
+                    progressiveRenderer.getAutoScrollManager()?.setOnUserScrollStateChangedListener { isUserScrolling ->
+                        runOnUiThread {
+                            binding.jumpToBottomFab.visibility = if (isUserScrolling) {
+                                android.view.View.VISIBLE
+                            } else {
+                                android.view.View.GONE
+                            }
+                        }
+                    }
+
+                    // 启用自动滚动（在所有模式下都启用）
+                    progressiveRenderer.setAutoScrollEnabled(true)
+
+                    // 强制恢复自动滚动
+                    progressiveRenderer.getAutoScrollManager()?.forceResumeAutoScroll()
 
                     // 使用统一的渐进式渲染器
                     progressiveRenderer.startRender(
-                        binding.contentTextView,
+                        binding.contentTextView.getTextView(),
                         renderedContent,
                         this@MainActivity
                     ) {
                         // 渲染完成回调
                         binding.timeTextView.text = getString(R.string.render_time, duration)
+
+                        // 渲染完成后再次记录视觉验证信息
+                        logVisualVerificationInfo()
+
+                        // 执行自动化截图对比测试
+                        performScreenshotComparison()
                     }
                 }
             }
@@ -227,12 +239,12 @@ class MainActivity : AppCompatActivity() {
 
         if (isSyncMode) {
             // 同步渲染
-            markdownEngine.getMarkwon().setMarkdown(binding.contentTextView, content)
+            markdownEngine.getMarkwon().setMarkdown(binding.contentTextView.getTextView(), content)
             renderComplete()
         } else {
             // 异步渲染
             lifecycleScope.launch {
-                markdownEngine.getMarkwon().setMarkdown(binding.contentTextView, content)
+                markdownEngine.getMarkwon().setMarkdown(binding.contentTextView.getTextView(), content)
                 renderComplete()
             }
         }
@@ -244,39 +256,37 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
+        when (item.itemId) {
             R.id.action_toggle_theme -> {
-                toggleTheme()
-                true
+                toggleTheme(); return true
             }
-
-            R.id.action_high_contrast -> {
-                toggleHighContrast()
-                true
+            R.id.action_typewriter_slow -> {
+                setRenderSpeed(ProgressiveRenderer.RenderSpeed.SLOW); return true
             }
-
+            R.id.action_typewriter_normal -> {
+                setRenderSpeed(ProgressiveRenderer.RenderSpeed.NORMAL); return true
+            }
+            R.id.action_typewriter_fast -> {
+                setRenderSpeed(ProgressiveRenderer.RenderSpeed.FAST); return true
+            }
             R.id.action_increase_font -> {
-                adjustFontSize(1.2f)
-                true
+                adjustFontSize(1.1f); return true
             }
-
             R.id.action_decrease_font -> {
-                adjustFontSize(0.8f)
-                true
+                adjustFontSize(0.9f); return true
             }
-
             R.id.action_reset_font -> {
-                resetFontSize()
-                true
+                resetFontSize(); return true
             }
-
+            R.id.action_high_contrast -> {
+                toggleHighContrast(); return true
+            }
             R.id.action_about -> {
-                showAboutDialog()
-                true
+                showAboutDialog(); return true
             }
-
-            else -> super.onOptionsItemSelected(item)
+            // Remove the action_update_baseline case completely
         }
+        return super.onOptionsItemSelected(item)
     }
 
     private fun toggleTheme() {
@@ -293,9 +303,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun toggleRenderMode() {
         isSyncMode = !isSyncMode
-        val modeText = if (isSyncMode) "同步" else "异步"
-        // 已切换到${modeText}渲染模式
-
         // 重新渲染内容以测试新模式
         loadAndRenderContent()
     }
@@ -364,62 +371,65 @@ class MainActivity : AppCompatActivity() {
         loadAndRenderContent()
     }
 
-    private fun setRenderSpeed(speed: ProgressiveRenderer.RenderSpeed) {
-        renderSpeed = speed
-        progressiveRenderer.setRenderSpeed(speed)
-        val speedText = when (speed) {
-            ProgressiveRenderer.RenderSpeed.SLOW -> "慢速"
-            ProgressiveRenderer.RenderSpeed.NORMAL -> "正常"
-            ProgressiveRenderer.RenderSpeed.FAST -> "快速"
-            ProgressiveRenderer.RenderSpeed.INSTANT -> "瞬时"
-        }
-        // 渲染速度已设置
-    }
-
-    private fun cycleRenderMode() {
-        val nextMode = when (renderMode) {
-            ProgressiveRenderer.RenderMode.INSTANT -> ProgressiveRenderer.RenderMode.PROGRESSIVE
-            ProgressiveRenderer.RenderMode.PROGRESSIVE -> ProgressiveRenderer.RenderMode.CHUNKED
-            ProgressiveRenderer.RenderMode.CHUNKED -> ProgressiveRenderer.RenderMode.INSTANT
-        }
-        setRenderMode(nextMode)
-
-        // 更新按钮文本
-        val buttonText = when (nextMode) {
-            ProgressiveRenderer.RenderMode.INSTANT -> "立即显示"
-            ProgressiveRenderer.RenderMode.PROGRESSIVE -> "逐字符渐进"
-            ProgressiveRenderer.RenderMode.CHUNKED -> "分块显示"
-        }
-        binding.streamingModeButton.text = buttonText
-    }
-
-    private fun cycleRenderSpeed() {
-        val nextSpeed = when (renderSpeed) {
-            ProgressiveRenderer.RenderSpeed.SLOW -> ProgressiveRenderer.RenderSpeed.NORMAL
-            ProgressiveRenderer.RenderSpeed.NORMAL -> ProgressiveRenderer.RenderSpeed.FAST
-            ProgressiveRenderer.RenderSpeed.FAST -> ProgressiveRenderer.RenderSpeed.INSTANT
-            ProgressiveRenderer.RenderSpeed.INSTANT -> ProgressiveRenderer.RenderSpeed.SLOW
-        }
-        setRenderSpeed(nextSpeed)
-
-        // 更新按钮文本
-        val buttonText = when (nextSpeed) {
-            ProgressiveRenderer.RenderSpeed.SLOW -> "慢速"
-            ProgressiveRenderer.RenderSpeed.NORMAL -> "正常速度"
-            ProgressiveRenderer.RenderSpeed.FAST -> "快速"
-            ProgressiveRenderer.RenderSpeed.INSTANT -> "瞬时"
-        }
-        binding.typewriterButton.text = buttonText
-    }
-
     private fun showAboutDialog() {
-        androidx.appcompat.app.AlertDialog.Builder(this)
+        val aboutDialog = AlertDialog.Builder(this)
             .setTitle(getString(R.string.about_title))
             .setMessage(getString(R.string.about_message))
             .setPositiveButton(getString(R.string.dialog_ok)) { dialog, _ ->
                 dialog.dismiss()
             }
-            .show()
+            .create()
+        aboutDialog.show()
+    }
+
+    private fun setRenderSpeed(speed: ProgressiveRenderer.RenderSpeed) {
+        renderSpeed = speed
+        progressiveRenderer.setRenderSpeed(speed)
+        Log.d("MainActivity", "Render speed changed to: $speed")
+
+        // 重新渲染当前内容以应用新的渲染速度
+        binding.contentTextView.post {
+            loadAndRenderContent()
+        }
+    }
+
+    private fun cycleRenderMode() {
+        renderMode = when (renderMode) {
+            ProgressiveRenderer.RenderMode.INSTANT -> ProgressiveRenderer.RenderMode.PROGRESSIVE
+            ProgressiveRenderer.RenderMode.PROGRESSIVE -> ProgressiveRenderer.RenderMode.CHUNKED
+            ProgressiveRenderer.RenderMode.CHUNKED -> ProgressiveRenderer.RenderMode.INSTANT
+        }
+        setRenderMode(renderMode)
+    }
+
+    private fun cycleRenderSpeed() {
+        renderSpeed = when (renderSpeed) {
+            ProgressiveRenderer.RenderSpeed.SLOW -> ProgressiveRenderer.RenderSpeed.NORMAL
+            ProgressiveRenderer.RenderSpeed.NORMAL -> ProgressiveRenderer.RenderSpeed.FAST
+            ProgressiveRenderer.RenderSpeed.FAST -> ProgressiveRenderer.RenderSpeed.INSTANT
+            ProgressiveRenderer.RenderSpeed.INSTANT -> ProgressiveRenderer.RenderSpeed.SLOW
+        }
+        progressiveRenderer.setRenderSpeed(renderSpeed)
+        Log.d("MainActivity", "Render speed changed to: $renderSpeed")
+
+        // 重新渲染当前内容以应用新的渲染速度
+        binding.contentTextView.post {
+            loadAndRenderContent()
+        }
+    }
+
+    private fun jumpToBottom() {
+        // 使用AutoScrollManager跳转到底部
+        progressiveRenderer.getAutoScrollManager()?.jumpToBottom()
+
+        // 强制恢复自动滚动
+        progressiveRenderer.getAutoScrollManager()?.forceResumeAutoScroll()
+
+        // 确保自动滚动启用
+        progressiveRenderer.setAutoScrollEnabled(true)
+
+        // 隐藏跳转按钮
+        binding.jumpToBottomFab.visibility = android.view.View.GONE
     }
 
     override fun onDestroy() {
@@ -438,4 +448,239 @@ class MainActivity : AppCompatActivity() {
             Log.e("MainActivity", "资源清理失败", e)
         }
     }
+
+    /**
+     * 记录设备、窗口、视图维度的调试信息
+     */
+    private fun logRenderDebugInfo() {
+        try {
+            val resources = resources
+            val displayMetrics = resources.displayMetrics
+            val configuration = resources.configuration
+
+            // 设备信息
+            val deviceInfo = "device: ${displayMetrics.widthPixels}x${displayMetrics.heightPixels}px, " +
+                    "densityDpi=${displayMetrics.densityDpi}, density=${displayMetrics.density}, " +
+                    "orientation=${if (configuration.orientation == android.content.res.Configuration.ORIENTATION_PORTRAIT) "portrait" else "landscape"}"
+
+            // 窗口信息
+            val windowInsets = ViewCompat.getRootWindowInsets(binding.root)
+            val systemBarsInsets = windowInsets?.getInsets(WindowInsetsCompat.Type.systemBars())
+            val windowInfo = "window: systemBars(${systemBarsInsets?.left},${systemBarsInsets?.top},${systemBarsInsets?.right},${systemBarsInsets?.bottom})"
+
+            // 获取窗口可见区域
+            val windowVisibleRect = android.graphics.Rect()
+            binding.root.getWindowVisibleDisplayFrame(windowVisibleRect)
+            val windowVisibleInfo = "windowVisible: ${windowVisibleRect.width()}x${windowVisibleRect.height()} at (${windowVisibleRect.left},${windowVisibleRect.top})"
+
+            // ContentTextView 信息
+            val contentView = binding.contentTextView
+            val textView = contentView.getTextView()
+
+            // 测量信息
+            val contentMeasured = "contentView: measured=${contentView.measuredWidth}x${contentView.measuredHeight}"
+            val textMeasured = "textView: measured=${textView.measuredWidth}x${textView.measuredHeight}"
+
+            // 位置信息
+            val contentLocation = IntArray(2)
+            contentView.getLocationOnScreen(contentLocation)
+            val textLocation = IntArray(2)
+            textView.getLocationOnScreen(textLocation)
+            val contentPosition = "contentPos: screen(${contentLocation[0]},${contentLocation[1]})"
+            val textPosition = "textPos: screen(${textLocation[0]},${textLocation[1]})"
+
+            // 可见性信息
+            val contentVisible = "contentVisible: isShown=${contentView.isShown}, alpha=${contentView.alpha}, visibility=${contentView.visibility}"
+            val textVisible = "textVisible: isShown=${textView.isShown}, alpha=${textView.alpha}, visibility=${textView.visibility}"
+
+            // 滚动信息
+            val scrollView = binding.swipeRefreshLayout.getChildAt(0) as androidx.core.widget.NestedScrollView
+            val scrollInfo = "scroll: canScroll=${scrollView.canScrollVertically(1) || scrollView.canScrollVertically(-1)}, " +
+                    "scrollY=${scrollView.scrollY}, scrollRange=${scrollView.getChildAt(0)?.height?.minus(scrollView.height) ?: 0}"
+
+            Log.d("RenderDebug", deviceInfo)
+            Log.d("RenderDebug", windowInfo)
+            Log.d("RenderDebug", windowVisibleInfo)
+            Log.d("RenderDebug", contentMeasured)
+            Log.d("RenderDebug", textMeasured)
+            Log.d("RenderDebug", contentPosition)
+            Log.d("RenderDebug", textPosition)
+            Log.d("RenderDebug", contentVisible)
+            Log.d("RenderDebug", textVisible)
+            Log.d("RenderDebug", scrollInfo)
+
+        } catch (e: Exception) {
+            Log.e("RenderDebug", "记录调试信息失败", e)
+        }
+    }
+
+    /**
+     * 记录视觉验证信息，包括遮挡检测和可见面积计算
+     */
+    private fun logVisualVerificationInfo() {
+        try {
+            val contentView = binding.contentTextView
+            val progressBar = binding.progressBar
+            val textView = contentView.getTextView()
+
+            // 获取全局可见矩形
+            val contentGlobalRect = android.graphics.Rect()
+            val progressGlobalRect = android.graphics.Rect()
+            val textGlobalRect = android.graphics.Rect()
+
+            contentView.getGlobalVisibleRect(contentGlobalRect)
+            progressBar.getGlobalVisibleRect(progressGlobalRect)
+            textView.getGlobalVisibleRect(textGlobalRect)
+
+            // 计算可见面积
+            val contentTotalArea = contentView.measuredWidth.toLong() * contentView.measuredHeight
+            val contentVisibleArea = contentGlobalRect.width().toLong() * contentGlobalRect.height()
+            val contentVisibilityRatio = if (contentTotalArea > 0) {
+                (contentVisibleArea * 100.0 / contentTotalArea)
+            } else 0.0
+
+            val textTotalArea = textView.measuredWidth.toLong() * textView.measuredHeight
+            val textVisibleArea = textGlobalRect.width().toLong() * textGlobalRect.height()
+            val textVisibilityRatio = if (textTotalArea > 0) {
+                (textVisibleArea * 100.0 / textTotalArea)
+            } else 0.0
+
+            // 检测遮挡 - ProgressBar 是否与 ContentView 相交
+            val progressVisible = progressBar.isVisible
+            val isOccluded = progressVisible && android.graphics.Rect.intersects(contentGlobalRect, progressGlobalRect)
+
+            // 检测可见性阈值
+            val contentVisibilityThreshold = 50.0 // 50%
+            val textVisibilityThreshold = 50.0
+            val contentVisibilityInsufficient = contentVisibilityRatio < contentVisibilityThreshold
+            val textVisibilityInsufficient = textVisibilityRatio < textVisibilityThreshold
+
+            // 输出验证信息
+            val contentAreaInfo = "contentArea: total=${contentTotalArea}, visible=${contentVisibleArea}, ratio=${"%.1f".format(contentVisibilityRatio)}%"
+            val textAreaInfo = "textArea: total=${textTotalArea}, visible=${textVisibleArea}, ratio=${"%.1f".format(textVisibilityRatio)}%"
+            val occlusionInfo = "occlusion: progressVisible=${progressVisible}, intersect=${isOccluded}"
+            val visibilityWarning = when {
+                contentVisibilityInsufficient && textVisibilityInsufficient ->
+                    "visibility: WARNING - 内容和文本可见性均不足"
+                contentVisibilityInsufficient ->
+                    "visibility: WARNING - 内容可见性不足"
+                textVisibilityInsufficient ->
+                    "visibility: WARNING - 文本可见性不足"
+                isOccluded ->
+                    "visibility: WARNING - 检测到视图遮挡"
+                else ->
+                    "visibility: OK - 可见性正常"
+            }
+
+            Log.d("RenderDebug", contentAreaInfo)
+            Log.d("RenderDebug", textAreaInfo)
+            Log.d("RenderDebug", occlusionInfo)
+            Log.d("RenderDebug", visibilityWarning)
+
+            // 边界检测
+            val windowVisibleRect = android.graphics.Rect()
+            binding.root.getWindowVisibleDisplayFrame(windowVisibleRect)
+            val contentOutOfBounds = !windowVisibleRect.contains(contentGlobalRect)
+            val textOutOfBounds = !windowVisibleRect.contains(textGlobalRect)
+
+            if (contentOutOfBounds || textOutOfBounds) {
+                Log.w("RenderDebug", "bounds: WARNING - 内容超出窗口可见区域")
+            } else {
+                Log.d("RenderDebug", "bounds: OK - 内容在窗口可见区域内")
+            }
+
+        } catch (e: Exception) {
+            Log.e("RenderDebug", "记录视觉验证信息失败", e)
+        }
+    }
+
+    /**
+     * 执行自动化截图对比测试
+     */
+    private fun performScreenshotComparison() {
+        // 等待一小段时间确保渲染完全完成
+        binding.contentTextView.postDelayed({
+            try {
+                // 生成截图文件名（包含当前设置）
+                val screenshotName = generateScreenshotName()
+
+                // 捕获当前视图截图
+                val screenshot = screenshotComparator.captureView(
+                    binding.contentTextView,
+                    screenshotName
+                )
+
+                if (screenshot != null) {
+                    // 与基准截图对比
+                    val comparisonResult = screenshotComparator.compareWithBaseline(screenshotName)
+
+                    // 记录对比结果
+                    logScreenshotComparisonResult(screenshotName, comparisonResult)
+
+                    // 如果差异较大，可以选择更新基准（在开发阶段）
+                    if (!comparisonResult.isMatch && comparisonResult.error == null) {
+                        Log.w("ScreenshotTest", "Visual regression detected in $screenshotName: " +
+                                "${String.format("%.2f", comparisonResult.diffPercentage)}% difference")
+
+                        // 在开发环境中，可以选择自动更新基准
+                        if ((applicationInfo.flags and android.content.pm.ApplicationInfo.FLAG_DEBUGGABLE) != 0) {
+                            Log.i("ScreenshotTest", "Development mode: consider updating baseline if changes are expected")
+                        }
+                    }
+                } else {
+                    Log.e("ScreenshotTest", "Failed to capture screenshot for comparison")
+                }
+
+                // 定期清理旧的截图文件
+                screenshotComparator.cleanupOldScreenshots()
+
+            } catch (e: Exception) {
+                Log.e("ScreenshotTest", "Screenshot comparison failed", e)
+            }
+        }, 500) // 等待500ms确保渲染完成
+    }
+
+    /**
+     * 生成截图文件名，包含当前配置信息
+     */
+    private fun generateScreenshotName(): String {
+        val themeMode = if (isDarkMode) "dark" else "light"
+        val contrastMode = if (isHighContrastMode) "high_contrast" else "normal"
+        val fontSize = currentFontSize.toInt()
+        val renderModeStr = renderMode.name.lowercase()
+        val renderSpeedStr = renderSpeed.name.lowercase()
+
+        return "comprehensive_test_${themeMode}_${contrastMode}_${fontSize}sp_${renderModeStr}_${renderSpeedStr}"
+    }
+
+    /**
+     * 记录截图对比结果
+     */
+    private fun logScreenshotComparisonResult(screenshotName: String, result: ScreenshotComparator.ComparisonResult) {
+        val logLevel = if (result.isMatch) Log.INFO else Log.WARN
+        val status = if (result.isMatch) "PASS" else "FAIL"
+
+        Log.println(logLevel, "ScreenshotTest",
+            "[$status] Screenshot comparison for '$screenshotName': " +
+            "match=${result.isMatch}, " +
+            "diff=${String.format("%.2f", result.diffPercentage)}%, " +
+            "pixels=${result.diffPixelCount}/${result.totalPixelCount}"
+        )
+
+        if (result.diffImagePath != null) {
+            Log.i("ScreenshotTest", "Diff image saved: ${result.diffImagePath}")
+        }
+
+        if (result.error != null) {
+            Log.e("ScreenshotTest", "Comparison error: ${result.error}")
+        }
+
+        // 记录目录信息（仅在首次运行时）
+        if (screenshotName.contains("normal_16sp_progressive_normal")) {
+            val dirInfo = screenshotComparator.getDirectoryInfo()
+            Log.i("ScreenshotTest", "Directory info: $dirInfo")
+        }
+    }
+
+
 }

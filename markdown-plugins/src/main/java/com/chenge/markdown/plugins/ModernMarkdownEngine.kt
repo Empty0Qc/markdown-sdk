@@ -3,6 +3,7 @@ package com.chenge.markdown.plugins
 import android.content.Context
 import android.widget.TextView
 import com.chenge.markdown.common.MarkdownStyleConfigV2
+
 import io.noties.markwon.Markwon
 import io.noties.markwon.ext.strikethrough.StrikethroughPlugin
 import io.noties.markwon.ext.tables.TablePlugin
@@ -20,6 +21,12 @@ class ModernMarkdownEngine private constructor(
     private val context: Context,
     private val config: MarkdownStyleConfigV2
 ) {
+    
+    private val customViewRenderer: CustomViewRenderer by lazy {
+        CustomViewRenderer(context).apply {
+            setStyleConfig(config)
+        }
+    }
     
     private val markwon: Markwon by lazy {
         createMarkwonInstance()
@@ -71,6 +78,9 @@ class ModernMarkdownEngine private constructor(
             .usePlugin(ModernQuotePlugin(config))
             .usePlugin(PerformancePlugin(config, 50 * 1024 * 1024))
             .usePlugin(AccessibilityPlugin(context, config))
+            
+            // 自定义视图渲染器插件
+            .usePlugin(customViewRenderer.createCustomViewPlugin())
             
             .build()
     }

@@ -148,7 +148,21 @@
 
   </LinearLayout>
 
-  <!-- Floating Action Button -->
+  <!-- Jump to Bottom FAB -->
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/jumpToBottomFab"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|end"
+    android:layout_margin="16dp"
+    android:layout_marginBottom="150dp"
+    android:contentDescription="跳转到底部"
+    android:visibility="gone"
+    app:srcCompat="@android:drawable/ic_menu_revert"
+    app:tint="?attr/colorOnPrimary"
+    app:fabSize="mini" />
+
+  <!-- Theme Toggle FAB -->
   <com.google.android.material.floatingactionbutton.FloatingActionButton
     android:id="@+id/fab"
     android:layout_width="wrap_content"

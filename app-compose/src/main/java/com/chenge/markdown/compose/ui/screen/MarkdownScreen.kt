@@ -1,6 +1,7 @@
 package com.chenge.markdown.compose.ui.screen
 
 import android.content.Context
+import android.util.TypedValue
 import android.view.ViewGroup
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -40,6 +41,9 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.ui.platform.LocalLifecycleOwner
+import androidx.core.widget.NestedScrollView
 import com.chenge.markdown.compose.ProgressiveRenderer
 import com.chenge.markdown.engine.MarkdownEngine
 import com.chenge.markdown.render.MarkdownView
@@ -57,17 +61,29 @@ fun MarkdownDemoScreen(
     renderSpeed: ProgressiveRenderer.RenderSpeed = ProgressiveRenderer.RenderSpeed.NORMAL,
     onThemeChange: () -> Unit = {},
     onFontSizeChange: (Float) -> Unit = {},
-    onRenderSpeedChange: (ProgressiveRenderer.RenderSpeed) -> Unit = {}
+    onRenderSpeedChange: (ProgressiveRenderer.RenderSpeed) -> Unit = {},
+    onFirstStableFrame: () -> Unit = {}
 ) {
+    val lifecycleOwner = LocalLifecycleOwner.current
+    val coroutineScope = rememberCoroutineScope()
     val context = LocalContext.current
-    val scope = rememberCoroutineScope()
-    // val lifecycleOwner = LocalLifecycleOwner.current
-
-    var markdownText by remember { mutableStateOf("") }
-    var isLoading by remember { mutableStateOf(false) }
-    var errorMessage by remember { mutableStateOf<String?>(null) }
-
+    
+    // 修复：ProgressiveRenderer 构造函数不接受参数
     val progressiveRenderer = remember { ProgressiveRenderer() }
+    
+    var markdownText by remember { mutableStateOf("正在加载...") }
+    var isLoading by remember { mutableStateOf(true) }
+    var errorMessage by remember { mutableStateOf<String?>(null) }
+    
+    // 首次稳定帧回调，延迟触发一次
+    var hasTriggeredFirstFrame by remember { mutableStateOf(false) }
+    LaunchedEffect(Unit) {
+        if (!hasTriggeredFirstFrame) {
+            kotlinx.coroutines.delay(2000) // 等待 2 秒确保渲染稳定
+            onFirstStableFrame()
+            hasTriggeredFirstFrame = true
+        }
+    }
 
     LaunchedEffect(Unit) {
         loadMarkdownContent(context) { content ->
@@ -144,7 +160,7 @@ fun MarkdownDemoScreen(
                 Row {
                     Button(
                         onClick = {
-                            scope.launch {
+                            coroutineScope.launch {
                                 isLoading = true
                                 errorMessage = null
                                 try {
@@ -183,7 +199,7 @@ fun MarkdownDemoScreen(
 
                     Button(
                         onClick = {
-                            scope.launch {
+                            coroutineScope.launch {
                                 isLoading = true
                                 errorMessage = null
                                 try {
@@ -239,23 +255,40 @@ fun MarkdownDemoScreen(
         ) {
             AndroidView(
                 factory = { context ->
-                    MarkdownView(context).apply {
+                    NestedScrollView(context).apply {
                         layoutParams = ViewGroup.LayoutParams(
                             ViewGroup.LayoutParams.MATCH_PARENT,
                             ViewGroup.LayoutParams.MATCH_PARENT
                         )
-                        // 初始化设置将在 update 中处理
-                        textSize = fontSize
-                        setMarkdown(markdownText)
+                        val markdownView = MarkdownView(context).apply {
+                            layoutParams = ViewGroup.LayoutParams(
+                                ViewGroup.LayoutParams.MATCH_PARENT,
+                                ViewGroup.LayoutParams.WRAP_CONTENT
+                            )
+                            setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
+                            setMarkdown(markdownText)
+                        }
+                        addView(markdownView)
+                        
+                        // 设置自动滚动管理器
+                        progressiveRenderer.setAutoScrollManager(
+                            this,
+                            markdownView.getTextView(),
+                            lifecycleOwner
+                        )
+                        
+                        progressiveRenderer.setAutoScrollEnabled(true)
+                        progressiveRenderer.setRenderSpeed(renderSpeed)
                     }
                 },
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(8.dp),
-                update = { markdownView ->
-                    markdownView.textSize = fontSize
+                update = { nestedScrollView ->
+                    val markdownView = nestedScrollView.getChildAt(0) as MarkdownView
+                    markdownView.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
                     markdownView.setMarkdown(markdownText)
-                    // progressiveRenderer.setMarkdownView(markdownView)
+                    progressiveRenderer.setRenderSpeed(renderSpeed)
                 }
             )
         }
@@ -295,7 +328,7 @@ private suspend fun loadMarkdownContent(
 ) {
     withContext(Dispatchers.IO) {
         try {
-            val inputStream = context.assets.open("full_format_test.md")
+            val inputStream = context.assets.open("test_custom_views.md")
             val content = inputStream.bufferedReader().use { it.readText() }
             withContext(Dispatchers.Main) {
                 onLoaded(content)

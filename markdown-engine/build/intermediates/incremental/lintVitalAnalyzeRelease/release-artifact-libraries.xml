@@ -14,9 +14,9 @@
       proguardRules="proguard.txt"/>
   <library
       name=":@@:markdown-render::release"
-      jars="/Users/quchen/.gradle/caches/transforms-4/7252c7f38392ff8841746dd5b1318046/transformed/out/jars/classes.jar:/Users/quchen/.gradle/caches/transforms-4/7252c7f38392ff8841746dd5b1318046/transformed/out/jars/libs/R.jar"
+      jars="/Users/quchen/.gradle/caches/transforms-4/27c0ae14cc024288a8ef7e827c2eef9c/transformed/out/jars/classes.jar:/Users/quchen/.gradle/caches/transforms-4/27c0ae14cc024288a8ef7e827c2eef9c/transformed/out/jars/libs/R.jar"
       resolved="markdown-sdk:markdown-render:unspecified"
-      folder="/Users/quchen/.gradle/caches/transforms-4/7252c7f38392ff8841746dd5b1318046/transformed/out"
+      folder="/Users/quchen/.gradle/caches/transforms-4/27c0ae14cc024288a8ef7e827c2eef9c/transformed/out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -27,9 +27,9 @@
       proguardRules="proguard.txt"/>
   <library
       name=":@@:markdown-plugins::release"
-      jars="/Users/quchen/.gradle/caches/transforms-4/be62d7cdef3198da6b6345742f567d0e/transformed/out/jars/classes.jar:/Users/quchen/.gradle/caches/transforms-4/be62d7cdef3198da6b6345742f567d0e/transformed/out/jars/libs/R.jar"
+      jars="/Users/quchen/.gradle/caches/transforms-4/c8737caa87ef7616ef8c42b4cf69dce2/transformed/out/jars/classes.jar:/Users/quchen/.gradle/caches/transforms-4/c8737caa87ef7616ef8c42b4cf69dce2/transformed/out/jars/libs/R.jar"
       resolved="markdown-sdk:markdown-plugins:unspecified"
-      folder="/Users/quchen/.gradle/caches/transforms-4/be62d7cdef3198da6b6345742f567d0e/transformed/out"
+      folder="/Users/quchen/.gradle/caches/transforms-4/c8737caa87ef7616ef8c42b4cf69dce2/transformed/out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -546,6 +546,18 @@
       jars="/Users/quchen/.gradle/caches/modules-2/files-2.1/com.atlassian.commonmark/commonmark/0.13.0/d233ad1436f35c7f88e3488ce6c1e65425c1a059/commonmark-0.13.0.jar"
       resolved="com.atlassian.commonmark:commonmark:0.13.0"/>
   <library
+      name="io.noties:prism4j:2.0.0@jar"
+      jars="/Users/quchen/.gradle/caches/modules-2/files-2.1/io.noties/prism4j/2.0.0/57572772d7a2f8a86543d0088a8307c8f5c30ade/prism4j-2.0.0.jar"
+      resolved="io.noties:prism4j:2.0.0"/>
+  <library
+      name="com.github.bumptech.glide:disklrucache:4.16.0@jar"
+      jars="/Users/quchen/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/disklrucache/4.16.0/411aa175d50d10b37c7a1a04d21a4e7145249557/disklrucache-4.16.0.jar"
+      resolved="com.github.bumptech.glide:disklrucache:4.16.0"/>
+  <library
+      name="com.github.bumptech.glide:annotations:4.16.0@jar"
+      jars="/Users/quchen/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/annotations/4.16.0/90730f6498299d207aa0878124ab7585969808f0/annotations-4.16.0.jar"
+      resolved="com.github.bumptech.glide:annotations:4.16.0"/>
+  <library
       name="androidx.tracing:tracing:1.0.0@aar"
       jars="/Users/quchen/.gradle/caches/transforms-4/c6412c286fba76446276962010049634/transformed/tracing-1.0.0/jars/classes.jar"
       resolved="androidx.tracing:tracing:1.0.0"
@@ -558,18 +570,6 @@
       symbolFile="R.txt"
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
-  <library
-      name="io.noties:prism4j:2.0.0@jar"
-      jars="/Users/quchen/.gradle/caches/modules-2/files-2.1/io.noties/prism4j/2.0.0/57572772d7a2f8a86543d0088a8307c8f5c30ade/prism4j-2.0.0.jar"
-      resolved="io.noties:prism4j:2.0.0"/>
-  <library
-      name="com.github.bumptech.glide:disklrucache:4.16.0@jar"
-      jars="/Users/quchen/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/disklrucache/4.16.0/411aa175d50d10b37c7a1a04d21a4e7145249557/disklrucache-4.16.0.jar"
-      resolved="com.github.bumptech.glide:disklrucache:4.16.0"/>
-  <library
-      name="com.github.bumptech.glide:annotations:4.16.0@jar"
-      jars="/Users/quchen/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/annotations/4.16.0/90730f6498299d207aa0878124ab7585969808f0/annotations-4.16.0.jar"
-      resolved="com.github.bumptech.glide:annotations:4.16.0"/>
   <library
       name="androidx.exifinterface:exifinterface:1.3.6@aar"
       jars="/Users/quchen/.gradle/caches/transforms-4/b87f43d618a52329f0a13bd404267463/transformed/exifinterface-1.3.6/jars/classes.jar"

@@ -99,6 +99,13 @@ class ProgressiveRenderer {
     }
 
     /**
+     * 获取自动滚动管理器
+     */
+    fun getAutoScrollManager(): AutoScrollManager? {
+        return autoScrollManager
+    }
+
+    /**
      * 开始渐进式渲染
      * @param textView 目标TextView
      * @param content 要显示的内容
